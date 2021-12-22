@@ -72,7 +72,7 @@ class clientes_loginState extends State<clientes_login> {
         ],
       ),
       backgroundColor: Colors.black,
-      body: Image.asset("image/pizza.png"),
+      body: Image.asset("images/pizza.png"),
     );
   }
 }
