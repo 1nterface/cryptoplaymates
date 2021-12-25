@@ -3,23 +3,16 @@ import 'package:cryptoplaymates/Modelo/agentes_modelo.dart';
 import 'package:cryptoplaymates/Clientes/clientes_login.dart';
 import 'package:cryptoplaymates/olvidecontra.dart';
 import 'package:firebase_core/firebase_core.dart';
-<<<<<<< HEAD
-
 import 'package:flutter/material.dart';
 import 'package:location_permissions/location_permissions.dart';
 import 'package:url_strategy/url_strategy.dart';
-
-void main() async{
-  WidgetsFlutterBinding.ensureInitialized();
-  setPathUrlStrategy();
-=======
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'package:location_permissions/location_permissions.dart';
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
 
->>>>>>> 9145fc65b3a711afa70b00eff1a96bcf292ebf83
+  setPathUrlStrategy();
   // Initialize a new Firebase App instance
   await Firebase.initializeApp();
   runApp(MyApp());
