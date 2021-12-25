@@ -463,7 +463,7 @@ packages:
       name: path_provider_android
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.9"
+    version: "2.0.11"
   path_provider_ios:
     dependency: transitive
     description:
@@ -772,7 +772,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.2"
-<<<<<<< HEAD
   url_strategy:
     dependency: "direct main"
     description:
@@ -780,8 +779,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.2.0"
-=======
->>>>>>> 9145fc65b3a711afa70b00eff1a96bcf292ebf83
   utf:
     dependency: transitive
     description:
@@ -809,7 +806,7 @@ packages:
       name: win32
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.3.2"
+    version: "2.3.3"
   xdg_directories:
     dependency: transitive
     description:
