@@ -12,7 +12,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:cryptoplaymates/authentication.dart';
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9145fc65b3a711afa70b00eff1a96bcf292ebf83
 class clientes_login extends StatefulWidget {
 
   var data;
