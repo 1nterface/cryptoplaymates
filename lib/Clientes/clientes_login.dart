@@ -58,9 +58,9 @@ class clientes_loginState extends State<clientes_login> {
         children: [
 
           SpeedDialChild(
-              child: Icon(Icons.home, color: Colors.white,),
+              child: Image.asset("images/pizza.png"),
               backgroundColor: Colors.purple[800],
-              label: 'Informacion',
+              label: 'Próximamente',
               onTap: () async {
 
                 //Navigator.of(context).pushNamed('/admin_inicio');
@@ -71,7 +71,12 @@ class clientes_loginState extends State<clientes_login> {
         ],
       ),
       backgroundColor: Colors.black,
-      body: Image.asset("images/pizza.png"),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(child: Image.asset("images/pizza.png")),
+        ],
+      ),
     );
   }
 }
