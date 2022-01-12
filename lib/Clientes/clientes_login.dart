@@ -111,22 +111,24 @@ class clientes_loginState extends State<clientes_login> {
         ],
       ),
       backgroundColor: Colors.black,
-      body: Stack(
-        children: [
-          Center(
-            child: Image.asset('image/pizza.png'),
-          ),
-          Column(
-            children: [
-              Center(
-                child: Text('Crypto Playmate', style: TextStyle(color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold)),
-              ),
-              Center(
-                child: Text('On Feb 2022', style: TextStyle(color: Colors.white, fontSize: 25)),
-              ),
-            ],
-          ),
-        ],
+      body: Center(
+        child: Stack(
+          children: [
+            Column(
+              children: [
+                Center(
+                  child: Text('Crypto Playmate', style: TextStyle(color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold)),
+                ),
+                Center(
+                  child: Text('On Feb 2022', style: TextStyle(color: Colors.white, fontSize: 25)),
+                ),
+              ],
+            ),
+            Center(
+              child: Image.asset('image/pizza.png'),
+            ),
+          ],
+        ),
       )
     );
   }
