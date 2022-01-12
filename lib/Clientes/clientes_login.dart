@@ -58,9 +58,29 @@ class clientes_loginState extends State<clientes_login> {
         children: [
 
           SpeedDialChild(
+              child: Icon(Icons.add_chart, color: Colors.white,),
+              backgroundColor: Colors.purple[800],
+              label: 'NFT Member',
+              onTap: () async {
+
+                //Navigator.of(context).pushNamed('/admin_inicio');
+
+              }
+          ),
+          SpeedDialChild(
+              child: Icon(Icons.account_tree, color: Colors.white,),
+              backgroundColor: Colors.purple[800],
+              label: 'Power Cards',
+              onTap: () async {
+
+                //Navigator.of(context).pushNamed('/admin_inicio');
+
+              }
+          ),
+          SpeedDialChild(
               child: Icon(Icons.home, color: Colors.white,),
               backgroundColor: Colors.purple[800],
-              label: 'Informacion',
+              label: 'Info',
               onTap: () async {
 
                 //Navigator.of(context).pushNamed('/admin_inicio');
@@ -71,7 +91,9 @@ class clientes_loginState extends State<clientes_login> {
         ],
       ),
       backgroundColor: Colors.black,
-      body: Image.asset("images/pizza.png"),
+      body: Center(
+        child: Text('Crypto Playmate'),
+      ),
     );
   }
 }
