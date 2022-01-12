@@ -117,9 +117,6 @@ class clientes_loginState extends State<clientes_login> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Center(
-                child: Text('Crypto Playmate', style: TextStyle(color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold)),
-              ),
-              Center(
                 child: Text('On Feb 2022', style: TextStyle(color: Colors.white, fontSize: 25)),
               ),
             ],
@@ -129,9 +126,9 @@ class clientes_loginState extends State<clientes_login> {
             children: [
               Row(
                 children: [
-                  Center(
-                    child: Image.asset('images/pizza.png', scale: 40,),
-                  ),
+                  Image.asset('images/pizza.png', scale: 70,),
+                  SizedBox(height: 20,),
+                  Text('Crypto Playmate', style: TextStyle(color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold)),
                 ],
               ),
             ],
