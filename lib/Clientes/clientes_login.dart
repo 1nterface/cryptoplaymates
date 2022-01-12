@@ -10,6 +10,7 @@ import 'package:geolocator/geolocator.dart';
 import 'package:location_permissions/location_permissions.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:cryptoplaymates/authentication.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class clientes_login extends StatefulWidget {
 
@@ -33,6 +34,15 @@ class clientes_loginState extends State<clientes_login> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
+  String url = 'https://twitter.com/CryptoPlaymate';
+
+  launchURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url, forceWebView: true);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,8 +59,8 @@ class clientes_loginState extends State<clientes_login> {
         overlayOpacity: 0.5,
         onOpen: () => print('OPENING DIAL'),
         onClose: () => print('DIAL CLOSED'),
-        tooltip: 'Speed Dial',
-        heroTag: 'speed-dial-hero-tag',
+        tooltip: 'Crypto Playmate',
+        heroTag: 'Crypto Playmate',
         backgroundColor: Colors.purple[800],
         foregroundColor: Colors.white,
         elevation: 1.0,
@@ -103,6 +113,7 @@ class clientes_loginState extends State<clientes_login> {
               label: 'Contact us',
               onTap: () async {
 
+                launchURL(url);
                 //Navigator.of(context).pushNamed('/admin_inicio');
 
               }
@@ -116,18 +127,8 @@ class clientes_loginState extends State<clientes_login> {
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset('images/pizza.png', scale: 400,),
-                      SizedBox(width: 20,),
-                      Text('Crypto Playmate', style: TextStyle(color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold)),
-                    ],
-                  ),
-                ],
+              Center(
+                child: Text('Crypto Playmate', style: TextStyle(color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold)),
               ),
               Center(
                 child: Text('On Feb 2022', style: TextStyle(color: Colors.white, fontSize: 25)),
