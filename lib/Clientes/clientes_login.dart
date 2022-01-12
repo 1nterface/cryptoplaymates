@@ -116,23 +116,23 @@ class clientes_loginState extends State<clientes_login> {
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Row(
+                    children: [
+                      Image.asset('images/pizza.png', scale: 100,),
+                      SizedBox(width: 20,),
+                      Text('Crypto Playmate', style: TextStyle(color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold)),
+                    ],
+                  ),
+                ],
+              ),
               Center(
                 child: Text('On Feb 2022', style: TextStyle(color: Colors.white, fontSize: 25)),
               ),
             ],
           ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Row(
-                children: [
-                  Image.asset('images/pizza.png', scale: 70,),
-                  SizedBox(height: 20,),
-                  Text('Crypto Playmate', style: TextStyle(color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold)),
-                ],
-              ),
-            ],
-          )
         ],
       )
     );
