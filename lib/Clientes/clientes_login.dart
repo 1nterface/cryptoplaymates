@@ -78,9 +78,29 @@ class clientes_loginState extends State<clientes_login> {
               }
           ),
           SpeedDialChild(
-              child: Icon(Icons.videogame_asset_sharp, color: Colors.white,),
+              child: Icon(Icons.list, color: Colors.white,),
               backgroundColor: Colors.purple[800],
-              label: 'Info',
+              label: 'Roadmap 2022',
+              onTap: () async {
+
+                //Navigator.of(context).pushNamed('/admin_inicio');
+
+              }
+          ),
+          SpeedDialChild(
+              child: Icon(Icons.announcement, color: Colors.white,),
+              backgroundColor: Colors.purple[800],
+              label: 'Whitepaper',
+              onTap: () async {
+
+                //Navigator.of(context).pushNamed('/admin_inicio');
+
+              }
+          ),
+          SpeedDialChild(
+              child: Icon(Icons.email, color: Colors.white,),
+              backgroundColor: Colors.purple[800],
+              label: 'Contact us',
               onTap: () async {
 
                 //Navigator.of(context).pushNamed('/admin_inicio');
@@ -96,8 +116,15 @@ class clientes_loginState extends State<clientes_login> {
           Center(
             child: Image.asset('image/pizza.png'),
           ),
-          Center(
-            child: Text('Crypto Playmate', style: TextStyle(color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold)),
+          Column(
+            children: [
+              Center(
+                child: Text('Crypto Playmate', style: TextStyle(color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold)),
+              ),
+              Center(
+                child: Text('On Feb 2022', style: TextStyle(color: Colors.white, fontSize: 25)),
+              ),
+            ],
           ),
         ],
       )
