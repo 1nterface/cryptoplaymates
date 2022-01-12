@@ -117,6 +117,9 @@ class clientes_loginState extends State<clientes_login> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Center(
+                child: Image.asset('images/pizza.png'),
+              ),
+              Center(
                 child: Text('Crypto Playmate', style: TextStyle(color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold)),
               ),
               Center(
@@ -124,7 +127,6 @@ class clientes_loginState extends State<clientes_login> {
               ),
             ],
           ),
-          Image.network('https://www.pikpng.com/pngl/b/419-4193184_logo-yp-play-button-transparent-logo-clipart.png'),
         ],
       )
     );
