@@ -91,9 +91,16 @@ class clientes_loginState extends State<clientes_login> {
         ],
       ),
       backgroundColor: Colors.black,
-      body: Center(
-        child: Text('Crypto Playmate', style: TextStyle(color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold)),
-      ),
+      body: Stack(
+        children: [
+          Center(
+            child: Image.asset('image/pizza.png'),
+          ),
+          Center(
+            child: Text('Crypto Playmate', style: TextStyle(color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold)),
+          ),
+        ],
+      )
     );
   }
 }
