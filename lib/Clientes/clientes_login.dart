@@ -78,7 +78,7 @@ class clientes_loginState extends State<clientes_login> {
               }
           ),
           SpeedDialChild(
-              child: Icon(Icons.home, color: Colors.white,),
+              child: Icon(Icons.videogame_asset_sharp, color: Colors.white,),
               backgroundColor: Colors.purple[800],
               label: 'Info',
               onTap: () async {
@@ -92,7 +92,7 @@ class clientes_loginState extends State<clientes_login> {
       ),
       backgroundColor: Colors.black,
       body: Center(
-        child: Text('Crypto Playmate'),
+        child: Text('Crypto Playmate', style: TextStyle(color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold)),
       ),
     );
   }
