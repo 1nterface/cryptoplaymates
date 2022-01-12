@@ -111,24 +111,21 @@ class clientes_loginState extends State<clientes_login> {
         ],
       ),
       backgroundColor: Colors.black,
-      body: Center(
-        child: Stack(
-          children: [
-            Column(
-              children: [
-                Center(
-                  child: Text('Crypto Playmate', style: TextStyle(color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold)),
-                ),
-                Center(
-                  child: Text('On Feb 2022', style: TextStyle(color: Colors.white, fontSize: 25)),
-                ),
-              ],
-            ),
-            Center(
-              child: Image.asset('image/pizza.png'),
-            ),
-          ],
-        ),
+      body: Stack(
+        children: [
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Center(
+                child: Text('Crypto Playmate', style: TextStyle(color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold)),
+              ),
+              Center(
+                child: Text('On Feb 2022', style: TextStyle(color: Colors.white, fontSize: 25)),
+              ),
+            ],
+          ),
+          Image.network('https://www.pikpng.com/pngl/b/419-4193184_logo-yp-play-button-transparent-logo-clipart.png'),
+        ],
       )
     );
   }
