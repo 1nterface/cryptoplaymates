@@ -70,7 +70,7 @@ class clientes_loginState extends State<clientes_login> {
           SpeedDialChild(
               child: Icon(Icons.add_chart, color: Colors.white,),
               backgroundColor: Colors.purple[800],
-              label: 'NFT Member',
+              label: 'NFT Members',
               onTap: () async {
 
                 //Navigator.of(context).pushNamed('/admin_inicio');
@@ -80,7 +80,7 @@ class clientes_loginState extends State<clientes_login> {
           SpeedDialChild(
               child: Icon(Icons.account_tree, color: Colors.white,),
               backgroundColor: Colors.purple[800],
-              label: 'Power Cards',
+              label: 'NFT Power Cards',
               onTap: () async {
 
                 //Navigator.of(context).pushNamed('/admin_inicio');
