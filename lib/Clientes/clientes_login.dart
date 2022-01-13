@@ -130,7 +130,9 @@ class clientes_loginState extends State<clientes_login> {
       body: Stack(
         children: [
           Row(
-            children: [
+              mainAxisAlignment: MainAxisAlignment.center,
+
+              children: [
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -149,10 +151,7 @@ class clientes_loginState extends State<clientes_login> {
               Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text('Crypto Playmate is operated by 1nterfaCe de México', style: TextStyle(color: Colors.white, fontSize: 13)),
-                  Text('Altamirano #105, Primera Sección C.P. 21100, under the laws of México', style: TextStyle(color: Colors.cyan[800], fontSize: 10),),
-                  Text('RFC: DUBJ861025JP4', style: TextStyle(color: Colors.cyan[800], fontSize: 10),),
-                  Text('© 1nterfaCe de México 2022', style: TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold),),
+                  Text('© 1nterfaCe de México 2022', style: TextStyle(color: Colors.cyan[800], fontSize: 15, fontWeight: FontWeight.bold),),
                 ],
               ),
             ],
