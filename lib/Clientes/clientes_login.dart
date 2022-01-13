@@ -127,8 +127,7 @@ class clientes_loginState extends State<clientes_login> {
         ],
       ),
       backgroundColor: Colors.black,
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+      body: Stack(
         children: [
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -137,6 +136,20 @@ class clientes_loginState extends State<clientes_login> {
               Text('Hyper-casual games platform', style: TextStyle(color: Colors.purple[800], fontSize: 35),),
               Text('Player vs. Multiplayer', style: TextStyle(color: Colors.purple[800], fontSize: 25),),
               Text('On Feb 2022', style: TextStyle(color: Colors.white, fontSize: 20),),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text('Crypto Playmate is operated by 1nterfaCe de Mexico', style: TextStyle(color: Colors.white, fontSize: 15)),
+                  Text('Altamirano #105, Primera Sección 21100, under the laws of México', style: TextStyle(color: Colors.cyan[800], fontSize: 15),),
+                  Text('RFC: DUBJ861025JP4', style: TextStyle(color: Colors.cyan[800], fontSize: 15),),
+                  Text('© 1nterface de Mexico 2022', style: TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold),),
+                ],
+              ),
             ],
           ),
         ],
