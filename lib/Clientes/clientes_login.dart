@@ -127,26 +127,30 @@ class clientes_loginState extends State<clientes_login> {
         ],
       ),
       backgroundColor: Colors.black,
-      body: Stack(
+      body: Column(
         children: [
-          Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text('Crypto Playmate', style: TextStyle(color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold)),
-                  Flexible(child: Text('Hyper-casual games platform', style: TextStyle(color: Colors.purple[800], fontSize: 35),),),
-                  Flexible(child: Padding(
-                    padding: const EdgeInsets.only(top: 10.0),
-                    child: Text('- Play to Earn', style: TextStyle(color: Colors.cyan[800], fontSize: 30, fontWeight: FontWeight.bold),),
-                  ),),
-                  Flexible(child: Text('- Own to Earn', style: TextStyle(color: Colors.cyan[800], fontSize: 30, fontWeight: FontWeight.bold),),),
-                  Flexible(child: Text('- Dev to Earn', style: TextStyle(color: Colors.cyan[800], fontSize: 30, fontWeight: FontWeight.bold),),),
+          ListView(
+            children:[
+              Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('Crypto Playmate', style: TextStyle(color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold)),
+                        Flexible(child: Text('Hyper-casual games platform', style: TextStyle(color: Colors.purple[800], fontSize: 35),),),
+                        Flexible(child: Padding(
+                          padding: const EdgeInsets.only(top: 10.0),
+                          child: Text('- Play to Earn', style: TextStyle(color: Colors.cyan[800], fontSize: 30, fontWeight: FontWeight.bold),),
+                        ),),
+                        Flexible(child: Text('- Own to Earn', style: TextStyle(color: Colors.cyan[800], fontSize: 30, fontWeight: FontWeight.bold),),),
+                        Flexible(child: Text('- Dev to Earn', style: TextStyle(color: Colors.cyan[800], fontSize: 30, fontWeight: FontWeight.bold),),),
 
-                  Text('Player vs. Multiplayer', style: TextStyle(color: Colors.purple[800], fontSize: 25),),
-                  Text('On Feb 2022', style: TextStyle(color: Colors.white, fontSize: 20),),
-                ],
+                        Text('Player vs. Multiplayer', style: TextStyle(color: Colors.purple[800], fontSize: 25),),
+                        Text('On Feb 2022', style: TextStyle(color: Colors.white, fontSize: 20),),
+                      ],
+                    ),
+                  ]
               ),
             ]
           ),
