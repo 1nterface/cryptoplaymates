@@ -112,7 +112,7 @@ class clientes_loginState extends State<clientes_login> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text('Crypto Playmate', style: TextStyle(color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold)),
-              Text('Minigames Platform Single', style: TextStyle(color: Colors.purple[800], fontSize: 35),),
+              Text('Minigames Platform', style: TextStyle(color: Colors.purple[800], fontSize: 35),),
               Text('Player vs. Multiplayer', style: TextStyle(color: Colors.purple[800], fontSize: 25),),
               Text('On Feb 2022', style: TextStyle(color: Colors.white, fontSize: 20),),
             ],
