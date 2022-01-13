@@ -88,7 +88,17 @@ class clientes_loginState extends State<clientes_login> {
 
               }
           ),
+          SpeedDialChild(
+              child: Icon(Icons.announcement, color: Colors.white,),
+              backgroundColor: Colors.purple[800],
+              label: 'Whitepaper',
+              onTap: () async {
 
+                launchURL(url);
+                //Navigator.of(context).pushNamed('/admin_inicio');
+
+              }
+          ),
 
           SpeedDialChild(
               child: Icon(Icons.email, color: Colors.white,),
@@ -105,19 +115,21 @@ class clientes_loginState extends State<clientes_login> {
         ],
       ),
       backgroundColor: Colors.black,
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text('Crypto Playmate', style: TextStyle(color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold)),
-              Text('Minigames Platform', style: TextStyle(color: Colors.purple[800], fontSize: 35),),
-              Text('Player vs. Multiplayer', style: TextStyle(color: Colors.purple[800], fontSize: 25),),
-              Text('On Feb 2022', style: TextStyle(color: Colors.white, fontSize: 20),),
-            ],
-          ),
-        ],
+      body: SingleChildScrollView(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('Crypto Playmate', style: TextStyle(color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold)),
+                Text('Hyper-casual games platform', style: TextStyle(color: Colors.purple[800], fontSize: 35),),
+                Text('Player vs. Multiplayer', style: TextStyle(color: Colors.purple[800], fontSize: 25),),
+                Text('On Feb 2022', style: TextStyle(color: Colors.white, fontSize: 20),),
+              ],
+            ),
+          ],
+        ),
       )
     );
   }
