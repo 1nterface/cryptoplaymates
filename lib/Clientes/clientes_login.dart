@@ -73,6 +73,7 @@ class clientes_loginState extends State<clientes_login> {
               label: 'NFT Members',
               onTap: () async {
 
+
                 //Navigator.of(context).pushNamed('/admin_inicio');
 
               }
@@ -87,26 +88,8 @@ class clientes_loginState extends State<clientes_login> {
 
               }
           ),
-          SpeedDialChild(
-              child: Icon(Icons.list, color: Colors.white,),
-              backgroundColor: Colors.purple[800],
-              label: 'Roadmap 2022',
-              onTap: () async {
 
-                //Navigator.of(context).pushNamed('/admin_inicio');
 
-              }
-          ),
-          SpeedDialChild(
-              child: Icon(Icons.announcement, color: Colors.white,),
-              backgroundColor: Colors.purple[800],
-              label: 'Whitepaper',
-              onTap: () async {
-
-                //Navigator.of(context).pushNamed('/admin_inicio');
-
-              }
-          ),
           SpeedDialChild(
               child: Icon(Icons.email, color: Colors.white,),
               backgroundColor: Colors.purple[800],
