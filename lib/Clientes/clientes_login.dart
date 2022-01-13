@@ -122,17 +122,14 @@ class clientes_loginState extends State<clientes_login> {
         ],
       ),
       backgroundColor: Colors.black,
-      body: Stack(
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Center(
-                child: Text('Crypto Playmate', style: TextStyle(color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold)),
-              ),
-              Center(
-                child: Text('On Feb 2022', style: TextStyle(color: Colors.white, fontSize: 25)),
-              ),
+              Text('Crypto Playmate', style: TextStyle(color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold)),
+              Text('On Feb 2022', style: TextStyle(color: Colors.white, fontSize: 25),),
             ],
           ),
         ],
