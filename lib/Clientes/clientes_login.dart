@@ -147,7 +147,7 @@ class clientes_loginState extends State<clientes_login> {
                   Text('Crypto Playmate is operated by 1nterfaCe de Mexico', style: TextStyle(color: Colors.white, fontSize: 15)),
                   Text('Altamirano #105, Primera Sección 21100, under the laws of México', style: TextStyle(color: Colors.cyan[800], fontSize: 15),),
                   Text('RFC: DUBJ861025JP4', style: TextStyle(color: Colors.cyan[800], fontSize: 15),),
-                  Text('© 1nterface de Mexico 2022', style: TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold),),
+                  Text('© 1nterface de México 2022', style: TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold),),
                 ],
               ),
             ],
