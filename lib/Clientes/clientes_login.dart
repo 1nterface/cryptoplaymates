@@ -68,27 +68,6 @@ class clientes_loginState extends State<clientes_login> {
         children: [
 
           SpeedDialChild(
-              child: Icon(Icons.add_chart, color: Colors.white,),
-              backgroundColor: Colors.purple[800],
-              label: 'NFT Members',
-              onTap: () async {
-
-
-                //Navigator.of(context).pushNamed('/admin_inicio');
-
-              }
-          ),
-          SpeedDialChild(
-              child: Icon(Icons.account_tree, color: Colors.white,),
-              backgroundColor: Colors.purple[800],
-              label: 'NFT Power Cards',
-              onTap: () async {
-
-                //Navigator.of(context).pushNamed('/admin_inicio');
-
-              }
-          ),
-          SpeedDialChild(
               child: Icon(Icons.announcement, color: Colors.white,),
               backgroundColor: Colors.purple[800],
               label: 'Whitepaper',
@@ -100,17 +79,6 @@ class clientes_loginState extends State<clientes_login> {
               }
           ),
 
-          SpeedDialChild(
-              child: Icon(Icons.announcement, color: Colors.white,),
-              backgroundColor: Colors.purple[800],
-              label: 'Roadmap 2022',
-              onTap: () async {
-
-                launchURL(url);
-                //Navigator.of(context).pushNamed('/admin_inicio');
-
-              }
-          ),
 
           SpeedDialChild(
               child: Icon(Icons.email, color: Colors.white,),
@@ -134,9 +102,27 @@ class clientes_loginState extends State<clientes_login> {
           child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children:[
-                Text('NFT Members', style: TextStyle(color: Colors.white),),
-                Text("FT Power Cards", style: TextStyle(color: Colors.white),),
-                Text("Roadmap", style: TextStyle(color: Colors.white),),
+                Row(
+                  children: [
+                    Icon(Icons.announcement, color: Colors.white),
+                    SizedBox(width:10),
+                    Text('NFT Members', style: TextStyle(color: Colors.white),),
+                  ]
+                ),
+                Row(
+                    children: [
+                      Icon(Icons.account_tree, color: Colors.white),
+                      SizedBox(width:10),
+                      Text("NFT Power Cards", style: TextStyle(color: Colors.white),),
+                    ]
+                ),
+                Row(
+                    children: [
+                      Icon(Icons.announcement, color: Colors.white),
+                      SizedBox(width:10),
+                      Text("Roadmap", style: TextStyle(color: Colors.white),),
+                    ]
+                ),
               ]
           ),
           ),
