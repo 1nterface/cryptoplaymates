@@ -82,6 +82,18 @@ class clientes_loginState extends State<clientes_login> {
 
               }
           ),
+
+          SpeedDialChild(
+              child: Icon(Icons.add_chart, color: Colors.white,),
+              backgroundColor: Colors.purple[800],
+              label: 'NFT Members',
+              onTap: () async {
+
+                launchURL(url);
+                //Navigator.of(context).pushNamed('/admin_inicio');
+
+              }
+          ),
           SpeedDialChild(
               child: Icon(Icons.email, color: Colors.white,),
               backgroundColor: Colors.purple[800],
@@ -109,9 +121,9 @@ class clientes_loginState extends State<clientes_login> {
                 children:[
                   Row(
                       children: [
-                        Icon(Icons.add_chart, color: Colors.white),
+                        Icon(Icons.list, color: Colors.white),
                         SizedBox(width:10),
-                        Text("NFT Member", style: TextStyle(color: Colors.white),),
+                        Text("Whitepaper", style: TextStyle(color: Colors.white),),
                       ]
                   ),
                   Row(
@@ -123,9 +135,9 @@ class clientes_loginState extends State<clientes_login> {
                   ),
                   Row(
                     children: [
-                      Icon(Icons.list, color: Colors.white),
+                      Icon(Icons.email, color: Colors.white),
                       SizedBox(width:10),
-                      Text('Whitepaper', style: TextStyle(color: Colors.white),),
+                      Text('Contact us', style: TextStyle(color: Colors.white),),
                     ]
                   ),
                 ]
@@ -140,7 +152,7 @@ class clientes_loginState extends State<clientes_login> {
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Flexible(child: Text('Hyper-casual games platform', style: TextStyle(color: Colors.purple[800], fontSize: 35),),),
+                          Flexible(child: Text('Hyper-casual games platform', style: TextStyle(color: Colors.purple[800], fontSize: 30),),),
                           Flexible(child: Padding(
                             padding: const EdgeInsets.only(top: 10.0),
                             child: Text('- Play to Earn', style: TextStyle(color: Colors.cyan[800], fontSize: 30, fontWeight: FontWeight.bold),),
