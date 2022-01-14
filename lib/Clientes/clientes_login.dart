@@ -46,6 +46,9 @@ class clientes_loginState extends State<clientes_login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text("Crypto Playmate", style: TextStyle(color: Colors.white)),),
       floatingActionButton: SpeedDial( //Boton flotante animado,
         //marginRight: 18,
         //marginBottom: 30,
@@ -135,7 +138,6 @@ class clientes_loginState extends State<clientes_login> {
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text('Crypto Playmate', style: TextStyle(color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold)),
                           Flexible(child: Text('Hyper-casual games platform', style: TextStyle(color: Colors.purple[800], fontSize: 35),),),
                           Flexible(child: Padding(
                             padding: const EdgeInsets.only(top: 10.0),
@@ -145,6 +147,11 @@ class clientes_loginState extends State<clientes_login> {
 
                           Text('Player vs. Multiplayer', style: TextStyle(color: Colors.purple[800], fontSize: 25),),
                           Text('On Feb 2022', style: TextStyle(color: Colors.white, fontSize: 20),),
+                          Row(
+                            children: [
+
+                            ]
+                          ),
                         ],
                       ),
                     ]
