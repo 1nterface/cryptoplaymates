@@ -102,9 +102,7 @@ class clientes_loginState extends State<clientes_login> {
       backgroundColor: Colors.black,
       body: Column(
         children: [
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Padding(
+         Padding(
               padding: EdgeInsets.all(15),
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -133,7 +131,6 @@ class clientes_loginState extends State<clientes_login> {
                 ]
             ),
             ),
-          ),
           Expanded(
             child: ListView(
               children:[
