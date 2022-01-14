@@ -68,9 +68,9 @@ class clientes_loginState extends State<clientes_login> {
         children: [
 
           SpeedDialChild(
-              child: Icon(Icons.announcement, color: Colors.white,),
+              child: Icon(Icons.sd_card_alert_rounded, color: Colors.white,),
               backgroundColor: Colors.purple[800],
-              label: 'Whitepaper',
+              label: 'NFT Power Cards',
               onTap: () async {
 
                 launchURL(url);
@@ -81,9 +81,9 @@ class clientes_loginState extends State<clientes_login> {
 
 
           SpeedDialChild(
-              child: Icon(Icons.email, color: Colors.white,),
+              child: Icon(Icons.add_chart, color: Colors.white,),
               backgroundColor: Colors.purple[800],
-              label: 'Contact us',
+              label: 'NFT Members',
               onTap: () async {
 
                 launchURL(url);
@@ -104,23 +104,23 @@ class clientes_loginState extends State<clientes_login> {
               children:[
                 Row(
                   children: [
-                    Icon(Icons.announcement, color: Colors.white),
+                    Icon(Icons.list, color: Colors.white),
                     SizedBox(width:10),
-                    Text('NFT Members', style: TextStyle(color: Colors.white),),
+                    Text('Whitepaper', style: TextStyle(color: Colors.white),),
                   ]
                 ),
                 Row(
                     children: [
                       Icon(Icons.account_tree, color: Colors.white),
                       SizedBox(width:10),
-                      Text("NFT Power Cards", style: TextStyle(color: Colors.white),),
+                      Text("Roadmap", style: TextStyle(color: Colors.white),),
                     ]
                 ),
                 Row(
                     children: [
-                      Icon(Icons.announcement, color: Colors.white),
+                      Icon(Icons.email, color: Colors.white),
                       SizedBox(width:10),
-                      Text("Roadmap", style: TextStyle(color: Colors.white),),
+                      Text("Contact us", style: TextStyle(color: Colors.white),),
                     ]
                 ),
               ]
