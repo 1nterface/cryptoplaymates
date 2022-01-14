@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/services.dart';
 import 'package:toast/toast.dart';
 import 'package:cryptoplaymates/Modelo/cajas_modelo.dart';
@@ -94,19 +95,6 @@ class clientes_loginState extends State<clientes_login> {
 
               }
           ),
-          SpeedDialChild(
-              child: Icon(Icons.email, color: Colors.white,),
-              backgroundColor: Colors.purple[800],
-              label: 'Contact us',
-              onTap: () async {
-
-                launchURL(url);
-                //Navigator.of(context).pushNamed('/admin_inicio');
-
-              }
-          ),
-
-
 
 
         ],
@@ -153,12 +141,63 @@ class clientes_loginState extends State<clientes_login> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Flexible(child: Text('Hyper-casual games platform', style: TextStyle(color: Colors.purple[800], fontSize: 30),),),
-                          Flexible(child: Padding(
-                            padding: const EdgeInsets.only(top: 10.0),
-                            child: Text('- Play to Earn', style: TextStyle(color: Colors.cyan[800], fontSize: 30, fontWeight: FontWeight.bold),),
-                          ),),
-                          Flexible(child: Text('- Own to Earn', style: TextStyle(color: Colors.cyan[800], fontSize: 30, fontWeight: FontWeight.bold),),),
-
+                          CarouselSlider(
+                            items: [
+                            Container(
+                              decoration: const BoxDecoration(
+                                borderRadius: BorderRadius.all(Radius.circular(12)),
+                                image: DecorationImage(
+                                  image: AssetImage("images/pizza.png"),
+                                  fit: BoxFit.cover,
+                                )
+                              )
+                            ),
+                              Container(
+                                  decoration: const BoxDecoration(
+                                      borderRadius: BorderRadius.all(Radius.circular(12)),
+                                      image: DecorationImage(
+                                        image: AssetImage("images/pizza.png"),
+                                        fit: BoxFit.cover,
+                                      )
+                                  )
+                              ),
+                              Container(
+                                  decoration: const BoxDecoration(
+                                      borderRadius: BorderRadius.all(Radius.circular(12)),
+                                      image: DecorationImage(
+                                        image: AssetImage("images/pizza.png"),
+                                        fit: BoxFit.cover,
+                                      )
+                                  )
+                              ),
+                              Container(
+                                  decoration: const BoxDecoration(
+                                      borderRadius: BorderRadius.all(Radius.circular(12)),
+                                      image: DecorationImage(
+                                        image: AssetImage("images/pizza.png"),
+                                        fit: BoxFit.cover,
+                                      )
+                                  )
+                              ),
+                              Container(
+                                  decoration: const BoxDecoration(
+                                      borderRadius: BorderRadius.all(Radius.circular(12)),
+                                      image: DecorationImage(
+                                        image: AssetImage("images/pizza.png"),
+                                        fit: BoxFit.cover,
+                                      )
+                                  )
+                              ),
+                            ],
+                            options: CarouselOptions(
+                              height: 400,
+                              autoPlay: true,
+                              autoPlayCurve: Curves.easeInOut,
+                              reverse: true,
+                              enlargeCenterPage: true,
+                              scrollDirection: Axis.horizontal,
+                            ),
+                          ),
                           Text('Player vs. Multiplayer', style: TextStyle(color: Colors.purple[800], fontSize: 25),),
                           Text('On Feb 2022', style: TextStyle(color: Colors.white, fontSize: 20),),
                           Row(
