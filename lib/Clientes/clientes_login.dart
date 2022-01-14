@@ -129,6 +129,17 @@ class clientes_loginState extends State<clientes_login> {
       backgroundColor: Colors.black,
       body: Column(
         children: [
+          Padding(
+            padding: EdgeInsets.all(15),
+          child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children:[
+                Text('NFT Members', style: TextStyle(color: Colors.white),),
+                Text("FT Power Cards", style: TextStyle(color: Colors.white),),
+                Text("Roadmap", style: TextStyle(color: Colors.white),),
+              ]
+          ),
+          ),
           Expanded(
             child: ListView(
               children:[
@@ -145,7 +156,6 @@ class clientes_loginState extends State<clientes_login> {
                             child: Text('- Play to Earn', style: TextStyle(color: Colors.cyan[800], fontSize: 30, fontWeight: FontWeight.bold),),
                           ),),
                           Flexible(child: Text('- Own to Earn', style: TextStyle(color: Colors.cyan[800], fontSize: 30, fontWeight: FontWeight.bold),),),
-                          Flexible(child: Text('- Dev to Earn', style: TextStyle(color: Colors.cyan[800], fontSize: 30, fontWeight: FontWeight.bold),),),
 
                           Text('Player vs. Multiplayer', style: TextStyle(color: Colors.purple[800], fontSize: 25),),
                           Text('On Feb 2022', style: TextStyle(color: Colors.white, fontSize: 20),),
