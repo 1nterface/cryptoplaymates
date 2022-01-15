@@ -126,7 +126,7 @@ class clientes_loginState extends State<clientes_login> {
                       Icon(Icons.email, color: Colors.white),
                       SizedBox(width:10),
                       Text('Contact us', style: TextStyle(color: Colors.white),),
-                    ]
+                    ],
                   ),
                 ]
             ),
@@ -134,6 +134,124 @@ class clientes_loginState extends State<clientes_login> {
           SingleChildScrollView(
             child: Column(
               children:[
+                CarouselSlider(
+                  items: [
+
+                    Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                ElevatedButton(
+                                  onPressed: () {
+
+                                  },
+                                  child: Text('Play'),
+                                  style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                        decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(12)),
+                            image: DecorationImage(
+                              image: AssetImage("images/a.png"),
+                              fit: BoxFit.cover,
+                            )
+                        )
+                    ),
+                    Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                ElevatedButton(
+                                  onPressed: () {
+
+                                  },
+                                  child: Text('Play'),
+                                  style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                        decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(12)),
+                            image: DecorationImage(
+                              image: AssetImage("images/b.png"),
+                              fit: BoxFit.cover,
+                            )
+                        )
+                    ),
+                    Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                ElevatedButton(
+                                  onPressed: () {
+
+                                  },
+                                  child: Text('Play'),
+                                  style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                        decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(12)),
+                            image: DecorationImage(
+                              image: AssetImage("images/c.png"),
+                              fit: BoxFit.cover,
+                            )
+                        )
+                    ),
+                    Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                ElevatedButton(
+                                  onPressed: () {
+
+                                  },
+                                  child: Text('Play'),
+                                  style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                        decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(12)),
+                            image: DecorationImage(
+                              image: AssetImage("images/d.png"),
+                              fit: BoxFit.cover,
+                            )
+                        )
+                    ),
+                  ],
+                  options: CarouselOptions(
+                    viewportFraction: 0.8,
+                    height: 400,
+                    autoPlay: true,
+                    autoPlayCurve: Curves.easeInOut,
+                    reverse: true,
+                    enlargeCenterPage: true,
+                    scrollDirection: Axis.horizontal,
+                  ),
+                ),
                 CarouselSlider(
                   items: [
 
