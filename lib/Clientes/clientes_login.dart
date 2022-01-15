@@ -135,8 +135,8 @@ class clientes_loginState extends State<clientes_login> {
                   items: [
 
                     Container(
-                      height: 200,
-                        width: 400,
+                      height: 500,
+                        width: 800,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
