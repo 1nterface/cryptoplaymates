@@ -68,7 +68,7 @@ class clientes_loginState extends State<clientes_login> {
               ),
               InkWell(
                 onTap:(){
-                  Navigator.of(context).pushNamed('/nft_power_Cards');
+                  Navigator.of(context).pushNamed('/nft_power_cards');
                 },
                 child: Row(
                     children: [
