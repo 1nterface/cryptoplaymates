@@ -13,6 +13,8 @@ class _nft_power_cardsState extends State<nft_power_cards> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
+        backgroundColor: Colors.black,
+
         centerTitle: true,
         title: Text('Passive Income'),
       ),

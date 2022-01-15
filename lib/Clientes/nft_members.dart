@@ -13,6 +13,8 @@ class _nft_membersState extends State<nft_members> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
+        backgroundColor: Colors.black,
+
         centerTitle: true,
         title: Text('Passive Income'),
       ),

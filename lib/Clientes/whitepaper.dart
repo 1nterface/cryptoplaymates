@@ -13,6 +13,8 @@ class whitepaperState extends State<whitepaper> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
+        backgroundColor: Colors.black,
+
         centerTitle: true,
         title: Text('Crypto Playmate'),
       ),

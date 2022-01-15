@@ -13,6 +13,7 @@ class _roadmapState extends State<roadmap> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
+        backgroundColor: Colors.black,
         centerTitle: true,
         title: Text('Roadmap'),
       ),
