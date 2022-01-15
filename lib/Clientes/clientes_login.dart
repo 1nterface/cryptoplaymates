@@ -135,7 +135,23 @@ class clientes_loginState extends State<clientes_login> {
             items: [
 
               Container(
-                child: Text('BOTON', style: TextStyle(color: Colors.white)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        ElevatedButton(
+                          onPressed: () {
+
+                          },
+                          child: Text('Play'),
+                          style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
                   decoration: const BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(12)),
                       image: DecorationImage(
@@ -145,7 +161,23 @@ class clientes_loginState extends State<clientes_login> {
                   )
               ),
               Container(
-                  child: Text('BOTON', style: TextStyle(color: Colors.white)),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          ElevatedButton(
+                            onPressed: () {
+
+                            },
+                            child: Text('Play'),
+                            style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                   decoration: const BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(12)),
                       image: DecorationImage(
@@ -155,7 +187,23 @@ class clientes_loginState extends State<clientes_login> {
                   )
               ),
               Container(
-                  child: Text('BOTON', style: TextStyle(color: Colors.white)),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          ElevatedButton(
+                            onPressed: () {
+
+                            },
+                            child: Text('Play'),
+                            style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                   decoration: const BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(12)),
                       image: DecorationImage(
@@ -165,7 +213,23 @@ class clientes_loginState extends State<clientes_login> {
                   )
               ),
               Container(
-                  child: Text('BOTON', style: TextStyle(color: Colors.white)),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          ElevatedButton(
+                            onPressed: () {
+
+                            },
+                            child: Text('Play'),
+                            style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                   decoration: const BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(12)),
                       image: DecorationImage(
