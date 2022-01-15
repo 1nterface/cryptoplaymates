@@ -135,6 +135,7 @@ class clientes_loginState extends State<clientes_login> {
             items: [
 
               Container(
+                child: Text('BOTON', style: TextStyle(color: Colors.white)),
                   decoration: const BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(12)),
                       image: DecorationImage(
@@ -144,6 +145,7 @@ class clientes_loginState extends State<clientes_login> {
                   )
               ),
               Container(
+                  child: Text('BOTON', style: TextStyle(color: Colors.white)),
                   decoration: const BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(12)),
                       image: DecorationImage(
@@ -153,6 +155,7 @@ class clientes_loginState extends State<clientes_login> {
                   )
               ),
               Container(
+                  child: Text('BOTON', style: TextStyle(color: Colors.white)),
                   decoration: const BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(12)),
                       image: DecorationImage(
@@ -162,6 +165,7 @@ class clientes_loginState extends State<clientes_login> {
                   )
               ),
               Container(
+                  child: Text('BOTON', style: TextStyle(color: Colors.white)),
                   decoration: const BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(12)),
                       image: DecorationImage(
