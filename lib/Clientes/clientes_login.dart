@@ -50,7 +50,33 @@ class clientes_loginState extends State<clientes_login> {
       appBar: AppBar(
         backgroundColor: Colors.black,
         centerTitle: true,
-        title: Text("Crypto Playmate", style: TextStyle(color: Colors.white)),),
+        title: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children:[
+              Row(
+                  children: [
+                    Icon(Icons.list, color: Colors.white),
+                    SizedBox(width:10),
+                    Text("Whitepaper", style: TextStyle(color: Colors.white),),
+                  ]
+              ),
+              Row(
+                  children: [
+                    Icon(Icons.account_tree, color: Colors.white),
+                    SizedBox(width:10),
+                    Text("Roadmap", style: TextStyle(color: Colors.white),),
+                  ]
+              ),
+              Row(
+                  children: [
+                    Icon(Icons.email, color: Colors.white),
+                    SizedBox(width:10),
+                    Text('Contact us', style: TextStyle(color: Colors.white),),
+                  ]
+              ),
+            ]
+        ),
+      ),
       floatingActionButton: SpeedDial( //Boton flotante animado,
         //marginRight: 18,
         //marginBottom: 30,
@@ -103,41 +129,14 @@ class clientes_loginState extends State<clientes_login> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-           Padding(
-                padding: EdgeInsets.all(15),
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children:[
-                    Row(
-                        children: [
-                          Icon(Icons.list, color: Colors.white),
-                          SizedBox(width:10),
-                          Text("Whitepaper", style: TextStyle(color: Colors.white),),
-                        ]
-                    ),
-                    Row(
-                        children: [
-                          Icon(Icons.account_tree, color: Colors.white),
-                          SizedBox(width:10),
-                          Text("Roadmap", style: TextStyle(color: Colors.white),),
-                        ]
-                    ),
-                    Row(
-                      children: [
-                        Icon(Icons.email, color: Colors.white),
-                        SizedBox(width:10),
-                        Text('Contact us', style: TextStyle(color: Colors.white),),
-                      ]
-                    ),
-                  ]
-              ),
-              ),
             Column(
               children:[
                 CarouselSlider(
                   items: [
 
                     Container(
+                      height: 200,
+                        width: 400,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
