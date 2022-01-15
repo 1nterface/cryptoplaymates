@@ -55,16 +55,16 @@ class clientes_loginState extends State<clientes_login> {
             children:[
               Row(
                   children: [
-                    Icon(Icons.list, color: Colors.white),
+                    Icon(Icons.add_chart, color: Colors.white),
                     SizedBox(width:10),
-                    Text("Whitepaper", style: TextStyle(color: Colors.white),),
+                    Text("NFT Members", style: TextStyle(color: Colors.white),),
                   ]
               ),
               Row(
                   children: [
-                    Icon(Icons.account_tree, color: Colors.white),
+                    Icon(Icons.sd_card_alert_rounded, color: Colors.white),
                     SizedBox(width:10),
-                    Text("Roadmap", style: TextStyle(color: Colors.white),),
+                    Text("NFT Power Cards", style: TextStyle(color: Colors.white),),
                   ]
               ),
               Row(
@@ -99,9 +99,9 @@ class clientes_loginState extends State<clientes_login> {
         children: [
 
           SpeedDialChild(
-              child: Icon(Icons.sd_card_alert_rounded, color: Colors.white,),
+              child: Icon(Icons.account_tree, color: Colors.white,),
               backgroundColor: Colors.purple[800],
-              label: 'NFT Power Cards',
+              label: 'Roadmap',
               onTap: () async {
 
                 launchURL(url);
@@ -111,9 +111,9 @@ class clientes_loginState extends State<clientes_login> {
           ),
 
           SpeedDialChild(
-              child: Icon(Icons.add_chart, color: Colors.white,),
+              child: Icon(Icons.list, color: Colors.white,),
               backgroundColor: Colors.purple[800],
-              label: 'NFT Members',
+              label: 'Whitepaper',
               onTap: () async {
 
                 launchURL(url);
@@ -135,8 +135,6 @@ class clientes_loginState extends State<clientes_login> {
                   items: [
 
                     Container(
-                      height: 500,
-                        width: 800,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
@@ -251,15 +249,15 @@ class clientes_loginState extends State<clientes_login> {
                     scrollDirection: Axis.horizontal,
                   ),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Text('© 1nterfaCe de México 2022', style: TextStyle(color: Colors.cyan[800], fontSize: 15, fontWeight: FontWeight.bold),),
-                      ],
-                    ),
+                    Text('© 1nterfaCe de México 2022', style: TextStyle(color: Colors.cyan[800], fontSize: 15, fontWeight: FontWeight.bold),),
                   ],
                 ),
               ],
