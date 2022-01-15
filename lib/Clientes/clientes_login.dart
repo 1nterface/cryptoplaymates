@@ -56,7 +56,8 @@ class clientes_loginState extends State<clientes_login> {
               InkWell(
                 onTap:(){
 
-              },
+                  Navigator.of(context).pushNamed('/nft_members');
+                  },
                 child: Row(
                     children: [
                       Icon(Icons.add_chart, color: Colors.white),
@@ -65,19 +66,29 @@ class clientes_loginState extends State<clientes_login> {
                     ]
                 ),
               ),
-              Row(
-                  children: [
-                    Icon(Icons.sd_card_alert_rounded, color: Colors.white),
-                    SizedBox(width:10),
-                    Text("NFT Power Cards", style: TextStyle(color: Colors.white),),
-                  ]
+              InkWell(
+                onTap:(){
+                  Navigator.of(context).pushNamed('/nft_power_Cards');
+                },
+                child: Row(
+                    children: [
+                      Icon(Icons.sd_card_alert_rounded, color: Colors.white),
+                      SizedBox(width:10),
+                      Text("NFT Power Cards", style: TextStyle(color: Colors.white),),
+                    ]
+                ),
               ),
-              Row(
-                  children: [
-                    Icon(Icons.email, color: Colors.white),
-                    SizedBox(width:10),
-                    Text('Contact us', style: TextStyle(color: Colors.white),),
-                  ]
+              InkWell(
+                onTap:(){
+                  Navigator.of(context).pushNamed('/whitepaper');
+                },
+                child: Row(
+                    children: [
+                      Icon(Icons.email, color: Colors.white),
+                      SizedBox(width:10),
+                      Text('Contact us', style: TextStyle(color: Colors.white),),
+                    ]
+                ),
               ),
             ]
         ),
