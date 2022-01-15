@@ -257,7 +257,7 @@ class clientes_loginState extends State<clientes_login> {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Text('© 1nterfaCe de México 2022', style: TextStyle(color: Colors.cyan[800], fontSize: 15, fontWeight: FontWeight.bold),),
+                    Text('On Feb 2022', style: TextStyle(color: Colors.white, fontSize: 35, fontWeight: FontWeight.bold),),
                   ],
                 ),
               ],
