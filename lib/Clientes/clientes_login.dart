@@ -172,7 +172,7 @@ class clientes_loginState extends State<clientes_login> {
               ),
             ],
             options: CarouselOptions(
-              viewportFraction: 0.8
+              viewportFraction: 0.8,
               height: 400,
               autoPlay: true,
               autoPlayCurve: Curves.easeInOut,
