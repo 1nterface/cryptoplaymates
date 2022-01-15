@@ -131,85 +131,61 @@ class clientes_loginState extends State<clientes_login> {
                 ]
             ),
             ),
-          Expanded(
-            child: ListView(
-              children:[
-                Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Flexible(child: Text('Hyper-casual games platform', style: TextStyle(color: Colors.purple[800], fontSize: 30),),),
-                          CarouselSlider(
-                            items: [
-                            Container(
-                              decoration: const BoxDecoration(
-                                borderRadius: BorderRadius.all(Radius.circular(12)),
-                                image: DecorationImage(
-                                  image: AssetImage("images/pizza.png"),
-                                  fit: BoxFit.cover,
-                                )
-                              )
-                            ),
-                              Container(
-                                  decoration: const BoxDecoration(
-                                      borderRadius: BorderRadius.all(Radius.circular(12)),
-                                      image: DecorationImage(
-                                        image: AssetImage("images/pizza.png"),
-                                        fit: BoxFit.cover,
-                                      )
-                                  )
-                              ),
-                              Container(
-                                  decoration: const BoxDecoration(
-                                      borderRadius: BorderRadius.all(Radius.circular(12)),
-                                      image: DecorationImage(
-                                        image: AssetImage("images/pizza.png"),
-                                        fit: BoxFit.cover,
-                                      )
-                                  )
-                              ),
-                              Container(
-                                  decoration: const BoxDecoration(
-                                      borderRadius: BorderRadius.all(Radius.circular(12)),
-                                      image: DecorationImage(
-                                        image: AssetImage("images/pizza.png"),
-                                        fit: BoxFit.cover,
-                                      )
-                                  )
-                              ),
-                              Container(
-                                  decoration: const BoxDecoration(
-                                      borderRadius: BorderRadius.all(Radius.circular(12)),
-                                      image: DecorationImage(
-                                        image: AssetImage("images/pizza.png"),
-                                        fit: BoxFit.cover,
-                                      )
-                                  )
-                              ),
-                            ],
-                            options: CarouselOptions(
-                              height: 400,
-                              autoPlay: true,
-                              autoPlayCurve: Curves.easeInOut,
-                              reverse: true,
-                              enlargeCenterPage: true,
-                              scrollDirection: Axis.horizontal,
-                            ),
-                          ),
-                          Text('Player vs. Multiplayer', style: TextStyle(color: Colors.purple[800], fontSize: 25),),
-                          Text('On Feb 2022', style: TextStyle(color: Colors.white, fontSize: 20),),
-                          Row(
-                            children: [
-
-                            ]
-                          ),
-                        ],
-                      ),
-                    ]
-                ),
-              ]
+          CarouselSlider(
+            items: [
+              Container(
+                  decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(12)),
+                      image: DecorationImage(
+                        image: AssetImage("images/pizza.png"),
+                        fit: BoxFit.cover,
+                      )
+                  )
+              ),
+              Container(
+                  decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(12)),
+                      image: DecorationImage(
+                        image: AssetImage("images/a.png"),
+                        fit: BoxFit.cover,
+                      )
+                  )
+              ),
+              Container(
+                  decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(12)),
+                      image: DecorationImage(
+                        image: AssetImage("images/b.png"),
+                        fit: BoxFit.cover,
+                      )
+                  )
+              ),
+              Container(
+                  decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(12)),
+                      image: DecorationImage(
+                        image: AssetImage("images/c.png"),
+                        fit: BoxFit.cover,
+                      )
+                  )
+              ),
+              Container(
+                  decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(12)),
+                      image: DecorationImage(
+                        image: AssetImage("images/d.png"),
+                        fit: BoxFit.cover,
+                      )
+                  )
+              ),
+            ],
+            options: CarouselOptions(
+              height: 400,
+              autoPlay: true,
+              autoPlayCurve: Curves.easeInOut,
+              reverse: true,
+              enlargeCenterPage: true,
+              scrollDirection: Axis.horizontal,
             ),
           ),
           Row(
