@@ -53,12 +53,17 @@ class clientes_loginState extends State<clientes_login> {
         title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children:[
-              Row(
-                  children: [
-                    Icon(Icons.add_chart, color: Colors.white),
-                    SizedBox(width:10),
-                    Text("NFT Members", style: TextStyle(color: Colors.white),),
-                  ]
+              InkWell(
+                onTap:(){
+
+              },
+                child: Row(
+                    children: [
+                      Icon(Icons.add_chart, color: Colors.white),
+                      SizedBox(width:10),
+                      Text("NFT Members", style: TextStyle(color: Colors.white),),
+                    ]
+                ),
               ),
               Row(
                   children: [
