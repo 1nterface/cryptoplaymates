@@ -1,6 +1,7 @@
 //@dart=2.9
 import 'package:cryptoplaymates/Clientes/nft_members.dart';
 import 'package:cryptoplaymates/Clientes/nft_power_cards.dart';
+import 'package:cryptoplaymates/Clientes/roadmap.dart';
 import 'package:cryptoplaymates/Clientes/whitepaper.dart';
 import 'package:cryptoplaymates/Modelo/agentes_modelo.dart';
 import 'package:cryptoplaymates/Clientes/clientes_login.dart';
@@ -38,6 +39,7 @@ class MyApp extends StatelessWidget {
         '/nft_members': (BuildContext context) => nft_members(),
         '/nft_power_cards': (BuildContext context) => nft_power_cards(),
         '/whitepaper': (BuildContext context) => whitepaper(),
+        '/roadmap': (BuildContext context) => roadmap(),
 
       },
       title: 'Crypto Playmate',

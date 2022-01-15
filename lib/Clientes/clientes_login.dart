@@ -80,7 +80,7 @@ class clientes_loginState extends State<clientes_login> {
               ),
               InkWell(
                 onTap:(){
-                  Navigator.of(context).pushNamed('/whitepaper');
+                  launchURL(url);
                 },
                 child: Row(
                     children: [
@@ -120,7 +120,7 @@ class clientes_loginState extends State<clientes_login> {
               label: 'Roadmap',
               onTap: () async {
 
-                launchURL(url);
+                Navigator.of(context).pushNamed('/roadmap');
                 //Navigator.of(context).pushNamed('/admin_inicio');
 
               }
@@ -132,7 +132,7 @@ class clientes_loginState extends State<clientes_login> {
               label: 'Whitepaper',
               onTap: () async {
 
-                launchURL(url);
+                Navigator.of(context).pushNamed('/whitepaper');
                 //Navigator.of(context).pushNamed('/admin_inicio');
 
               }
