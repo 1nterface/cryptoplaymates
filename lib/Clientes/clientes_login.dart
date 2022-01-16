@@ -55,8 +55,15 @@ class clientes_loginState extends State<clientes_login> {
       imageUrl,
           (int viewId) => ImageElement()..src = imageUrl,
     );
-    return HtmlElementView(
-      viewType: imageUrl,
+    return Container(
+      height: 70,
+      width: 40,
+      decoration: const BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(12)),
+      ),
+      child: HtmlElementView(
+        viewType: imageUrl,
+      ),
     );
   }
 
