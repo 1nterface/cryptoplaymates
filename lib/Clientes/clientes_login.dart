@@ -157,12 +157,18 @@ class clientes_loginState extends State<clientes_login> {
                             Column(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
-                                ElevatedButton(
-                                  onPressed: () {
+                                Container(
+                                  width: 400,
+                                  height: 300,
+                                  child: ElevatedButton(
+                                    onPressed: () {
 
-                                  },
-                                  child: Text('Play'),
-                                  style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+                                      Navigator.of(context).pushNamed('/juegos_principal');
+
+                                    },
+                                    child: Text('Play'),
+                                    style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+                                  ),
                                 ),
                               ],
                             ),
@@ -185,6 +191,7 @@ class clientes_loginState extends State<clientes_login> {
                               children: [
                                 ElevatedButton(
                                   onPressed: () {
+                                    Navigator.of(context).pushNamed('/juegos_principal');
 
                                   },
                                   child: Text('Play'),
@@ -211,6 +218,7 @@ class clientes_loginState extends State<clientes_login> {
                               children: [
                                 ElevatedButton(
                                   onPressed: () {
+                                    Navigator.of(context).pushNamed('/juegos_principal');
 
                                   },
                                   child: Text('Play'),
@@ -237,6 +245,7 @@ class clientes_loginState extends State<clientes_login> {
                               children: [
                                 ElevatedButton(
                                   onPressed: () {
+                                    Navigator.of(context).pushNamed('/juegos_principal');
 
                                   },
                                   child: Text('Play'),
