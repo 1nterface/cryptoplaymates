@@ -1,4 +1,6 @@
+import 'dart:ui' as ui;
 import 'dart:async';
+import 'dart:html';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/services.dart';
 import 'package:toast/toast.dart';
@@ -44,6 +46,18 @@ class clientes_loginState extends State<clientes_login> {
       throw 'Could not launch $url';
     }
   }
+
+  Widget hola (){
+
+    ui.platformViewRegistry.registerViewFactory(
+      imageUrl,
+          (int viewId) => ImageElement()..src = imageUrl,
+    );
+    return HtmlElementView(
+      viewType: imageUrl,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
