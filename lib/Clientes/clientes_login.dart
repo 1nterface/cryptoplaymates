@@ -47,6 +47,8 @@ class clientes_loginState extends State<clientes_login> {
     }
   }
 
+  final String imageUrl = "https://www.elcarrocolombiano.com/wp-content/uploads/2019/01/20190122-MPM-ERELIS-AUTO-DEPORTIVO-MAS-BARATO-01.jpg";
+
   Widget hola (){
 
     ui.platformViewRegistry.registerViewFactory(
@@ -164,38 +166,7 @@ class clientes_loginState extends State<clientes_login> {
                 CarouselSlider(
                   items: [
 
-                    Container(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                Container(
-                                  width: 120,
-                                  height: 30,
-                                  child: ElevatedButton(
-                                    onPressed: () {
-
-                                      Navigator.of(context).pushNamed('/juegos_principal');
-
-                                    },
-                                    child: Text('Play'),
-                                    style: ElevatedButton.styleFrom(shape: StadiumBorder()),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                        decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(12)),
-                            image: DecorationImage(
-                              image: NetworkImage('https://www.elcarrocolombiano.com/wp-content/uploads/2019/01/20190122-MPM-ERELIS-AUTO-DEPORTIVO-MAS-BARATO-01.jpg'),
-                              fit: BoxFit.cover,
-                            ),
-                        ),
-                    ),
+                    hola(),
                     Container(
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
