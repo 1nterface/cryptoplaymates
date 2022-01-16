@@ -179,8 +179,8 @@ class clientes_loginState extends State<clientes_login> {
                             image: DecorationImage(
                               image: NetworkImage('https://www.elcarrocolombiano.com/wp-content/uploads/2019/01/20190122-MPM-ERELIS-AUTO-DEPORTIVO-MAS-BARATO-01.jpg'),
                               fit: BoxFit.cover,
-                            )
-                        )
+                            ),
+                        ),
                     ),
                     Container(
                         child: Row(
