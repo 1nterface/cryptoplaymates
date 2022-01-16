@@ -158,8 +158,8 @@ class clientes_loginState extends State<clientes_login> {
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
                                 Container(
-                                  width: 70,
-                                  height: 50,
+                                  width: 120,
+                                  height: 30,
                                   child: ElevatedButton(
                                     onPressed: () {
 
