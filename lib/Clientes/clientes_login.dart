@@ -209,7 +209,7 @@ class clientes_loginState extends State<clientes_login> {
                             borderRadius: BorderRadius.all(Radius.circular(12)),
                             image: DecorationImage(
                               image: AssetImage("images/ancestral.jpg"),
-                              fit: BoxFit.fill,
+                              fit: BoxFit.cover, //contain en todas ya que tenga los SS de los juegos
                             )
                         )
                     ),
