@@ -19,6 +19,11 @@ class cryptactoeState extends State<cryptactoe> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        centerTitle: true,
+        title: Text("Cryptactoe"),
+      ),
       backgroundColor: Colors.black,
       body: Column(
         children: <Widget>[
@@ -28,7 +33,7 @@ class cryptactoeState extends State<cryptactoe> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Padding(
-                    padding: const EdgeInsets.all(30.0),
+                    padding: const EdgeInsets.all(15),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
@@ -46,7 +51,7 @@ class cryptactoeState extends State<cryptactoe> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(30.0),
+                    padding: const EdgeInsets.all(15),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[

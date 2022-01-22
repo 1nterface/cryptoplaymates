@@ -74,7 +74,6 @@ class clientes_loginState extends State<clientes_login> {
         backgroundColor: Colors.black,
         centerTitle: true,
         title: SingleChildScrollView(
-          padding: EdgeInsets.all(15),
           scrollDirection: Axis.horizontal,
           child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -92,6 +91,7 @@ class clientes_loginState extends State<clientes_login> {
                       ]
                   ),
                 ),
+                SizedBox(width: 15),
                 InkWell(
                   onTap:(){
                     Navigator.of(context).pushNamed('/nft_power_cards');
@@ -104,6 +104,8 @@ class clientes_loginState extends State<clientes_login> {
                       ]
                   ),
                 ),
+                SizedBox(width: 15),
+
                 InkWell(
                   onTap:(){
                     launchURL(url);
