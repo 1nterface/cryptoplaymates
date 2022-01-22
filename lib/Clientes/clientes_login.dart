@@ -138,6 +138,18 @@ class clientes_loginState extends State<clientes_login> {
         children: [
 
           SpeedDialChild(
+              child: Icon(Icons.person, color: Colors.white,),
+              backgroundColor: Colors.purple[800],
+              label: 'Team',
+              onTap: () async {
+
+                Navigator.of(context).pushNamed('/team');
+                //Navigator.of(context).pushNamed('/admin_inicio');
+
+              }
+          ),
+
+          SpeedDialChild(
               child: Icon(Icons.account_tree, color: Colors.white,),
               backgroundColor: Colors.purple[800],
               label: 'Roadmap',
