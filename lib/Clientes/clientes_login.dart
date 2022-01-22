@@ -56,8 +56,8 @@ class clientes_loginState extends State<clientes_login> {
           (int viewId) => ImageElement()..src = imageUrl,
     );
     return Container(
-      height: 150,
-      width: 300,
+      height: 350,
+      width: 500,
       decoration: const BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(12)),
       ),
@@ -173,7 +173,7 @@ class clientes_loginState extends State<clientes_login> {
                 CarouselSlider(
                   items: [
 
-                    hola(),
+                    //hola(),
                     Container(
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
