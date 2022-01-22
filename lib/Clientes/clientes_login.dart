@@ -74,6 +74,7 @@ class clientes_loginState extends State<clientes_login> {
         backgroundColor: Colors.black,
         centerTitle: true,
         title: SingleChildScrollView(
+          padding: EdgeInsets.all(15),
           scrollDirection: Axis.horizontal,
           child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
