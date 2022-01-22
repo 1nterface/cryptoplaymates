@@ -73,47 +73,50 @@ class clientes_loginState extends State<clientes_login> {
       appBar: AppBar(
         backgroundColor: Colors.black,
         centerTitle: true,
-        title: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children:[
-              InkWell(
-                onTap:(){
+        title: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children:[
+                InkWell(
+                  onTap:(){
 
-                  Navigator.of(context).pushNamed('/nft_members');
+                    Navigator.of(context).pushNamed('/nft_members');
+                    },
+                  child: Row(
+                      children: [
+                        Icon(Icons.add_chart, color: Colors.white),
+                        SizedBox(width:10),
+                        Text("NFT Members", style: TextStyle(color: Colors.white),),
+                      ]
+                  ),
+                ),
+                InkWell(
+                  onTap:(){
+                    Navigator.of(context).pushNamed('/nft_power_cards');
                   },
-                child: Row(
-                    children: [
-                      Icon(Icons.add_chart, color: Colors.white),
-                      SizedBox(width:10),
-                      Text("NFT Members", style: TextStyle(color: Colors.white),),
-                    ]
+                  child: Row(
+                      children: [
+                        Icon(Icons.sd_card_alert_rounded, color: Colors.white),
+                        SizedBox(width:10),
+                        Text("NFT Power Cards", style: TextStyle(color: Colors.white),),
+                      ]
+                  ),
                 ),
-              ),
-              InkWell(
-                onTap:(){
-                  Navigator.of(context).pushNamed('/nft_power_cards');
-                },
-                child: Row(
-                    children: [
-                      Icon(Icons.sd_card_alert_rounded, color: Colors.white),
-                      SizedBox(width:10),
-                      Text("NFT Power Cards", style: TextStyle(color: Colors.white),),
-                    ]
+                InkWell(
+                  onTap:(){
+                    launchURL(url);
+                  },
+                  child: Row(
+                      children: [
+                        Icon(Icons.email, color: Colors.white),
+                        SizedBox(width:10),
+                        Text('Contact us', style: TextStyle(color: Colors.white),),
+                      ]
+                  ),
                 ),
-              ),
-              InkWell(
-                onTap:(){
-                  launchURL(url);
-                },
-                child: Row(
-                    children: [
-                      Icon(Icons.email, color: Colors.white),
-                      SizedBox(width:10),
-                      Text('Contact us', style: TextStyle(color: Colors.white),),
-                    ]
-                ),
-              ),
-            ]
+              ]
+          ),
         ),
       ),
       floatingActionButton: SpeedDial( //Boton flotante animado,
