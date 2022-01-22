@@ -195,7 +195,7 @@ class clientes_loginState extends State<clientes_login> {
                               children: [
                                 ElevatedButton(
                                   onPressed: () {
-                                    Navigator.of(context).pushNamed('/juegos_principal');
+                                    Navigator.of(context).pushNamed('/cryptactoe');
 
                                   },
                                   child: Text('Play'),
@@ -208,7 +208,7 @@ class clientes_loginState extends State<clientes_login> {
                         decoration: const BoxDecoration(
                             borderRadius: BorderRadius.all(Radius.circular(12)),
                             image: DecorationImage(
-                              image: AssetImage("images/b.png"),
+                              image: AssetImage("images/ancestral.jpg"),
                               fit: BoxFit.cover,
                             )
                         )
