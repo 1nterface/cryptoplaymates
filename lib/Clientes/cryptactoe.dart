@@ -65,7 +65,8 @@ class cryptactoeState extends State<cryptactoe> {
               ),
             ),
           ),
-          Center(
+          Expanded(
+            flex: 4,
             child: GridView.builder(
                 itemCount: 9,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
