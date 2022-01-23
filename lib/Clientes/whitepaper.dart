@@ -19,14 +19,22 @@ class whitepaperState extends State<whitepaper> {
         title: Text('Whitepaper'),
       ),
       body: SingleChildScrollView(
-        child: Column(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Executive Summary', style: TextStyle(color: Colors.white, fontSize: 40),),
-            SizedBox(width: 20,),
-            Text('Our Mission', style: TextStyle(color: Colors.white, fontSize: 40),),
-            SizedBox(width: 20,),
-            Text('Our Vision', style: TextStyle(color: Colors.white, fontSize: 40),),
+            Padding(
+              padding: const EdgeInsets.all(25.0),
+              child: Column(
+                children: [
+                  Text('Executive Summary', style: TextStyle(color: Colors.white, fontSize: 40),),
+                  SizedBox(width: 20,),
+                  Text('Our Mission', style: TextStyle(color: Colors.white, fontSize: 40),),
+                  SizedBox(width: 20,),
+                  Text('Our Vision', style: TextStyle(color: Colors.white, fontSize: 40),),
 
+                ],
+              ),
+            ),
           ],
         ),
       ),
