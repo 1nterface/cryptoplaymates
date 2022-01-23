@@ -29,44 +29,47 @@ class cryptactoeState extends State<cryptactoe> {
         children: <Widget>[
           Expanded(
             child: Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.all(15),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Text(
-                          'CryptoPlaymate 1',
-                          style: TextStyle(fontSize: 20,
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.all(15),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Text(
+                            'CryptoPlaymate 1',
+                            style: TextStyle(fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                          ),
+                          Text(
+                            xScore.toString(),
+                            style: TextStyle(fontSize: 20,color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(15),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Text('CryptoPlaymate 2', style: TextStyle(fontSize: 20,
                               fontWeight: FontWeight.bold,
-                              color: Colors.white),
-                        ),
-                        Text(
-                          xScore.toString(),
-                          style: TextStyle(fontSize: 20,color: Colors.white),
-                        ),
-                      ],
+                              color: Colors.white)
+                          ),
+                          Text(
+                            oScore.toString(),
+                            style: TextStyle(fontSize: 20,color: Colors.white),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(15),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Text('CryptoPlaymate 2', style: TextStyle(fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white)
-                        ),
-                        Text(
-                          oScore.toString(),
-                          style: TextStyle(fontSize: 20,color: Colors.white),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),
