@@ -130,14 +130,14 @@ class cryptactoeState extends State<cryptactoe> {
                                             fit: BoxFit.cover,
                                           ),
                                           SizedBox(width: 15),
-                                          Text('INSTRUCCIONES')
+                                          Text('INSTRUCCIONES', style: TextStyle(fontSize: 25),)
                                         ],
                                       ),
                                       SizedBox(width: 15),
                                       Row(
                                         mainAxisAlignment: MainAxisAlignment.center,
                                         children:const [
-                                          Text('El primer jugador en hacer una linea GANA')
+                                          Text('El primer jugador en hacer una linea GANA la ronda')
                                         ],
                                       ),
                                     ],
