@@ -40,12 +40,18 @@ class cryptactoeState extends State<cryptactoe> {
                 padding: EdgeInsets.only(left:100.0, right: 100.0),
                 child: SizedBox(
                   width: 800,
-                  height: 50,
+                  height: 70,
                   child: SizedBox(
                     child: RaisedButton(
                       color: Colors.purple[800],
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
-                      child: Text('RANDOM', style: TextStyle(color: Colors.white, fontSize: 20.0),),
+                      child: Row(
+                        children:[
+                          Icon(Icons.shuffle),
+                          SizedBox(width:15),
+                          Text('RANDOM', style: TextStyle(color: Colors.white, fontSize: 20.0),),
+                        ]
+                      ),
                       onPressed: () async {
 
                         //Navigator.of(context).pushNamed("/panel_de_control");
@@ -61,12 +67,18 @@ class cryptactoeState extends State<cryptactoe> {
                 padding: EdgeInsets.only(left:100.0, right: 100.0),
                 child: SizedBox(
                   width: 800,
-                  height: 50,
+                  height: 70,
                   child: SizedBox(
                     child: RaisedButton(
                       color: Colors.lightBlueAccent,
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
-                      child: Text('CUSTOM', style: TextStyle(color: Colors.white, fontSize: 20.0),),
+                      child: Row(
+                          children:[
+                            Icon(Icons.gamepad_outlined),
+                            SizedBox(width:15),
+                            Text('CUSTOM', style: TextStyle(color: Colors.white, fontSize: 20.0),),
+                          ]
+                      ),
                       onPressed: () async {
                         Navigator.of(context).pushNamed("/cryptactoe_game");
                       },
@@ -80,18 +92,20 @@ class cryptactoeState extends State<cryptactoe> {
                 padding: EdgeInsets.only(left:100.0, right: 100.0),
                 child: SizedBox(
                   width: 800,
-                  height: 50,
+                  height: 70,
                   child: SizedBox(
                     child: RaisedButton(
-                      color: Colors.purple[800],
+                      color: Colors.lightBlueAccent,
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
-                      child: Text('SETTINGS', style: TextStyle(color: Colors.white, fontSize: 20.0),),
+                      child: Row(
+                          children:[
+                            Icon(Icons.settings),
+                            SizedBox(width:15),
+                            Text('SETTINGS', style: TextStyle(color: Colors.white, fontSize: 20.0),),
+                          ]
+                      ),
                       onPressed: () async {
-
-                        //al entrar ver lista de afiliados, boton flotante par agregar nuevos afiliados.
-                        //Navigator.of(context).pushNamed("/panel_de_control");
-                        //Navigator.of(context).pushNamed("/panel_login");
-
+                        Navigator.of(context).pushNamed("/cryptactoe_game");
                       },
                     ),
                   ),
