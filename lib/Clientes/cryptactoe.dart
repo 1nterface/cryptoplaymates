@@ -44,9 +44,10 @@ class cryptactoeState extends State<cryptactoe> {
                   child: SizedBox(
                     child: RaisedButton(
                       color: Colors.purple[800],
-                      shape: Row(
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
+                      child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children:[
+                          children:const [
                             Icon(Icons.shuffle, color : Colors.white),
                             SizedBox(width:15),
                             Text('RANDOM', style: TextStyle(color: Colors.white, fontSize: 20.0),),
@@ -75,7 +76,7 @@ class cryptactoeState extends State<cryptactoe> {
                       child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
 
-                          children:[
+                          children:const [
                             Icon(Icons.gamepad_outlined, color : Colors.white),
                             SizedBox(width:15),
                             Text('CUSTOM', style: TextStyle(color: Colors.white, fontSize: 20.0),),
@@ -102,7 +103,7 @@ class cryptactoeState extends State<cryptactoe> {
                       child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
 
-                          children:[
+                          children:const [
                             Icon(Icons.settings, color : Colors.white),
                             SizedBox(width:15),
                             Text('SETTINGS', style: TextStyle(color: Colors.white, fontSize: 20.0),),
@@ -112,16 +113,35 @@ class cryptactoeState extends State<cryptactoe> {
                         showDialog(
                             barrierColor: Color(0x00ffffff),
                             context: context,
-                            builder: (_) => new Dialog(
+                            builder: (_) => Dialog(
                               backgroundColor: Color(0x00ffffff),
-                              child: new Container(
+                              child: Container(
                                   alignment: FractionalOffset.center,
-                                  height: 80.0,
+                                  height: 120.0,
                                   padding: const EdgeInsets.all(20.0),
-                                  child:  new Image.asset(
-                                    'images/pizza.png',
-                                    fit: BoxFit.cover,
-                                  )
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children:[
+                                      Row(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children:[
+                                          Image.asset(
+                                            'images/pizza.png',
+                                            fit: BoxFit.cover,
+                                          ),
+                                          SizedBox(width: 15),
+                                          Text('INSTRUCCIONES')
+                                        ],
+                                      ),
+                                      SizedBox(width: 15),
+                                      Row(
+                                        mainAxisAlignment: MainAxisAlignment.center,
+                                        children:const [
+                                          Text('El primer jugador en hacer una linea GANA')
+                                        ],
+                                      ),
+                                    ],
+                                  ),
                               ),
                             ));
                         //Navigator.of(context).pushNamed("/cryptactoe_game");
