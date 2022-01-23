@@ -98,7 +98,7 @@ class cryptactoeState extends State<cryptactoe> {
                   height: 70,
                   child: SizedBox(
                     child: RaisedButton(
-                      color: Colors.lightBlueAccent,
+                      color: Colors.purple[800],
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
                       child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
