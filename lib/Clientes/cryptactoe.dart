@@ -55,8 +55,73 @@ class cryptactoeState extends State<cryptactoe> {
                       ),
                       onPressed: () async {
 
-                        //Navigator.of(context).pushNamed("/panel_de_control");
-                        Navigator.of(context).pushNamed("/cryptactoe_game");
+    final FirebaseAuth auth = FirebaseAuth.instance;
+
+    if(FirebaseAuth.instance.currentUser?.uid == null){
+    // not logged
+    Alert(
+    context: context,
+    title: "Inicio de sesion",
+    content: Column(
+    children: <Widget>[
+    TextFormField(
+    controller: _emailController,
+    decoration: InputDecoration(
+    icon: Icon(Icons.account_circle, color: Color(0xff6DA08E)),
+    labelText: 'Correo',
+    ),
+    ),
+    TextFormField(
+    controller: _passwordController,
+
+    obscureText: true,
+    decoration: InputDecoration(
+    icon: Icon(Icons.lock, color: Color(0xff6DA08E)),
+    labelText: 'Contrasena',
+    ),
+    ),
+    ],
+    ),
+    buttons: [
+    DialogButton(
+    onPressed: () {
+
+    initState();
+
+    inicioSesion();
+
+    setState(() {
+    comprasNotificaciones(context);
+    comprasNotificaciones2(context);
+    sesion = true;
+    });
+
+    },
+    child: Text(
+    "Entrar",
+    style: TextStyle(color: Colors.white, fontSize: 20),
+    ),
+    color: Color(0xff6DA08E),
+
+    ),
+    DialogButton(
+    onPressed: () {
+
+    Navigator.of(context).pushNamed('/registro');
+
+    },
+    child: Text(
+    "Registrarme",
+    style: TextStyle(color: Colors.white, fontSize: 20),
+    ),
+    color: Color(0xff6DA08E),
+    )
+    ]).show();
+    } else {
+    // logged
+    Navigator.of(context).pushNamed("/cryptactoe_game");
+    //Navigator.of(context).pushNamed("/panel_de_control");
+
 
                       },
                     ),
