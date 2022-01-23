@@ -44,7 +44,7 @@ class cryptactoeState extends State<cryptactoe> {
                   child: SizedBox(
                     child: RaisedButton(
                       color: Colors.purple[800],
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
                       child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children:const [
@@ -55,73 +55,8 @@ class cryptactoeState extends State<cryptactoe> {
                       ),
                       onPressed: () async {
 
-    final FirebaseAuth auth = FirebaseAuth.instance;
-
-    if(FirebaseAuth.instance.currentUser?.uid == null){
-    // not logged
-    Alert(
-    context: context,
-    title: "Inicio de sesion",
-    content: Column(
-    children: <Widget>[
-    TextFormField(
-    controller: _emailController,
-    decoration: InputDecoration(
-    icon: Icon(Icons.account_circle, color: Color(0xff6DA08E)),
-    labelText: 'Correo',
-    ),
-    ),
-    TextFormField(
-    controller: _passwordController,
-
-    obscureText: true,
-    decoration: InputDecoration(
-    icon: Icon(Icons.lock, color: Color(0xff6DA08E)),
-    labelText: 'Contrasena',
-    ),
-    ),
-    ],
-    ),
-    buttons: [
-    DialogButton(
-    onPressed: () {
-
-    initState();
-
-    inicioSesion();
-
-    setState(() {
-    comprasNotificaciones(context);
-    comprasNotificaciones2(context);
-    sesion = true;
-    });
-
-    },
-    child: Text(
-    "Entrar",
-    style: TextStyle(color: Colors.white, fontSize: 20),
-    ),
-    color: Color(0xff6DA08E),
-
-    ),
-    DialogButton(
-    onPressed: () {
-
-    Navigator.of(context).pushNamed('/registro');
-
-    },
-    child: Text(
-    "Registrarme",
-    style: TextStyle(color: Colors.white, fontSize: 20),
-    ),
-    color: Color(0xff6DA08E),
-    )
-    ]).show();
-    } else {
-    // logged
-    Navigator.of(context).pushNamed("/cryptactoe_game");
-    //Navigator.of(context).pushNamed("/panel_de_control");
-
+                        //Navigator.of(context).pushNamed("/panel_de_control");
+                        Navigator.of(context).pushNamed("/cryptactoe_game");
 
                       },
                     ),
@@ -137,7 +72,7 @@ class cryptactoeState extends State<cryptactoe> {
                   child: SizedBox(
                     child: RaisedButton(
                       color: Colors.lightBlueAccent,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
                       child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
 
@@ -164,7 +99,7 @@ class cryptactoeState extends State<cryptactoe> {
                   child: SizedBox(
                     child: RaisedButton(
                       color: Colors.purple[800],
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
                       child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
 
