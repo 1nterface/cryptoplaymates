@@ -1,251 +1,104 @@
 import 'package:flutter/material.dart';
-
+// ignore: camel_case_types
 class cryptactoe extends StatefulWidget {
   const cryptactoe({Key? key}) : super(key: key);
 
   @override
-  cryptactoeState createState() => cryptactoeState();
+  State<cryptactoe> createState() => cryptactoeState();
 }
 
 class cryptactoeState extends State<cryptactoe> {
-  bool oTurn = true;
-
-  // 1st player is O
-  List<String> displayElement = ['', '', '', '', '', '', '', '', ''];
-  int oScore = 0;
-  int xScore = 0;
-  int filledBoxes = 0;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black,
         centerTitle: true,
-        title: Text("Cryptactoe"),
+        backgroundColor: Colors.black,
+        title: Text('CrypTacToe', style: const TextStyle(color: Colors.white),),
       ),
       backgroundColor: Colors.black,
-      body: Column(
+      resizeToAvoidBottomInset : false,
+      body: ListView(
         children: <Widget>[
-          Expanded(
-            child: Container(
-              child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Padding(
-                      padding: const EdgeInsets.all(15),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text(
-                            'CryptoPlaymate 1',
-                            style: TextStyle(fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white),
-                          ),
-                          Text(
-                            xScore.toString(),
-                            style: TextStyle(fontSize: 20,color: Colors.white),
-                          ),
-                        ],
-                      ),
+          SizedBox(height: 20.0,),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  SizedBox(height:170),
+                  SizedBox(
+                    height: 200,
+                    child: Image.asset('images/pizza.png'),
+                  ),
+                ],
+              ),
+
+              Padding(
+                padding: EdgeInsets.only(left:100.0, right: 100.0),
+                child: SizedBox(
+                  width: 800,
+                  height: 50,
+                  child: SizedBox(
+                    child: RaisedButton(
+                      color: Colors.purple[800],
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
+                      child: Text('NEW GAME', style: TextStyle(color: Colors.white, fontSize: 20.0),),
+                      onPressed: () async {
+
+                        //Navigator.of(context).pushNamed("/panel_de_control");
+                        //Navigator.of(context).pushNamed("/gerencia_login");
+
+                      },
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(15),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text('CryptoPlaymate 2', style: TextStyle(fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white)
-                          ),
-                          Text(
-                            oScore.toString(),
-                            style: TextStyle(fontSize: 20,color: Colors.white),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               ),
-            ),
-          ),
-          Expanded(
-            flex: 4,
-            child: GridView.builder(
-                itemCount: 9,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3),
-                itemBuilder: (BuildContext context, int index) {
-                  return GestureDetector(
-                    onTap: () {
-                      _tapped(index);
-                    },
-                    child: Container(
-                      decoration: BoxDecoration(
-                          border: Border.all(color: Colors.white)),
-                      child: Center(
-                        child: Text(
-                          displayElement[index],
-                          style: TextStyle(color: Colors.white, fontSize: 35),
-                        ),
-                      ),
+
+              Padding(
+                padding: EdgeInsets.only(left:100.0, right: 100.0),
+                child: SizedBox(
+                  width: 800,
+                  height: 50,
+                  child: SizedBox(
+                    child: RaisedButton(
+                      color: Colors.purple[800],
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
+                      child: Text('RANDOM', style: TextStyle(color: Colors.white, fontSize: 20.0),),
+                      onPressed: () async {
+                        //Navigator.of(context).pushNamed("/repartidor_login");
+                      },
                     ),
-                  );
-                }),
-          ),
-          Expanded(
-              child: Container(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    RaisedButton(
-                      color: Colors.indigo[50],
-                      textColor: Colors.black,
-                      onPressed: _clearScoreBoard,
-                      child: Text("Clear Score Board"),
-                    ),
-                  ],
+                  ),
                 ),
-              ))
+              ),
+              Padding(
+                padding: EdgeInsets.only(left:100.0, right: 100.0),
+                child: SizedBox(
+                  width: 800,
+                  height: 50,
+                  child: SizedBox(
+                    child: RaisedButton(
+                      color: Colors.purple[800],
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
+                      child: Text('SETTINGS', style: TextStyle(color: Colors.white, fontSize: 20.0),),
+                      onPressed: () async {
+
+                        //al entrar ver lista de afiliados, boton flotante par agregar nuevos afiliados.
+                        //Navigator.of(context).pushNamed("/panel_de_control");
+                        //Navigator.of(context).pushNamed("/panel_login");
+
+                      },
+                    ),
+                  ),
+                ),
+              ),
+
+            ],
+          ),
         ],
       ),
     );
-  }
-
-  void _tapped(int index) {
-    setState(() {
-      if (oTurn && displayElement[index] == '') {
-        displayElement[index] = 'O';
-        filledBoxes++;
-      } else if (!oTurn && displayElement[index] == '') {
-        displayElement[index] = 'X';
-        filledBoxes++;
-      }
-
-      oTurn = !oTurn;
-      _checkWinner();
-    });
-  }
-
-  void _checkWinner() {
-
-    // Checking rows
-    if (displayElement[0] == displayElement[1] &&
-        displayElement[0] == displayElement[2] &&
-        displayElement[0] != '') {
-      _showWinDialog(displayElement[0]);
-    }
-    if (displayElement[3] == displayElement[4] &&
-        displayElement[3] == displayElement[5] &&
-        displayElement[3] != '') {
-      _showWinDialog(displayElement[3]);
-    }
-    if (displayElement[6] == displayElement[7] &&
-        displayElement[6] == displayElement[8] &&
-        displayElement[6] != '') {
-      _showWinDialog(displayElement[6]);
-    }
-
-    // Checking Column
-    if (displayElement[0] == displayElement[3] &&
-        displayElement[0] == displayElement[6] &&
-        displayElement[0] != '') {
-      _showWinDialog(displayElement[0]);
-    }
-    if (displayElement[1] == displayElement[4] &&
-        displayElement[1] == displayElement[7] &&
-        displayElement[1] != '') {
-      _showWinDialog(displayElement[1]);
-    }
-    if (displayElement[2] == displayElement[5] &&
-        displayElement[2] == displayElement[8] &&
-        displayElement[2] != '') {
-      _showWinDialog(displayElement[2]);
-    }
-
-    // Checking Diagonal
-    if (displayElement[0] == displayElement[4] &&
-        displayElement[0] == displayElement[8] &&
-        displayElement[0] != '') {
-      _showWinDialog(displayElement[0]);
-    }
-    if (displayElement[2] == displayElement[4] &&
-        displayElement[2] == displayElement[6] &&
-        displayElement[2] != '') {
-      _showWinDialog(displayElement[2]);
-    } else if (filledBoxes == 9) {
-      _showDrawDialog();
-    }
-  }
-
-  void _showWinDialog(String winner) {
-    showDialog(
-        barrierDismissible: false,
-        context: context,
-        builder: (BuildContext context) {
-          return AlertDialog(
-            title: Text("\" " + winner + " \" is Winner!!!"),
-            actions: [
-              FlatButton(
-                child: Text("Play Again"),
-                onPressed: () {
-                  _clearBoard();
-                  Navigator.of(context).pop();
-                },
-              )
-            ],
-          );
-        });
-
-    if (winner == 'O') {
-      oScore++;
-    } else if (winner == 'X') {
-      xScore++;
-    }
-  }
-
-  void _showDrawDialog() {
-    showDialog(
-        barrierDismissible: false,
-        context: context,
-        builder: (BuildContext context) {
-          return AlertDialog(
-            title: Text("Draw"),
-            actions: [
-              FlatButton(
-                child: Text("Play Again"),
-                onPressed: () {
-                  _clearBoard();
-                  Navigator.of(context).pop();
-                },
-              )
-            ],
-          );
-        });
-  }
-
-  void _clearBoard() {
-    setState(() {
-      for (int i = 0; i < 9; i++) {
-        displayElement[i] = '';
-      }
-    });
-
-    filledBoxes = 0;
-  }
-
-  void _clearScoreBoard() {
-    setState(() {
-      xScore = 0;
-      oScore = 0;
-      for (int i = 0; i < 9; i++) {
-        displayElement[i] = '';
-      }
-    });
-    filledBoxes = 0;
   }
 }

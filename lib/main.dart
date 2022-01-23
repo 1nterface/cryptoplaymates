@@ -1,12 +1,13 @@
 //@dart=2.9
 import 'package:cryptoplaymates/Clientes/cryptactoe.dart';
+import 'package:cryptoplaymates/Clientes/cryptactoe_game.dart';
+import 'package:cryptoplaymates/Clientes/home.dart';
 import 'package:cryptoplaymates/Clientes/juegos_principal.dart';
 import 'package:cryptoplaymates/Clientes/nft_members.dart';
 import 'package:cryptoplaymates/Clientes/nft_power_cards.dart';
 import 'package:cryptoplaymates/Clientes/roadmap.dart';
 import 'package:cryptoplaymates/Clientes/whitepaper.dart';
 import 'package:cryptoplaymates/Modelo/agentes_modelo.dart';
-import 'package:cryptoplaymates/Clientes/clientes_login.dart';
 import 'package:cryptoplaymates/olvidecontra.dart';
 import 'package:cryptoplaymates/team.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -38,13 +39,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: <String, WidgetBuilder> {
 
-        '/clientes_login': (BuildContext context) => clientes_login(),
+        '/home': (BuildContext context) => home(),
         '/nft_members': (BuildContext context) => nft_members(),
         '/nft_power_cards': (BuildContext context) => nft_power_cards(),
         '/whitepaper': (BuildContext context) => whitepaper(),
         '/roadmap': (BuildContext context) => roadmap(),
         '/team': (BuildContext context) => team(),
         '/cryptactoe': (BuildContext context) => cryptactoe(),
+        '/cryptactoe_game': (BuildContext context) => cryptactoe_game(),
         '/juegos_principal': (BuildContext context) => juegos_principal(),
 
       },
@@ -54,7 +56,7 @@ class MyApp extends StatelessWidget {
       ),
       home:
       //Inicio(),
-      clientes_login(),
+      home(),
       // <--- App Clientes
 
 

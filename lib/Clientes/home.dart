@@ -15,17 +15,17 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:cryptoplaymates/authentication.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class clientes_login extends StatefulWidget {
+class home extends StatefulWidget {
 
   var data;
-  clientes_login({this.data});
+  home({this.data});
   @override
-  clientes_loginState createState() => clientes_loginState();
+  homeState createState() => homeState();
 }
 
-class clientes_loginState extends State<clientes_login> {
+class homeState extends State<home> {
 
-  clientes_loginState();
+  homeState();
 
   @override
   void initState() {
@@ -201,7 +201,7 @@ class clientes_loginState extends State<clientes_login> {
                               children: [
                                 ElevatedButton(
                                   onPressed: () {
-                                    Navigator.of(context).pushNamed('/cryptactoe');
+                                    Navigator.of(context).pushNamed('/cryptactoe_game');
 
                                   },
                                   child: Text('Play'),
