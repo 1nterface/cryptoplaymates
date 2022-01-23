@@ -71,7 +71,7 @@ class homeState extends State<home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.blueGrey[900],
         centerTitle: true,
         title: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
@@ -182,7 +182,7 @@ class homeState extends State<home> {
 
         ],
       ),
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.blueGrey[900],
       body: SingleChildScrollView(
         child: Column(
           children: [
