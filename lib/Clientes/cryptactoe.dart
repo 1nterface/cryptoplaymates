@@ -44,7 +44,7 @@ class cryptactoeState extends State<cryptactoe> {
                     child: RaisedButton(
                       color: Colors.purple[800],
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
-                      child: Text('NEW GAME', style: TextStyle(color: Colors.white, fontSize: 20.0),),
+                      child: Text('NEW RANDOM GAME', style: TextStyle(color: Colors.white, fontSize: 20.0),),
                       onPressed: () async {
 
                         //Navigator.of(context).pushNamed("/panel_de_control");
@@ -55,7 +55,7 @@ class cryptactoeState extends State<cryptactoe> {
                   ),
                 ),
               ),
-
+              SizedBox(height: 20),
               Padding(
                 padding: EdgeInsets.only(left:100.0, right: 100.0),
                 child: SizedBox(
@@ -65,7 +65,7 @@ class cryptactoeState extends State<cryptactoe> {
                     child: RaisedButton(
                       color: Colors.cyan[800],
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
-                      child: Text('RANDOM', style: TextStyle(color: Colors.white, fontSize: 20.0),),
+                      child: Text('NEW CUSTOM GAME', style: TextStyle(color: Colors.white, fontSize: 20.0),),
                       onPressed: () async {
                         Navigator.of(context).pushNamed("/cryptactoe_game");
                       },
@@ -73,6 +73,8 @@ class cryptactoeState extends State<cryptactoe> {
                   ),
                 ),
               ),
+              SizedBox(height: 20),
+
               Padding(
                 padding: EdgeInsets.only(left:100.0, right: 100.0),
                 child: SizedBox(
