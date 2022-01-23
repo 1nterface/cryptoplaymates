@@ -201,7 +201,7 @@ class homeState extends State<home> {
                               children: [
                                 ElevatedButton(
                                   onPressed: () {
-                                    Navigator.of(context).pushNamed('/cryptactoe_game');
+                                    Navigator.of(context).pushNamed('/cryptactoe');
 
                                   },
                                   child: Text('Play'),

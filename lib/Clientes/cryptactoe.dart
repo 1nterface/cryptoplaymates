@@ -48,7 +48,7 @@ class cryptactoeState extends State<cryptactoe> {
                       onPressed: () async {
 
                         //Navigator.of(context).pushNamed("/panel_de_control");
-                        //Navigator.of(context).pushNamed("/gerencia_login");
+                        Navigator.of(context).pushNamed("/cryptactoe_game");
 
                       },
                     ),
@@ -63,11 +63,11 @@ class cryptactoeState extends State<cryptactoe> {
                   height: 50,
                   child: SizedBox(
                     child: RaisedButton(
-                      color: Colors.purple[800],
+                      color: Colors.cyan[800],
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
                       child: Text('RANDOM', style: TextStyle(color: Colors.white, fontSize: 20.0),),
                       onPressed: () async {
-                        //Navigator.of(context).pushNamed("/repartidor_login");
+                        Navigator.of(context).pushNamed("/cryptactoe_game");
                       },
                     ),
                   ),
