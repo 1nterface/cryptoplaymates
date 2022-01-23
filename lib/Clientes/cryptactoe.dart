@@ -105,7 +105,22 @@ class cryptactoeState extends State<cryptactoe> {
                           ]
                       ),
                       onPressed: () async {
-                        Navigator.of(context).pushNamed("/cryptactoe_game");
+                        showDialog(
+                            barrierColor: Color(0x00ffffff),
+                            context: context,
+                            builder: (_) => new Dialog(
+                              backgroundColor: Color(0x00ffffff),
+                              child: new Container(
+                                  alignment: FractionalOffset.center,
+                                  height: 80.0,
+                                  padding: const EdgeInsets.all(20.0),
+                                  child:  new Image.asset(
+                                    'images/pizza.png',
+                                    fit: BoxFit.cover,
+                                  )
+                              ),
+                            ));
+                        //Navigator.of(context).pushNamed("/cryptactoe_game");
                       },
                     ),
                   ),
