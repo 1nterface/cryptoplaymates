@@ -44,13 +44,13 @@ class cryptactoeState extends State<cryptactoe> {
                   child: SizedBox(
                     child: RaisedButton(
                       color: Colors.purple[800],
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
-                      child: Row(
-                        children:[
-                          Icon(Icons.shuffle),
-                          SizedBox(width:15),
-                          Text('RANDOM', style: TextStyle(color: Colors.white, fontSize: 20.0),),
-                        ]
+                      shape: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children:[
+                            Icon(Icons.shuffle, color : Colors.white),
+                            SizedBox(width:15),
+                            Text('RANDOM', style: TextStyle(color: Colors.white, fontSize: 20.0),),
+                          ],
                       ),
                       onPressed: () async {
 
@@ -73,8 +73,10 @@ class cryptactoeState extends State<cryptactoe> {
                       color: Colors.lightBlueAccent,
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
                       child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+
                           children:[
-                            Icon(Icons.gamepad_outlined),
+                            Icon(Icons.gamepad_outlined, color : Colors.white),
                             SizedBox(width:15),
                             Text('CUSTOM', style: TextStyle(color: Colors.white, fontSize: 20.0),),
                           ]
@@ -98,8 +100,10 @@ class cryptactoeState extends State<cryptactoe> {
                       color: Colors.lightBlueAccent,
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
                       child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+
                           children:[
-                            Icon(Icons.settings),
+                            Icon(Icons.settings, color : Colors.white),
                             SizedBox(width:15),
                             Text('SETTINGS', style: TextStyle(color: Colors.white, fontSize: 20.0),),
                           ]
