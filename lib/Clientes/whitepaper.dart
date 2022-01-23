@@ -16,11 +16,18 @@ class whitepaperState extends State<whitepaper> {
         backgroundColor: Colors.black,
 
         centerTitle: true,
-        title: Text('Crypto Playmate'),
+        title: Text('Whitepaper'),
       ),
       body: SingleChildScrollView(
-        child: Center(
-          child: Text('Whitepaper', style: TextStyle(color: Colors.white),),
+        child: Column(
+          children: [
+            Text('Executive Summary', style: TextStyle(color: Colors.white, fontSize: 40),),
+            SizedBox(width: 20,),
+            Text('Our Mission', style: TextStyle(color: Colors.white, fontSize: 40),),
+            SizedBox(width: 20,),
+            Text('Our Vision', style: TextStyle(color: Colors.white, fontSize: 40),),
+
+          ],
         ),
       ),
     );

@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 // ignore: camel_case_types
 class cryptactoe extends StatefulWidget {
@@ -98,79 +97,22 @@ class cryptactoeState extends State<cryptactoe> {
                   width: 800,
                   height: 70,
                   child: SizedBox(
-                    child: StreamBuilder(
-                      stream: FirebaseFirestore.instance.collection("Cajas")
-                          .orderBy("nombreProducto", descending: true).snapshots(),
-                      builder: (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
-                        if (!snapshot.hasData) {
-                          return Text('Nada');
-                        }
-                        return Expanded(
-                          child: Flex(
-                              direction: Axis.vertical,
-                              children: [
-                                GridView.builder(
-                                  physics: ScrollPhysics(),
-                                  scrollDirection: Axis.vertical,
-                                  shrinkWrap: true,
-                                  itemCount: snapshot.data.docs.length,
-                                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                                    crossAxisCount: 3,
-                                    crossAxisSpacing: 10.0,
-                                    mainAxisSpacing: 10,
-                                  ),
-                                  itemBuilder: (BuildContext context, int index) {
-                                    return ClipRRect(
-                                      borderRadius: BorderRadius.circular(5),
-                                      child: Stack(
-                                        children: [
-                                          Container(
-                                            height: 150,
-                                            width: 150,
-                                            child: Image.network(snapshot.data()['foto'],
-                                              fit: BoxFit.cover,
-                                              width: double.infinity,
-                                              height: double.infinity,
-                                            ),
-                                          ),
-                                          Positioned(
-                                            left: 0,
-                                            bottom: 0,
-                                            child: Container(
-                                              height: 20,
-                                              width: 150,
-                                              decoration: BoxDecoration(
-                                                  gradient: LinearGradient(
-                                                    colors: [
-                                                      Colors.black38,
-                                                      Colors.black38,
-                                                    ],
-                                                    begin: Alignment.bottomCenter,
-                                                    end: Alignment.topCenter,
-                                                  )
-                                              ),
-                                            ),
-                                          ),
-                                          Positioned(
-                                            left: 4,
-                                            bottom: 5,
-                                            child: Text(snapshot.data().documents[index]['nombreProducto'],
-                                              overflow: TextOverflow.ellipsis,
-                                              style: TextStyle(
-                                                  color: Colors.white,
-                                                  fontSize: 11,
-                                                  fontWeight: FontWeight.bold
-                                              ),),
-                                          )
-                                        ],
-                                      ),
-                                    );
-                                  },
-                                ),
-                              ]),
-                        );
-                      },
+                    child: RaisedButton(
+                      color: Colors.lightBlueAccent,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50.0)),
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
 
+                          children:const [
+                            Icon(Icons.settings, color : Colors.white),
+                            SizedBox(width:15),
+                            Text('SETTINGS', style: TextStyle(color: Colors.white, fontSize: 20.0),),
+                          ]
+                      ),
+                      onPressed: () async {
+
+                        Navigator.of(context).pushNamed("/cryptactoe_settings");
+                      },
                     ),
                   ),
                 ),
