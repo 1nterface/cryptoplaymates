@@ -23,7 +23,7 @@ class whitepaperState extends State<whitepaper> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Padding(
-              padding: const EdgeInsets.all(25.0),
+              padding: const EdgeInsets.all(15.0),
               child: Column(
                 children: const [
                   Text('Executive Summary', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),
@@ -32,7 +32,7 @@ class whitepaperState extends State<whitepaper> {
                   SizedBox(width: 20,),
                   Text('Our Vision', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),SizedBox(width: 20,),
                   SizedBox(width: 20,),
-                  Text('Wich games we have', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),SizedBox(width: 20,),
+                  Text('Which games we have', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),SizedBox(width: 20,),
                   SizedBox(width: 20,),
                   Text('Instructions', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),SizedBox(width: 20,),
                   SizedBox(width: 20,),
