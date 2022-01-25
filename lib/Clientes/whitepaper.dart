@@ -16,7 +16,7 @@ class whitepaperState extends State<whitepaper> {
         backgroundColor: Colors.black,
 
         centerTitle: true,
-        title: Text('Whitepaper'),
+        title: const Text('Whitepaper'),
       ),
       body: SingleChildScrollView(
         child: Row(
@@ -25,12 +25,24 @@ class whitepaperState extends State<whitepaper> {
             Padding(
               padding: const EdgeInsets.all(25.0),
               child: Column(
-                children: [
-                  Text('Executive Summary', style: TextStyle(color: Colors.white, fontSize: 40),),
+                children: const [
+                  Text('Executive Summary', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),
                   SizedBox(width: 20,),
-                  Text('Our Mission', style: TextStyle(color: Colors.white, fontSize: 40),),
+                  Text('Our Mission', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),
                   SizedBox(width: 20,),
-                  Text('Our Vision', style: TextStyle(color: Colors.white, fontSize: 40),),
+                  Text('Our Vision', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),SizedBox(width: 20,),
+                  SizedBox(width: 20,),
+                  Text('Wich games we have', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),SizedBox(width: 20,),
+                  SizedBox(width: 20,),
+                  Text('Instructions', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),SizedBox(width: 20,),
+                  SizedBox(width: 20,),
+                  Text('NFT Members', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),SizedBox(width: 20,),
+                  SizedBox(width: 20,),
+                  Text('NFT Power Cards', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),SizedBox(width: 20,),
+                  SizedBox(width: 20,),
+                  Text('Crypto Playmate Foundation', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),SizedBox(width: 20,),
+                  SizedBox(width: 20,),
+                  Text('Team', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),SizedBox(width: 20,),
 
                 ],
               ),
