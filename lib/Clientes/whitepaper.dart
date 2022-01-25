@@ -11,9 +11,9 @@ class whitepaperState extends State<whitepaper> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.blueGrey[900],
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.blueGrey[900],
 
         centerTitle: true,
         title: const Text('Whitepaper'),
@@ -32,7 +32,7 @@ class whitepaperState extends State<whitepaper> {
                   SizedBox(width: 20,),
                   Text('Our Vision', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),SizedBox(width: 20,),
                   SizedBox(width: 20,),
-                  Text('Which games we have', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),SizedBox(width: 20,),
+                  Text('Hyper-casual games presentation', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),SizedBox(width: 20,),
                   SizedBox(width: 20,),
                   Text('Instructions', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),SizedBox(width: 20,),
                   SizedBox(width: 20,),
