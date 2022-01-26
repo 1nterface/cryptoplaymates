@@ -182,7 +182,7 @@ class homeState extends State<home> {
 
         ],
       ),
-      backgroundColor: Colors.blueGrey[900],
+      backgroundColor: Color(0xFF1F1B24),
       body: SingleChildScrollView(
         child: Column(
           children: [
