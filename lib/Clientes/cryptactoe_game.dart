@@ -20,11 +20,11 @@ class cryptactoe_gameState extends State<cryptactoe_game> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Color(0xFF1F1B24),
         centerTitle: true,
         title: Text("Cryptactoe"),
       ),
-      backgroundColor: Colors.black,
+      backgroundColor: Color(0xFF1F1B24),
       body: Column(
         children: <Widget>[
           Expanded(
@@ -99,18 +99,47 @@ class cryptactoe_gameState extends State<cryptactoe_game> {
           ),
           Expanded(
               child: Container(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    RaisedButton(
-                      color: Colors.indigo[50],
-                      textColor: Colors.black,
-                      onPressed: _clearScoreBoard,
-                      child: Text("Clear Score Board"),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(18.0),
                     ),
-                  ],
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.deepPurple,
+                        spreadRadius: 4,
+                        blurRadius: 10,
+                      ),
+                      BoxShadow(
+                        color: Colors.deepPurple,
+                        spreadRadius: -4,
+                        blurRadius: 5,
+                      )
+                    ]),
+                child: SizedBox(
+                  width: 800,
+                  height: 70,
+                  child: SizedBox(
+                    child: RaisedButton(
+                      color: Colors.deepPurple,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+
+                          children:const [
+                            Icon(Icons.border_clear_outlined, color : Colors.white),
+                            SizedBox(width:15),
+                            Text('RESET GAME', style: TextStyle(color: Colors.white, fontSize: 20.0),),
+                          ]
+                      ),
+                      onPressed: () async {
+                        Navigator.of(context).pushNamed("/cryptactoe_settings");
+                      },
+                    ),
+                  ),
                 ),
-              ))
+              ),
+          )
         ],
       ),
     );
