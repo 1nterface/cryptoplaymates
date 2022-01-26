@@ -11,9 +11,9 @@ class _nft_membersState extends State<nft_members> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(0xFF1F1B24),
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Color(0xFF1F1B24),
 
         centerTitle: true,
         title: Text('Passive Income'),
