@@ -73,29 +73,33 @@ class cryptactoe_gameState extends State<cryptactoe_game> {
               ),
             ),
           ),
-          Expanded(
-            flex: 4,
-            child: GridView.builder(
-                itemCount: 9,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3),
-                itemBuilder: (BuildContext context, int index) {
-                  return GestureDetector(
-                    onTap: () {
-                      _tapped(index);
-                    },
-                    child: Container(
-                      decoration: BoxDecoration(
-                          border: Border.all(color: Colors.white)),
-                      child: Center(
-                        child: Text(
-                          displayElement[index],
-                          style: TextStyle(color: Colors.white, fontSize: 35),
+          Wrap(
+            children: [
+              Expanded(
+                flex: 4,
+                child: GridView.builder(
+                    itemCount: 9,
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 3),
+                    itemBuilder: (BuildContext context, int index) {
+                      return GestureDetector(
+                        onTap: () {
+                          _tapped(index);
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.white)),
+                          child: Center(
+                            child: Text(
+                              displayElement[index],
+                              style: TextStyle(color: Colors.white, fontSize: 35),
+                            ),
+                          ),
                         ),
-                      ),
-                    ),
-                  );
-                }),
+                      );
+                    }),
+              ),
+            ],
           ),
           Expanded(
               child: Container(
