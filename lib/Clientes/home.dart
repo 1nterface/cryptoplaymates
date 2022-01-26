@@ -122,90 +122,65 @@ class homeState extends State<home> {
           ),
         ),
       ),
-      floatingActionButton: Container(
-        decoration: const BoxDecoration(
-            borderRadius: const BorderRadius.all(
-              Radius.circular(18.0),
-            ),
-            color: Colors.white,
-            boxShadow: [
-              BoxShadow(
-                color: Colors.lightBlueAccent,
-                spreadRadius: 4,
-                blurRadius: 10,
-              ),
-              BoxShadow(
-                color: Colors.lightBlueAccent,
-                spreadRadius: -4,
-                blurRadius: 5,
-              )
-            ]),
-        child: SizedBox(
-          width: 800,
-          height: 70,
-          child: SizedBox(
-            child: SpeedDial( //Boton flotante animado,
-              //marginRight: 18,
-              //marginBottom: 30,
-              animatedIcon: AnimatedIcons.home_menu,
-              animatedIconTheme: IconThemeData(size: 25.0),
-              // this is ignored if animatedIcon is non null
-              // child: Icon(Icons.add),
-              visible: true,
-              curve: Curves.bounceIn,
-              overlayColor: Colors.black,
-              overlayOpacity: 0.5,
-              onOpen: () => print('OPENING DIAL'),
-              onClose: () => print('DIAL CLOSED'),
-              tooltip: 'Crypto Playmate',
-              heroTag: 'Crypto Playmate',
+      floatingActionButton: SpeedDial( //Boton flotante animado,
+        //marginRight: 18,
+        //marginBottom: 30,
+        animatedIcon: AnimatedIcons.home_menu,
+        animatedIconTheme: IconThemeData(size: 25.0),
+        // this is ignored if animatedIcon is non null
+        // child: Icon(Icons.add),
+        visible: true,
+        curve: Curves.bounceIn,
+        overlayColor: Colors.black,
+        overlayOpacity: 0.5,
+        onOpen: () => print('OPENING DIAL'),
+        onClose: () => print('DIAL CLOSED'),
+        tooltip: 'Crypto Playmate',
+        heroTag: 'Crypto Playmate',
+        backgroundColor: Colors.lightBlueAccent,
+        foregroundColor: Colors.white,
+        elevation: 1.0,
+        shape: CircleBorder(),
+        children: [
+
+          SpeedDialChild(
+              child: Icon(Icons.person, color: Colors.white,),
               backgroundColor: Colors.lightBlueAccent,
-              foregroundColor: Colors.white,
-              elevation: 1.0,
-              shape: CircleBorder(),
-              children: [
+              label: 'Team',
+              onTap: () async {
 
-                SpeedDialChild(
-                    child: Icon(Icons.person, color: Colors.white,),
-                    backgroundColor: Colors.lightBlueAccent,
-                    label: 'Team',
-                    onTap: () async {
+                Navigator.of(context).pushNamed('/team');
+                //Navigator.of(context).pushNamed('/admin_inicio');
 
-                      Navigator.of(context).pushNamed('/team');
-                      //Navigator.of(context).pushNamed('/admin_inicio');
-
-                    }
-                ),
-
-                SpeedDialChild(
-                    child: Icon(Icons.account_tree, color: Colors.white,),
-                    backgroundColor: Colors.lightBlueAccent,
-                    label: 'Roadmap',
-                    onTap: () async {
-
-                      Navigator.of(context).pushNamed('/roadmap');
-                      //Navigator.of(context).pushNamed('/admin_inicio');
-
-                    }
-                ),
-
-                SpeedDialChild(
-                    child: Icon(Icons.list, color: Colors.white,),
-                    backgroundColor: Colors.lightBlueAccent,
-                    label: 'Whitepaper',
-                    onTap: () async {
-
-                      Navigator.of(context).pushNamed('/whitepaper');
-                      //Navigator.of(context).pushNamed('/admin_inicio');
-
-                    }
-                ),
-
-
-              ],
-            ),
+              }
           ),
-        ),
+
+          SpeedDialChild(
+              child: Icon(Icons.account_tree, color: Colors.white,),
+              backgroundColor: Colors.lightBlueAccent,
+              label: 'Roadmap',
+              onTap: () async {
+
+                Navigator.of(context).pushNamed('/roadmap');
+                //Navigator.of(context).pushNamed('/admin_inicio');
+
+              }
+          ),
+
+          SpeedDialChild(
+              child: Icon(Icons.list, color: Colors.white,),
+              backgroundColor: Colors.lightBlueAccent,
+              label: 'Whitepaper',
+              onTap: () async {
+
+                Navigator.of(context).pushNamed('/whitepaper');
+                //Navigator.of(context).pushNamed('/admin_inicio');
+
+              }
+          ),
+
+
+        ],
       ),
       backgroundColor: Color(0xFF1F1B24),
       body: SingleChildScrollView(
@@ -232,31 +207,31 @@ class homeState extends State<home> {
                       ),
                     ),
                     Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(18.0),
-                          ),
-                          color: Colors.white,
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.pink,
-                              spreadRadius: 4,
-                              blurRadius: 10,
-                            ),
-                            BoxShadow(
-                              color: Colors.pink,
-                              spreadRadius: -4,
-                              blurRadius: 5,
-                            )
-                          ]),
-                      child: FlatButton(
-                        onPressed:(){},
-                        child: Text("P L A Y"),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                ElevatedButton(
+                                  onPressed: () {
+                                    Navigator.of(context).pushNamed('/juegos_principal');
 
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18.0),
+                                  },
+                                  child: Text('Play'),
+                                  style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
-                      ),
+                        decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(12)),
+                            image: DecorationImage(
+                              image: AssetImage("images/c.png"),
+                              fit: BoxFit.cover,
+                            )
+                        )
                     ),
                     Container(
                         child: Row(
