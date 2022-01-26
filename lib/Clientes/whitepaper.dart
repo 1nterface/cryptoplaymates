@@ -22,32 +22,27 @@ class whitepaperState extends State<whitepaper> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: Wrap(
-                children:[
-                  Column(
-                  children: const [
-                    Text('Executive Summary', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),
-                    SizedBox(width: 20,),
-                    Text('Our Mission', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),
-                    SizedBox(width: 20,),
-                    Text('Our Vision', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),SizedBox(width: 20,),
-                    SizedBox(width: 20,),
-                    Text('Hyper-casual games presentation', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),SizedBox(width: 20,),
-                    SizedBox(width: 20,),
-                    Text('Instructions', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),SizedBox(width: 20,),
-                    SizedBox(width: 20,),
-                    Text('NFT Members', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),SizedBox(width: 20,),
-                    SizedBox(width: 20,),
-                    Text('NFT Power Cards', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),SizedBox(width: 20,),
-                    SizedBox(width: 20,),
-                    Text('Crypto Playmate Foundation', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),SizedBox(width: 20,),
-                    SizedBox(width: 20,),
-                    Text('Team', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),SizedBox(width: 20,),
+            Flexible(
+              child: Column(
+                children: const [
+                  Text('Executive Summary', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),
+                  SizedBox(width: 20,),
+                  Text('Our Mission', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),
+                  SizedBox(width: 20,),
+                  Text('Our Vision', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),SizedBox(width: 20,),
+                  SizedBox(width: 20,),
+                  Text('Hyper-casual games presentation', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),SizedBox(width: 20,),
+                  SizedBox(width: 20,),
+                  Text('Instructions', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),SizedBox(width: 20,),
+                  SizedBox(width: 20,),
+                  Text('NFT Members', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),SizedBox(width: 20,),
+                  SizedBox(width: 20,),
+                  Text('NFT Power Cards', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),SizedBox(width: 20,),
+                  SizedBox(width: 20,),
+                  Text('Crypto Playmate Foundation', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),SizedBox(width: 20,),
+                  SizedBox(width: 20,),
+                  Text('Team', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true),SizedBox(width: 20,),
 
-                  ],
-                ),
                 ],
               ),
             ),
