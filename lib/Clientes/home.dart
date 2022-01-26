@@ -71,7 +71,7 @@ class homeState extends State<home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blueGrey[900],
+        backgroundColor: Color(0xFF1F1B24),
         centerTitle: true,
         title: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
@@ -137,7 +137,7 @@ class homeState extends State<home> {
         onClose: () => print('DIAL CLOSED'),
         tooltip: 'Crypto Playmate',
         heroTag: 'Crypto Playmate',
-        backgroundColor: Colors.purple[800],
+        backgroundColor: Colors.lightBlueAccent,
         foregroundColor: Colors.white,
         elevation: 1.0,
         shape: CircleBorder(),
@@ -145,7 +145,7 @@ class homeState extends State<home> {
 
           SpeedDialChild(
               child: Icon(Icons.person, color: Colors.white,),
-              backgroundColor: Colors.purple[800],
+              backgroundColor: Colors.lightBlueAccent,
               label: 'Team',
               onTap: () async {
 
@@ -157,7 +157,7 @@ class homeState extends State<home> {
 
           SpeedDialChild(
               child: Icon(Icons.account_tree, color: Colors.white,),
-              backgroundColor: Colors.purple[800],
+              backgroundColor: Colors.lightBlueAccent,
               label: 'Roadmap',
               onTap: () async {
 
@@ -169,7 +169,7 @@ class homeState extends State<home> {
 
           SpeedDialChild(
               child: Icon(Icons.list, color: Colors.white,),
-              backgroundColor: Colors.purple[800],
+              backgroundColor: Colors.lightBlueAccent,
               label: 'Whitepaper',
               onTap: () async {
 
@@ -196,23 +196,32 @@ class homeState extends State<home> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                ElevatedButton(
-                                  onPressed: () {
-                                    Navigator.of(context).pushNamed('/cryptactoe');
+                            SizedBox(
+                              width: 800,
+                              height: 70,
+                              child: SizedBox(
+                                child: RaisedButton(
+                                  color: Colors.lightBlueAccent,
+                                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+                                  child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
 
+                                      children:const [
+                                        Icon(Icons.gamepad_outlined, color : Colors.white),
+                                        SizedBox(width:15),
+                                        Text('P L A Y', style: TextStyle(color: Colors.white, fontSize: 20.0),),
+                                      ]
+                                  ),
+                                  onPressed: () async {
+                                    Navigator.of(context).pushNamed("/cryptactoe");
                                   },
-                                  child: Text('Play'),
-                                  style: ElevatedButton.styleFrom(shape: StadiumBorder()),
                                 ),
-                              ],
+                              ),
                             ),
                           ],
                         ),
                         decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(12)),
+                            borderRadius: BorderRadius.all(Radius.circular(5)),
                             image: DecorationImage(
                               image: AssetImage("images/ancestral.jpg"),
                               fit: BoxFit.cover, //contain en todas ya que tenga los SS de los juegos
