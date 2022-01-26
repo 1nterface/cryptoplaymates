@@ -81,6 +81,26 @@ class _roadmapState extends State<roadmap> {
                           content: Text('Short description', style: TextStyle(color: Colors.white, fontSize: 25),softWrap: true),
                         ),
                       ],
+                      onStepTapped: (int newIndex){
+                        setState(() {
+                          _currentStep = newIndex;
+                        });
+                      },
+                      currentStep: _currentStep,
+                      onStepContinue: (){
+                        if (_currentStep != 2){
+                          setState(() {
+                            _currentStep += 1;
+                          });
+                        }
+                      },
+                      onStepCancel: (){
+                        if(_currentStep != 0){
+                          setState(() {
+                            _currentStep -= 1;
+                          });
+                        }
+                      },
                     ),
                   ],
                 ),
