@@ -192,41 +192,19 @@ class homeState extends State<home> {
                   items: [
 
                     //hola(),
-                    Container(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            SizedBox(
-                              width: 800,
-                              height: 70,
-                              child: SizedBox(
-                                child: RaisedButton(
-                                  color: Colors.lightBlueAccent,
-                                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
-                                  child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-
-                                      children:const [
-                                        Icon(Icons.gamepad_outlined, color : Colors.white),
-                                        SizedBox(width:15),
-                                        Text('P L A Y', style: TextStyle(color: Colors.white, fontSize: 20.0),),
-                                      ]
-                                  ),
-                                  onPressed: () async {
-                                    Navigator.of(context).pushNamed("/cryptactoe");
-                                  },
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(5)),
-                            image: DecorationImage(
-                              image: AssetImage("images/ancestral.jpg"),
-                              fit: BoxFit.cover, //contain en todas ya que tenga los SS de los juegos
-                            )
-                        )
+                    InkWell(
+                      onTap: () async {
+                        Navigator.of(context).pushNamed("/cryptactoe");
+                      },
+                      child: Container(
+                          decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.all(Radius.circular(5)),
+                              image: DecorationImage(
+                                image: AssetImage("images/ancestral.jpg"),
+                                fit: BoxFit.cover, //contain en todas ya que tenga los SS de los juegos
+                              )
+                          )
+                      ),
                     ),
                     Container(
                         child: Row(
