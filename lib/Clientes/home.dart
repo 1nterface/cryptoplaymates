@@ -122,65 +122,90 @@ class homeState extends State<home> {
           ),
         ),
       ),
-      floatingActionButton: SpeedDial( //Boton flotante animado,
-        //marginRight: 18,
-        //marginBottom: 30,
-        animatedIcon: AnimatedIcons.home_menu,
-        animatedIconTheme: IconThemeData(size: 25.0),
-        // this is ignored if animatedIcon is non null
-        // child: Icon(Icons.add),
-        visible: true,
-        curve: Curves.bounceIn,
-        overlayColor: Colors.black,
-        overlayOpacity: 0.5,
-        onOpen: () => print('OPENING DIAL'),
-        onClose: () => print('DIAL CLOSED'),
-        tooltip: 'Crypto Playmate',
-        heroTag: 'Crypto Playmate',
-        backgroundColor: Colors.lightBlueAccent,
-        foregroundColor: Colors.white,
-        elevation: 1.0,
-        shape: CircleBorder(),
-        children: [
-
-          SpeedDialChild(
-              child: Icon(Icons.person, color: Colors.white,),
+      floatingActionButton: Container(
+        decoration: const BoxDecoration(
+            borderRadius: const BorderRadius.all(
+              Radius.circular(18.0),
+            ),
+            color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.lightBlueAccent,
+                spreadRadius: 4,
+                blurRadius: 10,
+              ),
+              BoxShadow(
+                color: Colors.lightBlueAccent,
+                spreadRadius: -4,
+                blurRadius: 5,
+              )
+            ]),
+        child: SizedBox(
+          width: 800,
+          height: 70,
+          child: SizedBox(
+            child: SpeedDial( //Boton flotante animado,
+              //marginRight: 18,
+              //marginBottom: 30,
+              animatedIcon: AnimatedIcons.home_menu,
+              animatedIconTheme: IconThemeData(size: 25.0),
+              // this is ignored if animatedIcon is non null
+              // child: Icon(Icons.add),
+              visible: true,
+              curve: Curves.bounceIn,
+              overlayColor: Colors.black,
+              overlayOpacity: 0.5,
+              onOpen: () => print('OPENING DIAL'),
+              onClose: () => print('DIAL CLOSED'),
+              tooltip: 'Crypto Playmate',
+              heroTag: 'Crypto Playmate',
               backgroundColor: Colors.lightBlueAccent,
-              label: 'Team',
-              onTap: () async {
+              foregroundColor: Colors.white,
+              elevation: 1.0,
+              shape: CircleBorder(),
+              children: [
 
-                Navigator.of(context).pushNamed('/team');
-                //Navigator.of(context).pushNamed('/admin_inicio');
+                SpeedDialChild(
+                    child: Icon(Icons.person, color: Colors.white,),
+                    backgroundColor: Colors.lightBlueAccent,
+                    label: 'Team',
+                    onTap: () async {
 
-              }
+                      Navigator.of(context).pushNamed('/team');
+                      //Navigator.of(context).pushNamed('/admin_inicio');
+
+                    }
+                ),
+
+                SpeedDialChild(
+                    child: Icon(Icons.account_tree, color: Colors.white,),
+                    backgroundColor: Colors.lightBlueAccent,
+                    label: 'Roadmap',
+                    onTap: () async {
+
+                      Navigator.of(context).pushNamed('/roadmap');
+                      //Navigator.of(context).pushNamed('/admin_inicio');
+
+                    }
+                ),
+
+                SpeedDialChild(
+                    child: Icon(Icons.list, color: Colors.white,),
+                    backgroundColor: Colors.lightBlueAccent,
+                    label: 'Whitepaper',
+                    onTap: () async {
+
+                      Navigator.of(context).pushNamed('/whitepaper');
+                      //Navigator.of(context).pushNamed('/admin_inicio');
+
+                    }
+                ),
+
+
+              ],
+            ),
           ),
-
-          SpeedDialChild(
-              child: Icon(Icons.account_tree, color: Colors.white,),
-              backgroundColor: Colors.lightBlueAccent,
-              label: 'Roadmap',
-              onTap: () async {
-
-                Navigator.of(context).pushNamed('/roadmap');
-                //Navigator.of(context).pushNamed('/admin_inicio');
-
-              }
-          ),
-
-          SpeedDialChild(
-              child: Icon(Icons.list, color: Colors.white,),
-              backgroundColor: Colors.lightBlueAccent,
-              label: 'Whitepaper',
-              onTap: () async {
-
-                Navigator.of(context).pushNamed('/whitepaper');
-                //Navigator.of(context).pushNamed('/admin_inicio');
-
-              }
-          ),
-
-
-        ],
+        ),
       ),
       backgroundColor: Color(0xFF1F1B24),
       body: SingleChildScrollView(

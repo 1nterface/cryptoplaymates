@@ -13,33 +13,33 @@ class cryptactoeState extends State<cryptactoe> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.black,
-        title: Text('CrypTacToe', style: const TextStyle(color: Colors.white),),
+        backgroundColor: Color(0xFF1F1B24),
+        title: const Text('CrypTacToe', style: TextStyle(color: Colors.white),),
       ),
-      backgroundColor: Colors.black,
+      backgroundColor: Color(0xFF1F1B24),
       resizeToAvoidBottomInset : false,
       body: ListView(
         children: <Widget>[
-          SizedBox(height: 20.0,),
+          const SizedBox(height: 20.0,),
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  SizedBox(height:170),
+                  const SizedBox(height:170),
                   SizedBox(
                     height: 200,
                     child: Image.asset('images/pizza.png'),
                   ),
                 ],
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
 
 
               Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(
+                decoration: const BoxDecoration(
+                    borderRadius: const BorderRadius.all(
                       Radius.circular(18.0),
                     ),
                     color: Colors.white,
@@ -82,36 +82,27 @@ class cryptactoeState extends State<cryptactoe> {
               ),
 
 
-              Padding(
-                padding: EdgeInsets.only(left:100.0, right: 100.0),
-                child: SizedBox(
-                  width: 800,
-                  height: 70,
-                  child: SizedBox(
-                    child: RaisedButton(
-                      color: Colors.purple[800],
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
-                      child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children:const [
-                            Icon(Icons.shuffle, color : Colors.white),
-                            SizedBox(width:15),
-                            Text('RANDOM', style: TextStyle(color: Colors.white, fontSize: 20.0),),
-                          ],
-                      ),
-                      onPressed: () async {
 
-                        //Navigator.of(context).pushNamed("/panel_de_control");
-                        Navigator.of(context).pushNamed("/cryptactoe_game");
+              const SizedBox(height: 20),
 
-                      },
+              Container(
+                decoration: const BoxDecoration(
+                    borderRadius: const BorderRadius.all(
+                      Radius.circular(18.0),
                     ),
-                  ),
-                ),
-              ),
-              SizedBox(height: 20),
-              Padding(
-                padding: EdgeInsets.only(left:100.0, right: 100.0),
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.lightBlueAccent,
+                        spreadRadius: 4,
+                        blurRadius: 10,
+                      ),
+                      BoxShadow(
+                        color: Colors.lightBlueAccent,
+                        spreadRadius: -4,
+                        blurRadius: 5,
+                      )
+                    ]),
                 child: SizedBox(
                   width: 800,
                   height: 70,
@@ -135,16 +126,31 @@ class cryptactoeState extends State<cryptactoe> {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
 
-              Padding(
-                padding: EdgeInsets.only(left:100.0, right: 100.0),
+              Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(
+                       Radius.circular(18.0),
+                    ),
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.deepPurple,
+                        spreadRadius: 4,
+                        blurRadius: 10,
+                      ),
+                       BoxShadow(
+                        color: Colors.deepPurple,
+                        spreadRadius: -4,
+                        blurRadius: 5,
+                      )
+                    ]),
                 child: SizedBox(
                   width: 800,
                   height: 70,
                   child: SizedBox(
                     child: RaisedButton(
-                      color: Colors.purple[800],
+                      color: Colors.deepPurple,
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
                       child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -156,7 +162,6 @@ class cryptactoeState extends State<cryptactoe> {
                           ]
                       ),
                       onPressed: () async {
-
                         Navigator.of(context).pushNamed("/cryptactoe_settings");
                       },
                     ),

@@ -14,9 +14,9 @@ class _roadmapState extends State<roadmap> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey[900],
+      backgroundColor: Color(0xFF1F1B24),
       appBar: AppBar(
-        backgroundColor: Colors.blueGrey[900],
+        backgroundColor: Color(0xFF1F1B24),
         centerTitle: true,
         title: const Text('Roadmap'),
       ),
