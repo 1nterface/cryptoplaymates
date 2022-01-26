@@ -207,31 +207,31 @@ class homeState extends State<home> {
                       ),
                     ),
                     Container(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                ElevatedButton(
-                                  onPressed: () {
-                                    Navigator.of(context).pushNamed('/juegos_principal');
-
-                                  },
-                                  child: Text('Play'),
-                                  style: ElevatedButton.styleFrom(shape: StadiumBorder()),
-                                ),
-                              ],
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(18.0),
+                          ),
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.pink,
+                              spreadRadius: 4,
+                              blurRadius: 10,
                             ),
-                          ],
-                        ),
-                        decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(12)),
-                            image: DecorationImage(
-                              image: AssetImage("images/c.png"),
-                              fit: BoxFit.cover,
+                            BoxShadow(
+                              color: Colors.pink,
+                              spreadRadius: -4,
+                              blurRadius: 5,
                             )
-                        )
+                          ]),
+                      child: FlatButton(
+                        onPressed:(){},
+                        child: Text("P L A Y"),
+
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18.0),
+                        ),
+                      ),
                     ),
                     Container(
                         child: Row(
