@@ -117,8 +117,8 @@ class cryptactoe_gameState extends State<cryptactoe_game> {
                       )
                     ]),
                 child: SizedBox(
-                  width: 800,
-                  height: 70,
+                  width: 300,
+                  height: 35,
                   child: SizedBox(
                     child: RaisedButton(
                       color: Colors.deepPurple,

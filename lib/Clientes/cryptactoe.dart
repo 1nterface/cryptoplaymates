@@ -130,46 +130,43 @@ class cryptactoeState extends State<cryptactoe> {
                 ),
                 const SizedBox(height: 20),
 
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.all(
-                           Radius.circular(18.0),
-                        ),
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.deepPurple,
-                            spreadRadius: 4,
-                            blurRadius: 10,
-                          ),
-                           BoxShadow(
-                            color: Colors.deepPurple,
-                            spreadRadius: -4,
-                            blurRadius: 5,
-                          )
-                        ]),
-                    child: SizedBox(
-                      width: 400,
-                      height: 35,
-                      child: SizedBox(
-                        child: RaisedButton(
+                Container(
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(
+                         Radius.circular(18.0),
+                      ),
+                      color: Colors.white,
+                      boxShadow: [
+                        BoxShadow(
                           color: Colors.deepPurple,
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
-                          child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-
-                              children:const [
-                                Icon(Icons.settings, color : Colors.white),
-                                SizedBox(width:15),
-                                Text('SETTINGS', style: TextStyle(color: Colors.white, fontSize: 20.0),),
-                              ]
-                          ),
-                          onPressed: () async {
-                            Navigator.of(context).pushNamed("/cryptactoe_settings");
-                          },
+                          spreadRadius: 4,
+                          blurRadius: 10,
                         ),
+                         BoxShadow(
+                          color: Colors.deepPurple,
+                          spreadRadius: -4,
+                          blurRadius: 5,
+                        )
+                      ]),
+                  child: SizedBox(
+                    width: 800,
+                    height: 70,
+                    child: SizedBox(
+                      child: RaisedButton(
+                        color: Colors.deepPurple,
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+                        child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+
+                            children:const [
+                              Icon(Icons.settings, color : Colors.white),
+                              SizedBox(width:15),
+                              Text('SETTINGS', style: TextStyle(color: Colors.white, fontSize: 20.0),),
+                            ]
+                        ),
+                        onPressed: () async {
+                          Navigator.of(context).pushNamed("/cryptactoe_settings");
+                        },
                       ),
                     ),
                   ),
