@@ -36,6 +36,52 @@ class cryptactoeState extends State<cryptactoe> {
               ),
               SizedBox(height: 20),
 
+
+              Container(
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(18.0),
+                    ),
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.pink,
+                        spreadRadius: 4,
+                        blurRadius: 10,
+                      ),
+                      BoxShadow(
+                        color: Colors.pink,
+                        spreadRadius: -4,
+                        blurRadius: 5,
+                      )
+                    ]),
+                child: SizedBox(
+                  width: 800,
+                  height: 70,
+                  child: SizedBox(
+                    child: RaisedButton(
+                      color: Colors.pink,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children:const [
+                          Icon(Icons.shuffle, color : Colors.white),
+                          SizedBox(width:15),
+                          Text('RANDOM', style: TextStyle(color: Colors.white, fontSize: 20.0),),
+                        ],
+                      ),
+                      onPressed: () async {
+
+                        //Navigator.of(context).pushNamed("/panel_de_control");
+                        Navigator.of(context).pushNamed("/cryptactoe_game");
+
+                      },
+                    ),
+                  ),
+                ),
+              ),
+
+
               Padding(
                 padding: EdgeInsets.only(left:100.0, right: 100.0),
                 child: SizedBox(
