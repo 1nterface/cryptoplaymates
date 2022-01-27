@@ -28,7 +28,7 @@ class whitepaperState extends State<whitepaper> {
                   ExpansionTile(
                     title: Text('Executive Summary', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
                     children: [
-                    Text('Content', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true,textAlign: TextAlign.center),
+                    Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
                     ],
                   ),
                   SizedBox(width: 30,),
@@ -36,7 +36,7 @@ class whitepaperState extends State<whitepaper> {
                   ExpansionTile(
                     title: Text('Our Mission', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
                     children: [
-                      Text('Content', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true,textAlign: TextAlign.center),
+                      Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
                     ],
                   ),
                   SizedBox(width: 30,),
@@ -44,7 +44,7 @@ class whitepaperState extends State<whitepaper> {
                   ExpansionTile(
                     title: Text('Our Vision', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
                     children: [
-                      Text('Content', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true,textAlign: TextAlign.center),
+                      Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
                     ],
                   ),
                   SizedBox(width: 30,),
@@ -52,7 +52,7 @@ class whitepaperState extends State<whitepaper> {
                   ExpansionTile(
                     title: Text('Hyper-casual Games Content', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
                     children: [
-                      Text('Content', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true,textAlign: TextAlign.center),
+                      Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
                     ],
                   ),
                   SizedBox(width: 30,),
@@ -60,7 +60,7 @@ class whitepaperState extends State<whitepaper> {
                   ExpansionTile(
                     title: Text('Instructions', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
                     children: [
-                      Text('Content', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true,textAlign: TextAlign.center),
+                      Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
                     ],
                   ),
                   SizedBox(width: 30,),
@@ -68,7 +68,7 @@ class whitepaperState extends State<whitepaper> {
                   ExpansionTile(
                     title: Text('NFT Members', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
                     children: [
-                      Text('Content', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true,textAlign: TextAlign.center),
+                      Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
                     ],
                   ),
                   SizedBox(width: 30,),
@@ -76,7 +76,7 @@ class whitepaperState extends State<whitepaper> {
                   ExpansionTile(
                     title: Text('NFT Power Cards', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
                     children: [
-                      Text('Content', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true,textAlign: TextAlign.center),
+                      Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
                     ],
                   ),
                   SizedBox(width: 30,),
@@ -84,7 +84,7 @@ class whitepaperState extends State<whitepaper> {
                   ExpansionTile(
                     title: Text('Crypto Playmate Foundation', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
                     children: [
-                      Text('Content', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true,textAlign: TextAlign.center),
+                      Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
                     ],
                   ),
                   SizedBox(width: 30,),
@@ -92,7 +92,7 @@ class whitepaperState extends State<whitepaper> {
                   ExpansionTile(
                     title: Text('Team', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
                     children: [
-                      Text('Content', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true,textAlign: TextAlign.center),
+                      Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
                     ],
                   ),
                   SizedBox(width: 30,),
