@@ -1,3 +1,4 @@
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'dart:ui' as ui;
 import 'dart:async';
 import 'dart:html';
@@ -38,12 +39,21 @@ class homeState extends State<home> {
   final TextEditingController _passwordController = TextEditingController();
 
   String url = 'https://twitter.com/CryptoPlaymate';
+  String urlD = 'https://discord.com';
 
   launchURL(String url) async {
     if (await canLaunch(url)) {
       await launch(url, forceWebView: true);
     } else {
       throw 'Could not launch $url';
+    }
+  }
+
+  launchURLDiscord(String urlD) async {
+    if (await canLaunch(urlD)) {
+      await launch(urlD, forceWebView: true);
+    } else {
+      throw 'Could not launch $urlD';
     }
   }
 
@@ -112,9 +122,24 @@ class homeState extends State<home> {
                   },
                   child: Row(
                       children: [
-                        Icon(Icons.email, color: Color(0xFF815FD5)),
+                        Icon(FontAwesomeIcons.twitter, color: Colors.lightBlueAccent),
                         SizedBox(width:10),
-                        Text('Contact us', style: TextStyle(color: Colors.white),),
+                        Text('Follow us', style: TextStyle(color: Colors.white),),
+                      ]
+                  ),
+                ),
+
+                SizedBox(width: 15),
+
+                InkWell(
+                  onTap:(){
+                    launchURLDiscord(urlD);
+                  },
+                  child: Row(
+                      children: [
+                        Icon(FontAwesomeIcons.discord, color: Color(0xFF815FD5)),
+                        SizedBox(width:10),
+                        Text('Join us', style: TextStyle(color: Colors.white),),
                       ]
                   ),
                 ),
@@ -145,7 +170,7 @@ class homeState extends State<home> {
 
           SpeedDialChild(
               child: Icon(Icons.person, color: Colors.white,),
-              backgroundColor: Colors.pink,
+              backgroundColor: Color(0xFF815FD5),
               label: 'Team',
               onTap: () async {
 
@@ -157,7 +182,7 @@ class homeState extends State<home> {
 
           SpeedDialChild(
               child: Icon(Icons.account_tree, color: Colors.white,),
-              backgroundColor: Color(0xFF815FD5),
+              backgroundColor: Colors.pink,
               label: 'Roadmap',
               onTap: () async {
 
