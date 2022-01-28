@@ -13,10 +13,10 @@ class cryptactoeState extends State<cryptactoe> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Color(0xFF1F1B24),
+        backgroundColor: Color(0xFF293143),
         title: const Text('Cryptactoe', style: TextStyle(color: Colors.white),),
       ),
-      backgroundColor: Color(0xFF1F1B24),
+      backgroundColor: Color(0xFF171B26),
       resizeToAvoidBottomInset : false,
       body: Padding(
         padding: const EdgeInsets.all(25.0),

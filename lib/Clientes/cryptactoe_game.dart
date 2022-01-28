@@ -20,11 +20,11 @@ class cryptactoe_gameState extends State<cryptactoe_game> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFF1F1B24),
+        backgroundColor: Color(0xFF293143),
         centerTitle: true,
         title: Text("Cryptactoe"),
       ),
-      backgroundColor: Color(0xFF1F1B24),
+      backgroundColor: Color(0xFF171B26),
       body: Column(
         children: <Widget>[
           Expanded(

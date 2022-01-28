@@ -11,9 +11,9 @@ class juegos_principalState extends State<juegos_principal> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(0xFF171B26),
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Color(0xFF293143),
 
         centerTitle: true,
         title: Text('Welcome'),

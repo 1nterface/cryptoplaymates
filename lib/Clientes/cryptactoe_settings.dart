@@ -11,9 +11,9 @@ class cryptactoe_settingsState extends State<cryptactoe_settings> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF1F1B24),
+      backgroundColor: Color(0xFF171B26),
       appBar: AppBar(
-        backgroundColor: Color(0xFF1F1B24),
+        backgroundColor: Color(0xFF293143),
 
         centerTitle: true,
         title: Text('Settings', style: TextStyle(color: Colors.white)),
