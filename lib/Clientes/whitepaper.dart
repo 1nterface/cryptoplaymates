@@ -45,90 +45,114 @@ class whitepaperState extends State<whitepaper> {
                   ),
                   SizedBox(width: 30,),
 
-                  ExpansionTile(
-                    collapsedIconColor: Colors.lightBlueAccent,
-                    iconColor: Colors.lightBlueAccent,
-                    title: Text('Our Mission', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
-                    children: [
-                      Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
-                    ],
+                  Padding(
+                    padding: EdgeInsets.all(15.0),
+                    child: ExpansionTile(
+                      collapsedIconColor: Colors.lightBlueAccent,
+                      iconColor: Colors.lightBlueAccent,
+                      title: Text('Our Mission', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
+                      children: [
+                        Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
+                      ],
+                    ),
                   ),
                   SizedBox(width: 30,),
 
-                  ExpansionTile(
-                    collapsedIconColor: Colors.lightBlueAccent,
-                    iconColor: Colors.lightBlueAccent,
+                  Padding(
+                    padding: EdgeInsets.all(15.0),
+                    child: ExpansionTile(
+                      collapsedIconColor: Colors.lightBlueAccent,
+                      iconColor: Colors.lightBlueAccent,
 
-                    title: Text('Our Vision', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
-                    children: [
-                      Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
-                    ],
+                      title: Text('Our Vision', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
+                      children: [
+                        Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
+                      ],
+                    ),
                   ),
                   SizedBox(width: 30,),
 
-                  ExpansionTile(
-                    collapsedIconColor: Colors.lightBlueAccent,
-                    iconColor: Colors.lightBlueAccent,
+                  Padding(
+                    padding: EdgeInsets.all(15.0),
+                    child: ExpansionTile(
+                      collapsedIconColor: Colors.lightBlueAccent,
+                      iconColor: Colors.lightBlueAccent,
 
-                    title: Text('Hyper-casual Games Content', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
-                    children: [
-                      Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
-                    ],
+                      title: Text('Hyper-casual Games Content', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
+                      children: [
+                        Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
+                      ],
+                    ),
                   ),
                   SizedBox(width: 30,),
 
-                  ExpansionTile(
-                    collapsedIconColor: Colors.lightBlueAccent,
-                    iconColor: Colors.lightBlueAccent,
+                  Padding(
+                    padding: EdgeInsets.all(15.0),
+                    child: ExpansionTile(
+                      collapsedIconColor: Colors.lightBlueAccent,
+                      iconColor: Colors.lightBlueAccent,
 
-                    title: Text('Instructions', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
-                    children: [
-                      Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
-                    ],
+                      title: Text('Instructions', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
+                      children: [
+                        Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
+                      ],
+                    ),
                   ),
                   SizedBox(width: 30,),
 
-                  ExpansionTile(
-                    collapsedIconColor: Colors.lightBlueAccent,
-                    iconColor: Colors.lightBlueAccent,
+                  Padding(
+                    padding: EdgeInsets.all(15.0),
+                    child: ExpansionTile(
+                      collapsedIconColor: Colors.lightBlueAccent,
+                      iconColor: Colors.lightBlueAccent,
 
-                    title: Text('NFT Members', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
-                    children: [
-                      Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
-                    ],
+                      title: Text('NFT Members', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
+                      children: [
+                        Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
+                      ],
+                    ),
                   ),
                   SizedBox(width: 30,),
 
-                  ExpansionTile(
-                    collapsedIconColor: Colors.lightBlueAccent,
-                    iconColor: Colors.lightBlueAccent,
+                  Padding(
+                    padding: EdgeInsets.all(15.0),
+                    child: ExpansionTile(
+                      collapsedIconColor: Colors.lightBlueAccent,
+                      iconColor: Colors.lightBlueAccent,
 
-                    title: Text('NFT Power Cards', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
-                    children: [
-                      Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
-                    ],
+                      title: Text('NFT Power Cards', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
+                      children: [
+                        Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
+                      ],
+                    ),
                   ),
                   SizedBox(width: 30,),
 
-                  ExpansionTile(
-                    collapsedIconColor: Colors.lightBlueAccent,
-                    iconColor: Colors.lightBlueAccent,
+                  Padding(
+                    padding: EdgeInsets.all(15.0),
+                    child: ExpansionTile(
+                      collapsedIconColor: Colors.lightBlueAccent,
+                      iconColor: Colors.lightBlueAccent,
 
-                    title: Text('Crypto Playmate Foundation', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
-                    children: [
-                      Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
-                    ],
+                      title: Text('Crypto Playmate Foundation', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
+                      children: [
+                        Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
+                      ],
+                    ),
                   ),
                   SizedBox(width: 30,),
 
-                  ExpansionTile(
-                    collapsedIconColor: Colors.lightBlueAccent,
-                    iconColor: Colors.lightBlueAccent,
+                  Padding(
+                    padding: EdgeInsets.all(15.0),
+                    child: ExpansionTile(
+                      collapsedIconColor: Colors.lightBlueAccent,
+                      iconColor: Colors.lightBlueAccent,
 
-                    title: Text('Team', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
-                    children: [
-                      Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
-                    ],
+                      title: Text('Team', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
+                      children: [
+                        Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
+                      ],
+                    ),
                   ),
                   SizedBox(width: 30,),
                 ],

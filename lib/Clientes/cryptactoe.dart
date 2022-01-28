@@ -74,8 +74,74 @@ class cryptactoeState extends State<cryptactoe> {
                         ),
                         onPressed: () async {
 
-                          //Navigator.of(context).pushNamed("/panel_de_control");
-                          Navigator.of(context).pushNamed("/cryptactoe_game");
+
+                          final FirebaseAuth auth = FirebaseAuth.instance;
+
+                          if(FirebaseAuth.instance.currentUser?.uid == null){
+                            // not logged
+                            Alert(
+                                context: context,
+                                title: "Inicio de sesion",
+                                content: Column(
+                                  children: <Widget>[
+                                    TextFormField(
+                                      controller: _emailController,
+                                      decoration: InputDecoration(
+                                        icon: Icon(Icons.account_circle, color: Colors.lightBlueAccent),
+                                        labelText: 'Correo',
+                                      ),
+                                    ),
+                                    TextFormField(
+                                      controller: _passwordController,
+
+                                      obscureText: true,
+                                      decoration: InputDecoration(
+                                        icon: Icon(Icons.lock, color: Colors.lightBlueAccent),
+                                        labelText: 'Contrasena',
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                buttons: [
+                                  DialogButton(
+                                    onPressed: () {
+
+                                      initState();
+
+                                      inicioSesion();
+
+                                      setState(() {
+                                        comprasNotificaciones(context);
+                                        comprasNotificaciones2(context);
+                                        sesion = true;
+                                      });
+
+                                    },
+                                    child: Text(
+                                      "Entrar",
+                                      style: TextStyle(color: Colors.lightBlueAccent, fontSize: 20),
+                                    ),
+                                    color: Color(0xff6DA08E),
+
+                                  ),
+                                  DialogButton(
+                                    onPressed: () {
+
+                                      Navigator.of(context).pushNamed('/registro');
+
+                                    },
+                                    child: Text(
+                                      "Registrarme",
+                                      style: TextStyle(color: Colors.white, fontSize: 20),
+                                    ),
+                                    color: Colors.lightBlueAccent,
+                                  )
+                                ]).show();
+                          } else {
+                            // logged
+                            Navigator.of(context).pushNamed("/cryptactoe_game");
+
+                          }
 
                         },
                       ),
@@ -122,7 +188,75 @@ class cryptactoeState extends State<cryptactoe> {
                             ]
                         ),
                         onPressed: () async {
-                          Navigator.of(context).pushNamed("/cryptactoe_game");
+
+                          final FirebaseAuth auth = FirebaseAuth.instance;
+
+                          if(FirebaseAuth.instance.currentUser?.uid == null){
+                            // not logged
+                            Alert(
+                                context: context,
+                                title: "Inicio de sesion",
+                                content: Column(
+                                  children: <Widget>[
+                                    TextFormField(
+                                      controller: _emailController,
+                                      decoration: InputDecoration(
+                                        icon: Icon(Icons.account_circle, color: Colors.pinkAccent),
+                                        labelText: 'Correo',
+                                      ),
+                                    ),
+                                    TextFormField(
+                                      controller: _passwordController,
+
+                                      obscureText: true,
+                                      decoration: InputDecoration(
+                                        icon: Icon(Icons.lock, color: Colors.pinkAccent),
+                                        labelText: 'Contrasena',
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                buttons: [
+                                  DialogButton(
+                                    onPressed: () {
+
+                                      initState();
+
+                                      inicioSesion();
+
+                                      setState(() {
+                                        comprasNotificaciones(context);
+                                        comprasNotificaciones2(context);
+                                        sesion = true;
+                                      });
+
+                                    },
+                                    child: Text(
+                                      "Entrar",
+                                      style: TextStyle(color: Colors.white, fontSize: 20),
+                                    ),
+                                    color: Colors.pinkAccent,
+
+                                  ),
+                                  DialogButton(
+                                    onPressed: () {
+
+                                      Navigator.of(context).pushNamed('/registro');
+
+                                    },
+                                    child: Text(
+                                      "Registrarme",
+                                      style: TextStyle(color: Colors.white, fontSize: 20),
+                                    ),
+                                    color: Colors.pinkAccent,
+                                  )
+                                ]).show();
+                          } else {
+                            // logged
+                            Navigator.of(context).pushNamed("/cryptactoe_game");
+
+                          }
+
                         },
                       ),
                     ),
