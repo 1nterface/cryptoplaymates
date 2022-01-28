@@ -6,14 +6,14 @@ import 'package:cryptoplaymates/authentication.dart';
 import 'package:flutter/material.dart';
 import 'package:toast/toast.dart';
 // ignore: camel_case_types
-class cryptactoe extends StatefulWidget {
-  const cryptactoe({Key? key}) : super(key: key);
+class cryptactoe_lobby extends StatefulWidget {
+  const cryptactoe_lobby({Key? key}) : super(key: key);
 
   @override
-  State<cryptactoe> createState() => cryptactoeState();
+  State<cryptactoe_lobby> createState() => cryptactoe_lobbyState();
 }
 
-class cryptactoeState extends State<cryptactoe> {
+class cryptactoe_lobbyState extends State<cryptactoe_lobby> {
 
   TextEditingController _emailController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
@@ -303,7 +303,7 @@ class cryptactoeState extends State<cryptactoe> {
                 Container(
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(
-                         Radius.circular(18.0),
+                        Radius.circular(18.0),
                       ),
                       color: Colors.white,
                       boxShadow: [
@@ -312,7 +312,7 @@ class cryptactoeState extends State<cryptactoe> {
                           spreadRadius: 4,
                           blurRadius: 10,
                         ),
-                         BoxShadow(
+                        BoxShadow(
                           color: Color(0xFF815FD5),
                           spreadRadius: -4,
                           blurRadius: 5,

@@ -36,7 +36,7 @@ class _roadmapState extends State<roadmap> {
                         Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
                       ],
                     ),
-                    SizedBox(width: 30,),
+                    SizedBox(width: 45,),
 
                     Text('II', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true,textAlign: TextAlign.center),
                     ExpansionTile(
@@ -47,7 +47,7 @@ class _roadmapState extends State<roadmap> {
                         Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
                       ],
                     ),
-                    SizedBox(width: 30,),
+                    SizedBox(width: 45,),
                     Text('III', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true,textAlign: TextAlign.center),
                     ExpansionTile(
                       iconColor: Color(0xFF815FD5),
@@ -57,7 +57,7 @@ class _roadmapState extends State<roadmap> {
                         Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
                       ],
                     ),
-                    SizedBox(width: 30,),
+                    SizedBox(width: 45,),
                     Text('IV', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true,textAlign: TextAlign.center),
                     ExpansionTile(
                       iconColor: Color(0xFF815FD5),
@@ -66,7 +66,7 @@ class _roadmapState extends State<roadmap> {
                         Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
                       ],
                     ),
-                    SizedBox(width: 30,),
+                    SizedBox(width: 45,),
 
                     Text('V', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true,textAlign: TextAlign.center),
                     ExpansionTile(
@@ -76,7 +76,7 @@ class _roadmapState extends State<roadmap> {
                         Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
                       ],
                     ),
-                    SizedBox(width: 30,),
+                    SizedBox(width: 45,),
 
                     Text('VI', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true,textAlign: TextAlign.center),
                     ExpansionTile(
@@ -86,7 +86,7 @@ class _roadmapState extends State<roadmap> {
                         Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
                       ],
                     ),
-                    SizedBox(width: 30,),
+                    SizedBox(width: 45,),
 
                     Text('VII', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true,textAlign: TextAlign.center),
                     ExpansionTile(
@@ -97,7 +97,7 @@ class _roadmapState extends State<roadmap> {
                         Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
                       ],
                     ),
-                    SizedBox(width: 30,),
+                    SizedBox(width: 45,),
 
                     Text('VIII', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true,textAlign: TextAlign.center),
                     ExpansionTile(
@@ -107,7 +107,7 @@ class _roadmapState extends State<roadmap> {
                         Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
                       ],
                     ),
-                    SizedBox(width: 30,),
+                    SizedBox(width: 45,),
 
                     Text('IX', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true,textAlign: TextAlign.center),
                     ExpansionTile(
@@ -117,6 +117,7 @@ class _roadmapState extends State<roadmap> {
                         Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
                       ],
                     ),
+                    SizedBox(width: 45,),
 
                     Text('X', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true,textAlign: TextAlign.center),
                     ExpansionTile(
@@ -126,6 +127,7 @@ class _roadmapState extends State<roadmap> {
                         Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
                       ],
                     ),
+                    SizedBox(width: 45,),
 
                   ],
                 ),

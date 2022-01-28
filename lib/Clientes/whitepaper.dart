@@ -36,14 +36,16 @@ class whitepaperState extends State<whitepaper> {
                           'engaging and entertaining hyper-casual games, to win crypto rewards.'
                           , style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.justify,
                       ),
+                        SizedBox(width: 30,),
+
                         Text('On Crypto Playmate, the more a player wins the more their in-platform rank grows, just like normal real-life leaderboards in competitive sports. Once a player advances their rank they can participate in more rewarding tournaments with higher entrance fees & reward pools. '
-                            'Each tournament has a reward pool where WAM.app adds a fixed amount of WAM Coins for every player who pays the entrance fee. At the end of the tournament the rewards are distributed algorithmically to a percentage of the top players based on their score and ranking.'
+                            'Each tournament has a reward pool where WAM.app addsCrypto Playmate a fixed amount of Crypto Playmate Coins for every player who pays the entrance fee. At the end of the tournament the rewards are distributed algorithmically to a percentage of the top players based on their score and ranking.'
                             , style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.justify
                         ),
                       ],
                     ),
                   ),
-                  SizedBox(width: 30,),
+                  SizedBox(width: 45,),
 
                   Padding(
                     padding: EdgeInsets.all(15.0),
@@ -56,7 +58,7 @@ class whitepaperState extends State<whitepaper> {
                       ],
                     ),
                   ),
-                  SizedBox(width: 30,),
+                  SizedBox(width: 45,),
 
                   Padding(
                     padding: EdgeInsets.all(15.0),
@@ -70,7 +72,7 @@ class whitepaperState extends State<whitepaper> {
                       ],
                     ),
                   ),
-                  SizedBox(width: 30,),
+                  SizedBox(width: 45,),
 
                   Padding(
                     padding: EdgeInsets.all(15.0),
@@ -84,7 +86,7 @@ class whitepaperState extends State<whitepaper> {
                       ],
                     ),
                   ),
-                  SizedBox(width: 30,),
+                  SizedBox(width: 45,),
 
                   Padding(
                     padding: EdgeInsets.all(15.0),
@@ -98,7 +100,7 @@ class whitepaperState extends State<whitepaper> {
                       ],
                     ),
                   ),
-                  SizedBox(width: 30,),
+                  SizedBox(width: 45,),
 
                   Padding(
                     padding: EdgeInsets.all(15.0),
@@ -112,7 +114,7 @@ class whitepaperState extends State<whitepaper> {
                       ],
                     ),
                   ),
-                  SizedBox(width: 30,),
+                  SizedBox(width: 45,),
 
                   Padding(
                     padding: EdgeInsets.all(15.0),
@@ -126,7 +128,7 @@ class whitepaperState extends State<whitepaper> {
                       ],
                     ),
                   ),
-                  SizedBox(width: 30,),
+                  SizedBox(width: 45,),
 
                   Padding(
                     padding: EdgeInsets.all(15.0),
@@ -140,7 +142,7 @@ class whitepaperState extends State<whitepaper> {
                       ],
                     ),
                   ),
-                  SizedBox(width: 30,),
+                  SizedBox(width: 45,),
 
                   Padding(
                     padding: EdgeInsets.all(15.0),
@@ -154,7 +156,7 @@ class whitepaperState extends State<whitepaper> {
                       ],
                     ),
                   ),
-                  SizedBox(width: 30,),
+                  SizedBox(width: 45,),
                 ],
               ),
             ),
