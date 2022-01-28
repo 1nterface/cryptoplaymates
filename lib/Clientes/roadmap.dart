@@ -23,80 +23,111 @@ class _roadmapState extends State<roadmap> {
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(25.0),
-          child: Column(
-            children:  [
-              Stepper(
-                steps: [
-                  Step(
-                    title: Text('OPEN 2022 NFT MEMBERSHIP', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 40),softWrap: true),
-                    content: Text('Short description', style: TextStyle(color: Colors.white, fontSize: 25),softWrap: true),
-                  ),
+          child: Row(
+            children: [
+              Flexible(
+                child: Column(
+                  children:  [
 
-                  Step(
-                    title: Text('OPEN 2022 NFT POWER CARDS PRE-SALE', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 40),softWrap: true),
-                    content: Text('Short description', style: TextStyle(color: Colors.white, fontSize: 25),softWrap: true),
-                  ),
+                    ExpansionTile(
+                      iconColor: Colors.lightBlueAccent,
+                      title: Text('OPEN 2022 NFT MEMBERSHIP', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
+                      children: [
+                        Text('Content', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
+                      ],
+                    ),
+                    SizedBox(width: 30,),
 
-                  Step(
-                    title: Text('NFT MEMBERS & POWER CARDS DEMO', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 40),softWrap: true),
-                    content: Text('Short description', style: TextStyle(color: Colors.white, fontSize: 25),softWrap: true),
-                  ),
+                    ExpansionTile(
+                      iconColor: Colors.pink,
 
-                  Step(
-                    title: Text('CRYPTO PLAYMATE OFFICIAL LAUNCH after SUPER BOWL LVI', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 40),softWrap: true),
-                    content: Text('Short description', style: TextStyle(color: Colors.white, fontSize: 25),softWrap: true),
-                  ),
+                      title: Text('OPEN 2022 NFT POWER CARDS PRE-SALE', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
+                      children: [
+                        Text('Content', style: TextStyle(color: Colors.pink, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
+                      ],
+                    ),
+                    SizedBox(width: 30,),
 
-                  Step(
-                    title: Text('RECRUIT COMMUNITY MANAGER FOR DISCORD GROUP', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 40),softWrap: true),
-                    content: Text('Short description', style: TextStyle(color: Colors.white, fontSize: 25),softWrap: true),
-                  ),
+                    ExpansionTile(
+                      iconColor: Color(0xFF815FD5),
 
-                  Step(
-                    title: Text('RECRUIT DESIGN TEAM', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 40),softWrap: true),
-                    content: Text('Short description', style: TextStyle(color: Colors.white, fontSize: 25),softWrap: true),
-                  ),
+                      title: Text('NFT MEMBERS & POWER CARDS DEMO', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
+                      children: [
+                        Text('Content', style: TextStyle(color: Color(0xFF815FD5), fontSize: 20),softWrap: true,textAlign: TextAlign.center),
+                      ],
+                    ),
+                    SizedBox(width: 30,),
 
-                  Step(
-                    title: Text('RECRUIT FLUTTER DEVS', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 40),softWrap: true),
-                    content: Text('Short description', style: TextStyle(color: Colors.white, fontSize: 25),softWrap: true),
-                  ),
+                    ExpansionTile(
+                      iconColor: Colors.lightBlueAccent,
 
-                  Step(
-                    title: Text('RECRUIT MARKETING TEAM', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 40),softWrap: true),
-                    content: Text('Short description', style: TextStyle(color: Colors.white, fontSize: 25),softWrap: true),
-                  ),
+                      title: Text('CRYPTO PLAYMATE OFFICIAL LAUNCH after SUPER BOWL LVI', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
+                      children: [
+                        Text('Content', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
+                      ],
+                    ),
+                    SizedBox(width: 30,),
 
-                  Step(
-                    title: Text('NEW GAMES RELESEASE', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 40),softWrap: true),
-                    content: Text('Short description', style: TextStyle(color: Colors.white, fontSize: 25),softWrap: true),
-                  ),
+                    ExpansionTile(
+                      iconColor: Colors.pink,
 
-                  Step(
-                    title: Text('CREATE CRYPTO PLAYMATE FOUNDATION', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 40),softWrap: true),
-                    content: Text('Short description', style: TextStyle(color: Colors.white, fontSize: 25),softWrap: true),
-                  ),
-                ],
-                onStepTapped: (int newIndex){
-                  setState(() {
-                    _currentStep = newIndex;
-                  });
-                },
-                currentStep: _currentStep,
-                onStepContinue: (){
-                  if (_currentStep != 9){
-                    setState(() {
-                      _currentStep += 1;
-                    });
-                  }
-                },
-                onStepCancel: (){
-                  if(_currentStep != 0){
-                    setState(() {
-                      _currentStep -= 1;
-                    });
-                  }
-                },
+                      title: Text('RECRUIT COMMUNITY MANAGER FOR DISCORD GROUP', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
+                      children: [
+                        Text('Content', style: TextStyle(color: Colors.pink, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
+                      ],
+                    ),
+                    SizedBox(width: 30,),
+
+                    ExpansionTile(
+                      iconColor: Color(0xFF815FD5),
+
+                      title: Text('RECRUIT DESIGN TEAM', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
+                      children: [
+                        Text('Content', style: TextStyle(color: Color(0xFF815FD5), fontSize: 20),softWrap: true,textAlign: TextAlign.center),
+                      ],
+                    ),
+                    SizedBox(width: 30,),
+
+                    ExpansionTile(
+                      iconColor: Colors.lightBlueAccent,
+
+                      title: Text('RECRUIT FLUTTER DEVSs', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
+                      children: [
+                        Text('Content', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
+                      ],
+                    ),
+                    SizedBox(width: 30,),
+
+                    ExpansionTile(
+                      iconColor: Colors.pink,
+
+                      title: Text('RECRUIT MARKETING TEAM', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
+                      children: [
+                        Text('Content', style: TextStyle(color: Colors.pink, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
+                      ],
+                    ),
+                    SizedBox(width: 30,),
+
+                    ExpansionTile(
+                      iconColor: Color(0xFF815FD5),
+
+                      title: Text('NEW GAMES RELESEASE', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
+                      children: [
+                        Text('Content', style: TextStyle(color: Color(0xFF815FD5), fontSize: 20),softWrap: true,textAlign: TextAlign.center),
+                      ],
+                    ),
+
+                    ExpansionTile(
+                      iconColor: Colors.lightBlueAccent,
+
+                      title: Text('CREATE CRYPTO PLAYMATE FOUNDATION', style: TextStyle(color: Colors.white, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
+                      children: [
+                        Text('Content', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
+                      ],
+                    ),
+
+                  ],
+                ),
               ),
             ],
           ),
