@@ -236,7 +236,7 @@ class cryptactoeState extends State<cryptactoe> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children:const [
-                            Icon(Icons.fiber_new, color : Colors.white),
+                            Icon(Icons.gamepad_outlined, color : Colors.white),
                             SizedBox(width:15),
                             Text('NEW GAME', style: TextStyle(color: Colors.white, fontSize: 20.0),),
                           ],
