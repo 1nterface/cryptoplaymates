@@ -85,7 +85,7 @@ class homeState extends State<home> {
                     },
                   child: Row(
                       children: [
-                        Icon(Icons.add_chart, color: Colors.white),
+                        Icon(Icons.add_chart, color: Colors.lightBlueAccent),
                         SizedBox(width:10),
                         Text("NFT Members", style: TextStyle(color: Colors.white),),
                       ]
@@ -98,7 +98,7 @@ class homeState extends State<home> {
                   },
                   child: Row(
                       children: [
-                        Icon(Icons.sd_card_alert_rounded, color: Colors.white),
+                        Icon(Icons.sd_card_alert_rounded, color: Colors.pink),
                         SizedBox(width:10),
                         Text("NFT Power Cards", style: TextStyle(color: Colors.white),),
                       ]
@@ -112,7 +112,7 @@ class homeState extends State<home> {
                   },
                   child: Row(
                       children: [
-                        Icon(Icons.email, color: Colors.white),
+                        Icon(Icons.email, color: Color(0xFF815FD5)),
                         SizedBox(width:10),
                         Text('Contact us', style: TextStyle(color: Colors.white),),
                       ]
@@ -145,7 +145,7 @@ class homeState extends State<home> {
 
           SpeedDialChild(
               child: Icon(Icons.person, color: Colors.white,),
-              backgroundColor: Colors.lightBlueAccent,
+              backgroundColor: Colors.pink,
               label: 'Team',
               onTap: () async {
 
@@ -157,7 +157,7 @@ class homeState extends State<home> {
 
           SpeedDialChild(
               child: Icon(Icons.account_tree, color: Colors.white,),
-              backgroundColor: Colors.lightBlueAccent,
+              backgroundColor: Color(0xFF815FD5),
               label: 'Roadmap',
               onTap: () async {
 
@@ -279,7 +279,7 @@ class homeState extends State<home> {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Text('On Feb 2022', style: TextStyle(color: Colors.white, fontSize: 35, fontWeight: FontWeight.bold),),
+                    Text('Launch on Feb 13', style: TextStyle(color: Colors.white, fontSize: 35, fontWeight: FontWeight.bold),),
                   ],
                 ),
               ],

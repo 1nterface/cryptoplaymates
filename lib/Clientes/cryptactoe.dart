@@ -47,12 +47,12 @@ class cryptactoeState extends State<cryptactoe> {
                       color: Colors.white,
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.pink,
+                          color: Colors.lightBlueAccent,
                           spreadRadius: 4,
                           blurRadius: 10,
                         ),
                         BoxShadow(
-                          color: Colors.pink,
+                          color: Colors.lightBlueAccent,
                           spreadRadius: -4,
                           blurRadius: 5,
                         )
@@ -62,7 +62,7 @@ class cryptactoeState extends State<cryptactoe> {
                     height: 70,
                     child: SizedBox(
                       child: RaisedButton(
-                        color: Colors.pink,
+                        color: Colors.lightBlueAccent,
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -95,12 +95,12 @@ class cryptactoeState extends State<cryptactoe> {
                       color: Colors.white,
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.lightBlueAccent,
+                          color: Colors.pink,
                           spreadRadius: 4,
                           blurRadius: 10,
                         ),
                         BoxShadow(
-                          color: Colors.lightBlueAccent,
+                          color: Colors.pink,
                           spreadRadius: -4,
                           blurRadius: 5,
                         )
@@ -110,7 +110,7 @@ class cryptactoeState extends State<cryptactoe> {
                     height: 70,
                     child: SizedBox(
                       child: RaisedButton(
-                        color: Colors.lightBlueAccent,
+                        color: Colors.pink,
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
                         child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
