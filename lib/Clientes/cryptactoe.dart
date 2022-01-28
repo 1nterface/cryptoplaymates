@@ -95,12 +95,12 @@ class cryptactoeState extends State<cryptactoe> {
                       color: Colors.white,
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.pink,
+                          color: Colors.pinkAccent,
                           spreadRadius: 4,
                           blurRadius: 10,
                         ),
                         BoxShadow(
-                          color: Colors.pink,
+                          color: Colors.pinkAccent,
                           spreadRadius: -4,
                           blurRadius: 5,
                         )
@@ -110,7 +110,7 @@ class cryptactoeState extends State<cryptactoe> {
                     height: 70,
                     child: SizedBox(
                       child: RaisedButton(
-                        color: Colors.pink,
+                        color: Colors.pinkAccent,
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
                         child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
