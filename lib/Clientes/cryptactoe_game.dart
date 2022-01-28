@@ -106,12 +106,12 @@ class cryptactoe_gameState extends State<cryptactoe_game> {
                     color: Colors.white,
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.deepPurple,
+                        color: Color(0xFF815FD5),
                         spreadRadius: 4,
                         blurRadius: 10,
                       ),
                       BoxShadow(
-                        color: Colors.deepPurple,
+                        color: Color(0xFF815FD5),
                         spreadRadius: -4,
                         blurRadius: 5,
                       )
@@ -121,7 +121,7 @@ class cryptactoe_gameState extends State<cryptactoe_game> {
                   height: 25,
                   child: SizedBox(
                     child: RaisedButton(
-                      color: Colors.deepPurple,
+                      color: Color(0xFF815FD5),
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
                       child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
