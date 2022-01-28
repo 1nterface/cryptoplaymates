@@ -1,4 +1,10 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
+import 'package:cryptoplaymates/authentication.dart';
+
 import 'package:flutter/material.dart';
+import 'package:toast/toast.dart';
 // ignore: camel_case_types
 class cryptactoe extends StatefulWidget {
   const cryptactoe({Key? key}) : super(key: key);
@@ -8,6 +14,27 @@ class cryptactoe extends StatefulWidget {
 }
 
 class cryptactoeState extends State<cryptactoe> {
+
+  TextEditingController _emailController = TextEditingController();
+  TextEditingController _passwordController = TextEditingController();
+  Future<void> inicioSesion() async {
+    // marked async
+    AuthenticationHelper()
+        .signIn(email: _emailController.text, password: _passwordController.text)
+        .then((result) {
+      if (result == null) {
+
+        Navigator.of(context).pop();
+
+        //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => home(cajas_modelo("","","",0,0,0,0,0,"","","","","",0))));
+        Toast.show("¡Has iniciado sesion!", context, duration: Toast.LENGTH_LONG, gravity:  Toast.CENTER);
+
+      } else {
+        Toast.show("Contraseña incorrecta!", context, duration: Toast.LENGTH_LONG, gravity:  Toast.CENTER);
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -111,9 +138,9 @@ class cryptactoeState extends State<cryptactoe> {
                                       inicioSesion();
 
                                       setState(() {
-                                        comprasNotificaciones(context);
-                                        comprasNotificaciones2(context);
-                                        sesion = true;
+                                        //comprasNotificaciones(context);
+                                        //comprasNotificaciones2(context);
+                                        //sesion = true;
                                       });
 
                                     },
@@ -225,9 +252,9 @@ class cryptactoeState extends State<cryptactoe> {
                                       inicioSesion();
 
                                       setState(() {
-                                        comprasNotificaciones(context);
-                                        comprasNotificaciones2(context);
-                                        sesion = true;
+                                        //comprasNotificaciones(context);
+                                        //comprasNotificaciones2(context);
+                                        //sesion = true;
                                       });
 
                                     },
