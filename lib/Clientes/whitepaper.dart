@@ -46,9 +46,9 @@ class whitepaperState extends State<whitepaper> {
                   SizedBox(width: 30,),
 
                   ExpansionTile(
-                    collapsedIconColor: Colors.pink,
-                    iconColor: Colors.pink,
-                    title: Text('Our Mission', style: TextStyle(color: Colors.pink, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
+                    collapsedIconColor: Colors.lightBlueAccent,
+                    iconColor: Colors.lightBlueAccent,
+                    title: Text('Our Mission', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
                     children: [
                       Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
                     ],
@@ -56,10 +56,10 @@ class whitepaperState extends State<whitepaper> {
                   SizedBox(width: 30,),
 
                   ExpansionTile(
-                    collapsedIconColor: Color(0xFF815FD5),
-                    iconColor: Color(0xFF815FD5),
+                    collapsedIconColor: Colors.lightBlueAccent,
+                    iconColor: Colors.lightBlueAccent,
 
-                    title: Text('Our Vision', style: TextStyle(color: Color(0xFF815FD5), fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
+                    title: Text('Our Vision', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
                     children: [
                       Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
                     ],
@@ -78,10 +78,10 @@ class whitepaperState extends State<whitepaper> {
                   SizedBox(width: 30,),
 
                   ExpansionTile(
-                    collapsedIconColor: Colors.pink,
-                    iconColor: Colors.pink,
+                    collapsedIconColor: Colors.lightBlueAccent,
+                    iconColor: Colors.lightBlueAccent,
 
-                    title: Text('Instructions', style: TextStyle(color: Colors.pink, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
+                    title: Text('Instructions', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
                     children: [
                       Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
                     ],
@@ -89,10 +89,10 @@ class whitepaperState extends State<whitepaper> {
                   SizedBox(width: 30,),
 
                   ExpansionTile(
-                    collapsedIconColor: Color(0xFF815FD5),
-                    iconColor: Color(0xFF815FD5),
+                    collapsedIconColor: Colors.lightBlueAccent,
+                    iconColor: Colors.lightBlueAccent,
 
-                    title: Text('NFT Members', style: TextStyle(color: Color(0xFF815FD5), fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
+                    title: Text('NFT Members', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
                     children: [
                       Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
                     ],
@@ -111,10 +111,10 @@ class whitepaperState extends State<whitepaper> {
                   SizedBox(width: 30,),
 
                   ExpansionTile(
-                    collapsedIconColor: Colors.pink,
-                    iconColor: Colors.pink,
+                    collapsedIconColor: Colors.lightBlueAccent,
+                    iconColor: Colors.lightBlueAccent,
 
-                    title: Text('Crypto Playmate Foundation', style: TextStyle(color: Colors.pink, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
+                    title: Text('Crypto Playmate Foundation', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
                     children: [
                       Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
                     ],
@@ -122,10 +122,10 @@ class whitepaperState extends State<whitepaper> {
                   SizedBox(width: 30,),
 
                   ExpansionTile(
-                    collapsedIconColor: Color(0xFF815FD5),
-                    iconColor: Color(0xFF815FD5),
+                    collapsedIconColor: Colors.lightBlueAccent,
+                    iconColor: Colors.lightBlueAccent,
 
-                    title: Text('Team', style: TextStyle(color: Color(0xFF815FD5), fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
+                    title: Text('Team', style: TextStyle(color: Colors.lightBlueAccent, fontSize: 40),softWrap: true, textAlign: TextAlign.center,),
                     children: [
                       Text('Content', style: TextStyle(color: Colors.white, fontSize: 20),softWrap: true,textAlign: TextAlign.center),
                     ],
