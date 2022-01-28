@@ -43,7 +43,7 @@ class cryptactoe_gameState extends State<cryptactoe_game> {
                             'CryptoPlaymate 1',
                             style: TextStyle(fontSize: 20,
                                 fontWeight: FontWeight.bold,
-                                color: Colors.white),
+                                color: Colors.pink),
                           ),
                           Text(
                             xScore.toString(),
@@ -59,7 +59,7 @@ class cryptactoe_gameState extends State<cryptactoe_game> {
                         children: <Widget>[
                           Text('CryptoPlaymate 2', style: TextStyle(fontSize: 20,
                               fontWeight: FontWeight.bold,
-                              color: Colors.white)
+                              color: Colors.lightBlueAccent)
                           ),
                           Text(
                             oScore.toString(),
