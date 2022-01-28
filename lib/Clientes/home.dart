@@ -95,7 +95,7 @@ class homeState extends State<home> {
                     },
                   child: Row(
                       children: [
-                        Icon(Icons.add_chart, color: Colors.lightBlueAccent),
+                        Icon(Icons.add_chart, color: Color(0xFF815FD5)),
                         SizedBox(width:10),
                         Text("NFT Members", style: TextStyle(color: Colors.white),),
                       ]

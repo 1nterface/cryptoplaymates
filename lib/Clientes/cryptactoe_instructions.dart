@@ -1,21 +1,22 @@
 import 'package:flutter/material.dart';
 
-class cryptactoe_lobby extends StatefulWidget {
-  const cryptactoe_lobby({Key? key}) : super(key: key);
+class cryptactoe_instructions extends StatefulWidget {
+  const cryptactoe_instructions({Key? key}) : super(key: key);
 
   @override
-  cryptactoe_lobbyState createState() => cryptactoe_lobbyState();
+  cryptactoe_instructionsState createState() => cryptactoe_instructionsState();
 }
 
-class cryptactoe_lobbyState extends State<cryptactoe_lobby> {
+class cryptactoe_instructionsState extends State<cryptactoe_instructions> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF171B26),
       appBar: AppBar(
         backgroundColor: Color(0xFF293143),
+
         centerTitle: true,
-        title: Text('Lobby', style: TextStyle(color: Colors.white)),
+        title: Text('Instructions', style: TextStyle(color: Colors.white)),
       ),
       body: SingleChildScrollView(
         child: Center(

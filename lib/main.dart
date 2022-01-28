@@ -1,6 +1,7 @@
 //@dart=2.9
 import 'package:cryptoplaymates/Clientes/cryptactoe.dart';
 import 'package:cryptoplaymates/Clientes/cryptactoe_game.dart';
+import 'package:cryptoplaymates/Clientes/cryptactoe_instructions.dart';
 import 'package:cryptoplaymates/Clientes/cryptactoe_settings.dart';
 import 'package:cryptoplaymates/Clientes/home.dart';
 import 'package:cryptoplaymates/Clientes/juegos_principal.dart';
@@ -49,6 +50,7 @@ class MyApp extends StatelessWidget {
         '/cryptactoe': (BuildContext context) => cryptactoe(),
         '/cryptactoe_settings': (BuildContext context) => cryptactoe_settings(),
         '/cryptactoe_game': (BuildContext context) => cryptactoe_game(),
+        '/cryptactoe_instructions': (BuildContext context) => cryptactoe_instructions(),
         '/juegos_principal': (BuildContext context) => juegos_principal(),
 
       },

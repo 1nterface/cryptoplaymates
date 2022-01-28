@@ -236,12 +236,14 @@ class cryptactoeState extends State<cryptactoe> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children:const [
-                            Icon(Icons.shuffle, color : Colors.white),
+                            Icon(Icons.fiber_new, color : Colors.white),
                             SizedBox(width:15),
-                            Text('RANDOM', style: TextStyle(color: Colors.white, fontSize: 20.0),),
+                            Text('NEW GAME', style: TextStyle(color: Colors.white, fontSize: 20.0),),
                           ],
                         ),
                         onPressed: () async {
+
+                          Navigator.of(context).pushNamed("/cryptactoe_lobby");
 
                           //sinSesion();
 
@@ -284,13 +286,14 @@ class cryptactoeState extends State<cryptactoe> {
                             mainAxisAlignment: MainAxisAlignment.center,
 
                             children:const [
-                              Icon(Icons.gamepad_outlined, color : Colors.white),
+                              Icon(Icons.list, color : Colors.white),
                               SizedBox(width:15),
-                              Text('CUSTOM', style: TextStyle(color: Colors.white, fontSize: 20.0),),
+                              Text('INSTRUCTIONS', style: TextStyle(color: Colors.white, fontSize: 20.0),),
                             ]
                         ),
                         onPressed: () async {
 
+                          Navigator.of(context).pushNamed("/cryptactoe_instructions");
                           //sinSesion2();
 
                         },
