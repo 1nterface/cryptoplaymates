@@ -82,7 +82,7 @@ class cryptactoe_gameState extends State<cryptactoe_game> {
                 itemBuilder: (BuildContext context, int index) {
                   return GestureDetector(
                     onTap: () {
-                      _clearScoreBoard;
+                      _tapped(index);
                     },
                     child: Container(
                       decoration: BoxDecoration(
@@ -133,7 +133,7 @@ class cryptactoe_gameState extends State<cryptactoe_game> {
                           ]
                       ),
                       onPressed: () async {
-                        Navigator.of(context).pushNamed("/cryptactoe_settings");
+                        _clearScoreBoard();
                       },
                     ),
                   ),
