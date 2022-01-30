@@ -36,7 +36,7 @@ class cryptactoe_lobbyState extends State<cryptactoe_lobby> {
     return Expanded(
       child: StreamBuilder(
         //Asi encontraremos los negocios por ciudad y sin problemas con la BD
-          stream: reflistadecarrito.where('id', isEqualTo: "123").snapshots(),
+          stream: reflistadecarrito.where('id', isEqualTo: "123").where('estado', isEqualTo: "activo").snapshots(),
           builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot){
             if (!snapshot.hasData) {
               return Text("Loading..");
@@ -125,8 +125,6 @@ class cryptactoe_lobbyState extends State<cryptactoe_lobby> {
                                   print("hora");
                                   // do something
                                 }
-
-
                               },
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(5.0),
@@ -145,54 +143,6 @@ class cryptactoe_lobbyState extends State<cryptactoe_lobby> {
                             ),
                           ),
                           //Container(color: Colors.black12,),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.all(5.0),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Container(
-                                      child: Text(documents["empresa"], style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22.0, color: Colors.black45),),
-                                      //height: 30,
-                                      width: 200,
-                                    ),
-                                    //SizedBox(width: 5,),
-                                  ],
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 5.0),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                  children: [
-                                    Container(
-                                      child:
-                                      documents["negocio"] =="cerrado"?
-                                      Text("CERRADO", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0, color: Colors.red[800]),)
-                                          :
-                                      current.hour >= documents["entrada"] && current.hour < documents["salida"]?
-                                      Text("ABIERTO", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0, color: Colors.green[800]),)
-                                          :
-                                      Text("CERRADO", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0, color: Colors.red[800]),),
-                                      width: 200,
-                                    ),
-                                    Container(
-                                      child:
-                                      documents["minutosSalida"] == null?
-                                      Text(documents["entrada"].toString()+":00 a "+documents["minutosSalida"].toString()+":00", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0, color: Colors.black45),)
-                                          :
-                                      Text(documents["entrada"].toString()+":00 a "+documents["salida"].toString()+":"+documents["minutosSalida"].toString(), style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.0, color: Colors.black45),),
-
-                                      //height: 30,
-                                      width: 100,
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
                         ],
                       ),
                     ),

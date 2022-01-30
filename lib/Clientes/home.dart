@@ -186,7 +186,7 @@ class homeState extends State<home> {
                   },
                   child: Row(
                       children: [
-                        Icon(FontAwesomeIcons.networkWired, color: Color(0xFF815FD5)),
+                        Icon(FontAwesomeIcons.idCard, color: Color(0xFF815FD5)),
                         SizedBox(width:10),
                         Text('NFT Member', style: TextStyle(color: Colors.white),),
                       ]
@@ -201,7 +201,7 @@ class homeState extends State<home> {
                   },
                   child: Row(
                       children: [
-                        Icon(FontAwesomeIcons.idCard, color: Colors.pinkAccent),
+                        Icon(FontAwesomeIcons.networkWired, color: Colors.pinkAccent),
                         SizedBox(width:10),
                         Text('NFT Power Cards', style: TextStyle(color: Colors.white),),
                       ]
