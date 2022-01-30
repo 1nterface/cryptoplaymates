@@ -86,8 +86,8 @@ class cryptactoe_lobbyState extends State<cryptactoe_lobby> {
                     },
                     child: Card(
 
-                      elevation: 7.0,
-                      color: Colors.white,
+                      elevation: 4.0,
+                      color: Color(0xFF171B26),
                       child: Column(
                         children: <Widget>[
                           Padding(
@@ -95,49 +95,16 @@ class cryptactoe_lobbyState extends State<cryptactoe_lobby> {
                             child: InkWell(
                               onTap: () async{
 
-                                final prefs2 = await SharedPreferences.getInstance();
-                                final correoresta = prefs2.getString('correoresta') ?? "";
 
-                                //_sheetCarrito(context, foto, nombreProducto);
-                                //   showDialog(context: context, builder: (BuildContext context) => _buildAboutDialog(context, foto, nombreProducto, costo, descripcion, empresa, categoriap, newid, codigo),);
-                                //_sheetComanda2(context, costo,  descripcion,  nombreProducto, foto);
-
-
-                                //Navigator.of(context).pushNamed('/home');
-
-
-                                //await Navigator.push(context, MaterialPageRoute(builder: (context) => home(cajas_modelo("", documents["empresa"],documents["miembrodesde"],documents["minutosSalida"],documents["entrada"], documents["salida"],4,5,documents["numero"],documents["correo"],documents["colonia"], documents["calle"], documents["empresa"], 0))),);
-
-                                final prefs = await SharedPreferences.getInstance();
-                                prefs.setString('correoresta', documents["correo"]);
-                                prefs.setString('empresa', documents["empresa"]);
-
-                                final startTime = DateTime(2018, 6, 23, 10, 30);
-                                final endTime = DateTime(2018, 6, 23, 13, 00);
-
-                                final currentTime = DateTime.now();
-
-                                if(currentTime.isAfter(startTime) && currentTime.isBefore(endTime)) {
-
-                                  print(currentTime);
-                                  print("hora");
-                                  // do something
-                                }
                               },
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(5.0),
-                                child: Container(
-                                  height: 250.0,
-                                  decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                      fit: BoxFit.cover,
-                                      image: NetworkImage(documents["foto"]),
-                                    ),
-                                    //borderRadius: BorderRadius.all(Radius.circular(30.0)),
-                                    color: Colors.transparent,
-                                  ),
-                                ),
-                              ),
+                              child: Row(
+                                children: [
+                                  Text(documents["folio"].toString()),
+                                  Text(documents["nombre"]),
+                                  Text(documents["maxgame"]),
+                                  Text(documents["maxmoney"]),
+                                ]
+                              )
                             ),
                           ),
                           //Container(color: Colors.black12,),
