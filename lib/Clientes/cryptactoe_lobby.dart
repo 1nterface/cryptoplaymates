@@ -105,18 +105,23 @@ class cryptactoe_lobbyState extends State<cryptactoe_lobby> {
                                   Column(
                                     children: [
                                       Flexible(child: Text(documents["nombre"], style: TextStyle(color: Colors.white, fontSize: 25),)),
-                                      Column(
-                                        children: [
-                                          Text("Games"),
-                                          Text(documents["maxgame"]),
-                                        ],
-                                      ),
-                                      Column(
-                                        children: [
-                                          Text("Reward"),
-                                          Text(documents["maxmoney"]),
-                                        ],
-                                      ),
+                                      Row(
+                                        children:[
+                                          Column(
+                                            children: [
+                                              Text("Games"),
+                                              Text(documents["maxgame"]),
+                                            ],
+                                          ),
+                                          SizedBox(height: 20,),
+                                          Column(
+                                            children: [
+                                              Text("Reward"),
+                                              Text(documents["maxmoney"]),
+                                            ],
+                                          ),
+                                        ]
+                                      )
                                     ],
                                   ),
                                 ]
