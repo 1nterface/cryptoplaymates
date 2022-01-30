@@ -74,8 +74,8 @@ class cryptactoe_lobbyState extends State<cryptactoe_lobby> {
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                                     children: [
-                                      Text(documents["folio"].toString(), style: TextStyle(color: Colors.white, fontSize: 20),),
-                                      Icon(Icons.person, color: Colors.pinkAccent, size: 50),
+                                      Text("\$"+documents["maxmoney"].toString(), style: TextStyle(color: Colors.white, fontSize: 20),),
+                                      Container(child: Image.asset("images/opcex.png"))
                                     ],
                                   ),
                                   Column(
@@ -86,14 +86,14 @@ class cryptactoe_lobbyState extends State<cryptactoe_lobby> {
                                         children:[
                                           Column(
                                             children: [
-                                              Text("Games", style: TextStyle(color: Colors.white12),),
+                                              Text("Games", style: TextStyle(color: Colors.white38),),
                                               Text(documents["maxgame"], style: TextStyle(color: Colors.white),),
                                             ],
                                           ),
-                                          Text(" | ", style: TextStyle(color: Colors.white12),),
+                                          Text(" | ", style: TextStyle(color: Colors.white38),),
                                           Column(
                                             children: [
-                                              Text("Reward", style: TextStyle(color: Colors.white12),),
+                                              Text("Players", style: TextStyle(color: Colors.white38),),
                                               Text(documents["maxmoney"], style: TextStyle(color: Colors.white),),
                                             ],
                                           ),
