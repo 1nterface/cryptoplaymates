@@ -30,9 +30,7 @@ class cryptactoe_lobbyState extends State<cryptactoe_lobby> {
   DateTime current = DateTime.now();
 
   listaTodos(){
-    final FirebaseAuth auth = FirebaseAuth.instance;
-    final User? user = auth.currentUser;
-    final correo = user!.email;
+
     return Expanded(
       child: StreamBuilder(
         //Asi encontraremos los negocios por ciudad y sin problemas con la BD
