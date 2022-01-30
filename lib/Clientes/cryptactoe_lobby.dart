@@ -86,7 +86,7 @@ class cryptactoe_lobbyState extends State<cryptactoe_lobby> {
                     },
                     child: Card(
 
-                      elevation: 4.0,
+                      elevation: 10.0,
                       color: Color(0xFF171B26),
                       child: Column(
                         children: <Widget>[
@@ -98,11 +98,27 @@ class cryptactoe_lobbyState extends State<cryptactoe_lobby> {
 
                               },
                               child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceAround,
                                 children: [
-                                  Text(documents["folio"].toString()),
-                                  Text(documents["nombre"]),
-                                  Text(documents["maxgame"]),
-                                  Text(documents["maxmoney"]),
+                                  Text(documents["folio"].toString(), style: TextStyle(color: Colors.white, fontSize: 20),),
+                                  Icon(Icons.person, color: Colors.pinkAccent, size: 30),
+                                  Column(
+                                    children: [
+                                      Flexible(child: Text(documents["nombre"], style: TextStyle(color: Colors.white, fontSize: 25),)),
+                                      Column(
+                                        children: [
+                                          Text("Games"),
+                                          Text(documents["maxgame"]),
+                                        ],
+                                      ),
+                                      Column(
+                                        children: [
+                                          Text("Reward"),
+                                          Text(documents["maxmoney"]),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
                                 ]
                               )
                             ),
