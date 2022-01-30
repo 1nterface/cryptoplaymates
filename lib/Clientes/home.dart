@@ -181,7 +181,8 @@ class homeState extends State<home> {
 
                 InkWell(
                   onTap:(){
-                    launchURL(url);
+                    Navigator.of(context).pushNamed("/nft_members");
+
                   },
                   child: Row(
                       children: [
@@ -195,7 +196,8 @@ class homeState extends State<home> {
 
                 InkWell(
                   onTap:(){
-                    Navigator.of(context).pushNamed("/nft_members");
+                    Navigator.of(context).pushNamed("/nft_power_cards");
+
                   },
                   child: Row(
                       children: [
@@ -209,7 +211,7 @@ class homeState extends State<home> {
 
                 InkWell(
                   onTap:(){
-                    Navigator.of(context).pushNamed("/nft_power_cards");
+                    launchURL(url);
                   },
                   child: Row(
                       children: [
@@ -334,9 +336,9 @@ class homeState extends State<home> {
                                 ElevatedButton(
                                   onPressed: () {
 
-                                    //sinSesion2();
+                                    sinSesion2();
 
-                                    Navigator.of(context).pushNamed('/juegos_principal');
+                                    //Navigator.of(context).pushNamed('/juegos_principal');
 
                                   },
                                   child: Text('Play'),
@@ -363,7 +365,9 @@ class homeState extends State<home> {
                               children: [
                                 ElevatedButton(
                                   onPressed: () {
-                                    Navigator.of(context).pushNamed('/juegos_principal');
+
+                                    //Navigator.of(context).pushNamed('/juegos_principal');
+                                    sinSesion2();
 
                                   },
                                   child: Text('Play'),
