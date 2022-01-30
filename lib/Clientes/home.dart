@@ -178,51 +178,38 @@ class homeState extends State<home> {
           child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children:[
-                InkWell(
-                  onTap:(){
-
-                    showDialog(
-                      context: context,
-                      builder: (BuildContext context) {
-                        // return object of type Dialog
-                        return AlertDialog(
-                          title: Text('¿Deseas cerrar sesion?', style: TextStyle(color: Colors.black)),
-                          actions: <Widget>[
-
-
-
-                            FlatButton(
-                              onPressed: (){
-
-                                Navigator.of(context).pop();
-
-                              },
-                              child: Text('Cancelar'),
-                            ),
-                            // usually buttons at the bottom of the dialog
-                            FlatButton(
-                              child: Text("Si"),
-                              onPressed: () async {
-                                Navigator.of(context).pushNamedAndRemoveUntil('/clientes_login', (route) => false);
-                                //signOut();
-                              },
-                            ),
-                          ],
-                        );
-                      },
-                    );
-
-                    //_tiempoRecorrido(context, documents["estado3"], documents["pendiente"], documents["transitopendiente"], documents["encamino"], documents["ensitio"], documents["finalizo"], documents["hora"]);
-                  },
-                  child: Icon(Icons.exit_to_app),
-                ),
-                Text("Ive's Boutique", style: const TextStyle(color: Colors.white),),
-
-                SizedBox(width: 15),
 
                 InkWell(
                   onTap:(){
                     launchURL(url);
+                  },
+                  child: Row(
+                      children: [
+                        Icon(FontAwesomeIcons.networkWired, color: Color(0xFF815FD5)),
+                        SizedBox(width:10),
+                        Text('NFT Member', style: TextStyle(color: Colors.white),),
+                      ]
+                  ),
+                ),
+                SizedBox(width: 15),
+
+                InkWell(
+                  onTap:(){
+                    Navigator.of(context).pushNamed("/nft_members");
+                  },
+                  child: Row(
+                      children: [
+                        Icon(FontAwesomeIcons.idCard, color: Colors.pinkAccent),
+                        SizedBox(width:10),
+                        Text('NFT Power Cards', style: TextStyle(color: Colors.white),),
+                      ]
+                  ),
+                ),
+                SizedBox(width: 15),
+
+                InkWell(
+                  onTap:(){
+                    Navigator.of(context).pushNamed("/nft_power_cards");
                   },
                   child: Row(
                       children: [
@@ -347,7 +334,7 @@ class homeState extends State<home> {
                                 ElevatedButton(
                                   onPressed: () {
 
-                                    sinSesion2();
+                                    //sinSesion2();
 
                                     Navigator.of(context).pushNamed('/juegos_principal');
 
