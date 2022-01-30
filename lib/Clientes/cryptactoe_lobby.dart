@@ -74,13 +74,13 @@ class cryptactoe_lobbyState extends State<cryptactoe_lobby> {
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                                     children: [
-                                      Text("\$"+documents["maxmoney"].toString(), style: TextStyle(color: Colors.white, fontSize: 20),),
                                       Container(
                                         width: 50,
                                           height: 50,
                                           child: Image.asset("images/opcex.png"))
                                     ],
                                   ),
+                                  Text("\$"+documents["maxmoney"].toString(), style: TextStyle(color: Colors.white, fontSize: 50),),
                                   Column(
                                     children: [
                                       Flexible(child: Text(documents["nombre"], style: TextStyle(color: Colors.white, fontSize: 25),)),
@@ -93,7 +93,7 @@ class cryptactoe_lobbyState extends State<cryptactoe_lobby> {
                                               Text(documents["maxgame"], style: TextStyle(color: Colors.white),),
                                             ],
                                           ),
-                                          Text(" | ", style: TextStyle(color: Colors.white38),),
+                                          Text(" | ", style: TextStyle(color: Colors.white38, fontSize: 35),),
                                           Column(
                                             children: [
                                               Text("Players", style: TextStyle(color: Colors.white38),),
