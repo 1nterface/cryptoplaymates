@@ -18,8 +18,17 @@ class cryptactoe_lobbyState extends State<cryptactoe_lobby> {
         title: Text('Lobby', style: TextStyle(color: Colors.white)),
       ),
       body: SingleChildScrollView(
-        child: Center(
-          child: Container(),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text("Foto de perfil y monedas"),
+                Text("Lista de lobbys")
+              ],
+            ),
+          ],
         ),
       ),
     );

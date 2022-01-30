@@ -252,9 +252,7 @@ class cryptactoeState extends State<cryptactoe> {
                     ),
                   ),
                 ),
-
-
-
+                
                 const SizedBox(height: 20),
 
                 Container(

@@ -4,6 +4,7 @@ import 'dart:async';
 import 'dart:html';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/services.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:toast/toast.dart';
 import 'package:cryptoplaymates/Modelo/cajas_modelo.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -77,6 +78,95 @@ class homeState extends State<home> {
     );
   }
 
+  Future<void> inicioSesion() async {
+    // marked async
+    AuthenticationHelper()
+        .signIn(email: _emailController.text, password: _passwordController.text)
+        .then((result) {
+      if (result == null) {
+
+        Navigator.of(context).pop();
+
+        //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => home(cajas_modelo("","","",0,0,0,0,0,"","","","","",0))));
+        Toast.show("¡Has iniciado sesion!", context, duration: Toast.LENGTH_LONG, gravity:  Toast.CENTER);
+
+      } else {
+        Toast.show("Contraseña incorrecta!", context, duration: Toast.LENGTH_LONG, gravity:  Toast.CENTER);
+      }
+    });
+  }
+
+  void sinSesion2(){
+    final FirebaseAuth auth = FirebaseAuth.instance;
+
+    if(FirebaseAuth.instance.currentUser?.uid == null){
+      // not logged
+      Alert(
+          context: context,
+          title: "Inicio de sesion",
+          content: Column(
+            children: <Widget>[
+              TextFormField(
+                controller: _emailController,
+                decoration: InputDecoration(
+                  icon: Icon(Icons.account_circle, color: Colors.pinkAccent),
+                  labelText: 'Correo',
+                ),
+              ),
+              TextFormField(
+                controller: _passwordController,
+
+                obscureText: true,
+                decoration: InputDecoration(
+                  icon: Icon(Icons.lock, color: Colors.pinkAccent),
+                  labelText: 'Contrasena',
+                ),
+              ),
+            ],
+          ),
+          buttons: [
+            DialogButton(
+              onPressed: () {
+
+                initState();
+
+                inicioSesion();
+
+                setState(() {
+                  //comprasNotificaciones(context);
+                  //comprasNotificaciones2(context);
+                  //sesion = true;
+                });
+
+              },
+              child: Text(
+                "Entrar",
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
+              color: Colors.lightBlueAccent,
+
+            ),
+            DialogButton(
+              onPressed: () {
+
+                Navigator.of(context).pushNamed('/registro');
+
+              },
+              child: Text(
+                "Registrarme",
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
+              color: Colors.lightBlueAccent,
+            )
+          ]).show();
+    } else {
+      // logged
+      Navigator.of(context).pushNamed("/cryptactoe_game");
+
+    }
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -91,29 +181,43 @@ class homeState extends State<home> {
                 InkWell(
                   onTap:(){
 
-                    Navigator.of(context).pushNamed('/nft_members');
-                    },
-                  child: Row(
-                      children: [
-                        Icon(Icons.add_chart, color: Color(0xFF815FD5)),
-                        SizedBox(width:10),
-                        Text("NFT Members", style: TextStyle(color: Colors.white),),
-                      ]
-                  ),
-                ),
-                SizedBox(width: 15),
-                InkWell(
-                  onTap:(){
-                    Navigator.of(context).pushNamed('/nft_power_cards');
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        // return object of type Dialog
+                        return AlertDialog(
+                          title: Text('¿Deseas cerrar sesion?', style: TextStyle(color: Colors.black)),
+                          actions: <Widget>[
+
+
+
+                            FlatButton(
+                              onPressed: (){
+
+                                Navigator.of(context).pop();
+
+                              },
+                              child: Text('Cancelar'),
+                            ),
+                            // usually buttons at the bottom of the dialog
+                            FlatButton(
+                              child: Text("Si"),
+                              onPressed: () async {
+                                Navigator.of(context).pushNamedAndRemoveUntil('/clientes_login', (route) => false);
+                                //signOut();
+                              },
+                            ),
+                          ],
+                        );
+                      },
+                    );
+
+                    //_tiempoRecorrido(context, documents["estado3"], documents["pendiente"], documents["transitopendiente"], documents["encamino"], documents["ensitio"], documents["finalizo"], documents["hora"]);
                   },
-                  child: Row(
-                      children: [
-                        Icon(Icons.sd_card_alert_rounded, color: Colors.pink),
-                        SizedBox(width:10),
-                        Text("NFT Power Cards", style: TextStyle(color: Colors.white),),
-                      ]
-                  ),
+                  child: Icon(Icons.exit_to_app),
                 ),
+                Text("Ive's Boutique", style: const TextStyle(color: Colors.white),),
+
                 SizedBox(width: 15),
 
                 InkWell(
@@ -219,6 +323,8 @@ class homeState extends State<home> {
                     //hola(),
                     InkWell(
                       onTap: () async {
+
+                        //sinSesion2();
                         Navigator.of(context).pushNamed("/cryptactoe");
                       },
                       child: Container(
@@ -240,6 +346,9 @@ class homeState extends State<home> {
                               children: [
                                 ElevatedButton(
                                   onPressed: () {
+
+                                    sinSesion2();
+
                                     Navigator.of(context).pushNamed('/juegos_principal');
 
                                   },
