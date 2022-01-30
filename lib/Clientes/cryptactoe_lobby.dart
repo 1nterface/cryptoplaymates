@@ -75,7 +75,10 @@ class cryptactoe_lobbyState extends State<cryptactoe_lobby> {
                                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                                     children: [
                                       Text("\$"+documents["maxmoney"].toString(), style: TextStyle(color: Colors.white, fontSize: 20),),
-                                      Container(child: Image.asset("images/opcex.png"))
+                                      Container(
+                                        width: 50,
+                                          height: 50,
+                                          child: Image.asset("images/opcex.png"))
                                     ],
                                   ),
                                   Column(
