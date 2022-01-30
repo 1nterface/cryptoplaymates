@@ -164,7 +164,7 @@ class cryptactoe_lobbyState extends State<cryptactoe_lobby> {
       ),
       body: Column(
         children: [
-          listaTodos()//
+          listaTodos()//hu
         ],
       ),
     );
