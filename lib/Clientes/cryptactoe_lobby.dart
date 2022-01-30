@@ -55,15 +55,15 @@ class cryptactoe_lobbyState extends State<cryptactoe_lobby> {
 
 
                     },
-                    child: Card(
+                    child: Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: Card(
 
-                      elevation: 10.0,
-                      color: Color(0xFF171B26),
-                      child: Column(
-                        children: <Widget>[
-                          Padding(
-                            padding: const EdgeInsets.only(top: 10.0, bottom:10.0),
-                            child: InkWell(
+                        elevation: 10.0,
+                        color: Color(0xFF293143),
+                        child: Column(
+                          children: <Widget>[
+                            InkWell(
                               onTap: () async{
 
 
@@ -104,9 +104,9 @@ class cryptactoe_lobbyState extends State<cryptactoe_lobby> {
                                 ]
                               )
                             ),
-                          ),
-                          //Container(color: Colors.black12,),
-                        ],
+                            //Container(color: Colors.black12,),
+                          ],
+                        ),
                       ),
                     ),
                   );
