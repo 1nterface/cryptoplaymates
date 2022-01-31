@@ -66,6 +66,7 @@ class cryptactoe_lobbyState extends State<cryptactoe_lobby> {
                             InkWell(
                               onTap: () async{
 
+                                Navigator.of(context).pushNamed("/cryptactoe_game");
 
                               },
                               child: Row(
@@ -80,7 +81,7 @@ class cryptactoe_lobbyState extends State<cryptactoe_lobby> {
                                           child: Image.asset("images/opcex.png"))
                                     ],
                                   ),
-                                  Text("\$"+documents["maxmoney"].toString(), style: TextStyle(color: Colors.white, fontSize: 50),),
+                                  Text(documents["maxmoney"].toString(), style: TextStyle(color: Colors.white, fontSize: 50),),
                                   Column(
                                     children: [
                                       Flexible(child: Text(documents["nombre"], style: TextStyle(color: Colors.white, fontSize: 25),)),
@@ -100,7 +101,7 @@ class cryptactoe_lobbyState extends State<cryptactoe_lobby> {
                                               Text(documents["maxmoney"], style: TextStyle(color: Colors.white),),
                                             ],
                                           ),
-                                        ]
+                                        ],
                                       )
                                     ],
                                   ),
