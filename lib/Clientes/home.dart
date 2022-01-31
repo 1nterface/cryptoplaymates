@@ -181,14 +181,16 @@ class homeState extends State<home> {
 
                 InkWell(
                   onTap:(){
-                    Navigator.of(context).pushNamed("/nft_members");
+
+                    Navigator.of(context).pushNamed('/whitepaper');
+
 
                   },
                   child: Row(
                       children: [
-                        Icon(FontAwesomeIcons.idCard, color: Color(0xFF815FD5)),
+                        Icon(Icons.list, color: Color(0xFF815FD5)),
                         SizedBox(width:10),
-                        Text('NFT Member', style: TextStyle(color: Colors.white),),
+                        Text('Whitepaper', style: TextStyle(color: Colors.white),),
                       ]
                   ),
                 ),
@@ -196,14 +198,15 @@ class homeState extends State<home> {
 
                 InkWell(
                   onTap:(){
-                    Navigator.of(context).pushNamed("/nft_power_cards");
+
+                    Navigator.of(context).pushNamed("/roadmap");
 
                   },
                   child: Row(
                       children: [
-                        Icon(FontAwesomeIcons.networkWired, color: Colors.pinkAccent),
+                        Icon(Icons.account_tree, color: Colors.pinkAccent),
                         SizedBox(width:10),
-                        Text('NFT Power Cards', style: TextStyle(color: Colors.white),),
+                        Text('Roadmap', style: TextStyle(color: Colors.white),),
                       ]
                   ),
                 ),
@@ -236,7 +239,32 @@ class homeState extends State<home> {
                       ]
                   ),
                 ),
-              ]
+
+                InkWell(
+                  onTap:(){
+                    launchURLDiscord(urlD);
+                  },
+                  child: Row(
+                      children: [
+                        Icon(FontAwesomeIcons.linkedinIn, color: Colors.pinkAccent),
+                        SizedBox(width:10),
+                        Text('Check us', style: TextStyle(color: Colors.white),),
+                      ]
+                  ),
+                ),
+                InkWell(
+                  onTap:(){
+                    launchURLDiscord(urlD);
+                  },
+                  child: Row(
+                      children: [
+                        Icon(FontAwesomeIcons.youtube, color: Colors.red[800]),
+                        SizedBox(width:10),
+                        Text('Suscribe', style: TextStyle(color: Colors.white),),
+                      ]
+                  ),
+                ),
+              ],
           ),
         ),
       ),
@@ -274,24 +302,26 @@ class homeState extends State<home> {
           ),
 
           SpeedDialChild(
-              child: Icon(Icons.account_tree, color: Colors.white,),
-              backgroundColor: Colors.pink,
-              label: 'Roadmap',
+              child: Icon(FontAwesomeIcons.networkWired, color: Colors.white,),
+              backgroundColor: Colors.pinkAccent,
+              label: 'NFT Power Cards',
               onTap: () async {
 
-                Navigator.of(context).pushNamed('/roadmap');
+                Navigator.of(context).pushNamed("/nft_power_cards");
+
                 //Navigator.of(context).pushNamed('/admin_inicio');
 
               }
           ),
 
           SpeedDialChild(
-              child: Icon(Icons.list, color: Colors.white,),
+              child: Icon(FontAwesomeIcons.idCard, color: Colors.white),
               backgroundColor: Colors.lightBlueAccent,
-              label: 'Whitepaper',
+              label: 'NFT Member',
               onTap: () async {
 
-                Navigator.of(context).pushNamed('/whitepaper');
+                Navigator.of(context).pushNamed("/nft_members");
+
                 //Navigator.of(context).pushNamed('/admin_inicio');
 
               }
@@ -304,99 +334,102 @@ class homeState extends State<home> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Column(
-              children:[
-                CarouselSlider(
-                  items: [
+            Padding(
+              padding: const EdgeInsets.only(top: 20.0),
+              child: Column(
+                children:[
+                  CarouselSlider(
+                    items: [
 
-                    //hola(),
-                    InkWell(
-                      onTap: () async {
+                      //hola(),
+                      InkWell(
+                        onTap: () async {
 
-                        //sinSesion2();
-                        Navigator.of(context).pushNamed("/cryptactoe");
-                      },
-                      child: Container(
+                          //sinSesion2();
+                          Navigator.of(context).pushNamed("/cryptactoe");
+                        },
+                        child: Container(
+                            decoration: const BoxDecoration(
+                                borderRadius: BorderRadius.all(Radius.circular(5)),
+                                image: DecorationImage(
+                                  image: AssetImage("images/ancestral.jpg"),
+                                  fit: BoxFit.cover, //contain en todas ya que tenga los SS de los juegos
+                                )
+                            )
+                        ),
+                      ),
+                      Container(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  ElevatedButton(
+                                    onPressed: () {
+
+                                      sinSesion2();
+
+                                      //Navigator.of(context).pushNamed('/juegos_principal');
+
+                                    },
+                                    child: Text('Play'),
+                                    style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
                           decoration: const BoxDecoration(
-                              borderRadius: BorderRadius.all(Radius.circular(5)),
+                              borderRadius: BorderRadius.all(Radius.circular(12)),
                               image: DecorationImage(
-                                image: AssetImage("images/ancestral.jpg"),
-                                fit: BoxFit.cover, //contain en todas ya que tenga los SS de los juegos
+                                image: AssetImage("images/c.png"),
+                                fit: BoxFit.cover,
                               )
                           )
                       ),
+                      Container(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  ElevatedButton(
+                                    onPressed: () {
+
+                                      //Navigator.of(context).pushNamed('/juegos_principal');
+                                      sinSesion2();
+
+                                    },
+                                    child: Text('Play'),
+                                    style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                          decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.all(Radius.circular(12)),
+                              image: DecorationImage(
+                                image: AssetImage("images/d.png"),
+                                fit: BoxFit.cover,
+                              )
+                          )
+                      ),
+                    ],
+                    options: CarouselOptions(
+                      viewportFraction: 0.8,
+                      height: 400,
+                      autoPlay: true,
+                      autoPlayCurve: Curves.easeInOut,
+                      reverse: true,
+                      enlargeCenterPage: true,
+                      scrollDirection: Axis.horizontal,
                     ),
-                    Container(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                ElevatedButton(
-                                  onPressed: () {
-
-                                    sinSesion2();
-
-                                    //Navigator.of(context).pushNamed('/juegos_principal');
-
-                                  },
-                                  child: Text('Play'),
-                                  style: ElevatedButton.styleFrom(shape: StadiumBorder()),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                        decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(12)),
-                            image: DecorationImage(
-                              image: AssetImage("images/c.png"),
-                              fit: BoxFit.cover,
-                            )
-                        )
-                    ),
-                    Container(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.end,
-                              children: [
-                                ElevatedButton(
-                                  onPressed: () {
-
-                                    //Navigator.of(context).pushNamed('/juegos_principal');
-                                    sinSesion2();
-
-                                  },
-                                  child: Text('Play'),
-                                  style: ElevatedButton.styleFrom(shape: StadiumBorder()),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                        decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(12)),
-                            image: DecorationImage(
-                              image: AssetImage("images/d.png"),
-                              fit: BoxFit.cover,
-                            )
-                        )
-                    ),
-                  ],
-                  options: CarouselOptions(
-                    viewportFraction: 0.8,
-                    height: 400,
-                    autoPlay: true,
-                    autoPlayCurve: Curves.easeInOut,
-                    reverse: true,
-                    enlargeCenterPage: true,
-                    scrollDirection: Axis.horizontal,
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
