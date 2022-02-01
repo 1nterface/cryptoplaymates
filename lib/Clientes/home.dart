@@ -239,6 +239,7 @@ class homeState extends State<home> {
                       ]
                   ),
                 ),
+                SizedBox(width: 15),
 
                 InkWell(
                   onTap:(){
@@ -248,10 +249,12 @@ class homeState extends State<home> {
                       children: [
                         Icon(FontAwesomeIcons.linkedinIn, color: Colors.pinkAccent),
                         SizedBox(width:10),
-                        Text('Check us', style: TextStyle(color: Colors.white),),
+                        Text('Contact us', style: TextStyle(color: Colors.white),),
                       ]
                   ),
                 ),
+                SizedBox(width: 15),
+
                 InkWell(
                   onTap:(){
                     launchURLDiscord(urlD);
