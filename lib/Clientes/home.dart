@@ -253,20 +253,7 @@ class homeState extends State<home> {
                       ]
                   ),
                 ),
-                SizedBox(width: 15),
 
-                InkWell(
-                  onTap:(){
-                    launchURLDiscord(urlD);
-                  },
-                  child: Row(
-                      children: [
-                        Icon(FontAwesomeIcons.youtube, color: Colors.red[800]),
-                        SizedBox(width:10),
-                        Text('Suscribe', style: TextStyle(color: Colors.white),),
-                      ]
-                  ),
-                ),
               ],
           ),
         ),
