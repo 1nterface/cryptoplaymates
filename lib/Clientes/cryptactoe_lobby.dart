@@ -78,7 +78,8 @@ class cryptactoe_lobbyState extends State<cryptactoe_lobby> {
                                       Container(
                                         width: 50,
                                           height: 50,
-                                          child: Image.asset("images/opcex.png"))
+                                          child: Image.asset("images/opcex.png")
+                                      ),
                                     ],
                                   ),
                                   Text(documents["maxmoney"].toString(), style: TextStyle(color: Colors.white, fontSize: 50),),

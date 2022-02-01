@@ -208,7 +208,17 @@ class cryptactoeState extends State<cryptactoe> {
                           child: Icon(Icons.person, size: 50, color: Colors.white38),
                         ),
                         SizedBox(width: 15),
-                        Text("25 | Level 3", style: TextStyle(color: Colors.white38),),
+                        Row(
+                          children: [
+                            Container(
+                                width: 50,
+                                height: 50,
+                                child: Image.asset("images/opcex.png")
+                            ),
+                            SizedBox(height: 10),
+                            Text("25 | Level 3", style: TextStyle(color: Colors.white38),),
+                          ]
+                        ),
                       ],
                     ),
 
