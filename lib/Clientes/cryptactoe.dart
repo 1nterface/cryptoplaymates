@@ -204,7 +204,7 @@ class cryptactoeState extends State<cryptactoe> {
                           decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               border: Border.all(color: Color(0xFF815FD5))
-                          )
+                          ),
                           child: Icon(Icons.person, size: 70, color: Colors.white38),
                         ),
                         SizedBox(width: 15),
