@@ -200,10 +200,10 @@ class cryptactoeState extends State<cryptactoe> {
                   children: <Widget>[
                     Column(
                       children: [
-                        Material(
-                          color: Colors.transparent,
-                          shape: CircleBorder(
-                              side: BorderSide(color: Color(0xFF815FD5))
+                        Container(
+                          decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              border: Border.all(color: Color(0xFF815FD5))
                           ),
                           child: Icon(Icons.person, size: 50, color: Colors.white38),
                         ),
@@ -247,7 +247,7 @@ class cryptactoeState extends State<cryptactoe> {
                           children:const [
                             Icon(Icons.gamepad_outlined, color : Colors.white),
                             SizedBox(width:15),
-                            Text('PLAY', style: TextStyle(color: Colors.white, fontSize: 20.0),),
+                            Text('PLAY NOW', style: TextStyle(color: Colors.white, fontSize: 20.0),),
                           ],
                         ),
                         onPressed: () async {
