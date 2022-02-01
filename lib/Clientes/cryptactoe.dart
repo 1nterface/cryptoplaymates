@@ -204,19 +204,24 @@ class cryptactoeState extends State<cryptactoe> {
                           decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               border: Border.all(color: Color(0xFF815FD5))
-                          ),
-                          child: Icon(Icons.person, size: 50, color: Colors.white38),
+                          )
+                          child: Icon(Icons.person, size: 70, color: Colors.white38),
                         ),
                         SizedBox(width: 15),
                         Row(
                           children: [
                             Container(
-                                width: 50,
-                                height: 50,
+                                width: 30,
+                                height: 30,
                                 child: Image.asset("images/opcex.png")
                             ),
                             SizedBox(height: 10),
-                            Text("25 | Level 3", style: TextStyle(color: Colors.white38),),
+                            Column(children:[
+                              Text("Coins | Level", style: TextStyle(fontSize: 20, color: Colors.white38),),
+                              SizedBox(width: 5),
+                              Text("25    3", style: TextStyle(fontSize: 25, color: Colors.white),),
+                            ],
+                            ),
                           ]
                         ),
                       ],
