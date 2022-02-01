@@ -198,11 +198,20 @@ class cryptactoeState extends State<cryptactoe> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    const SizedBox(height:170),
-                    SizedBox(
-                      height: 200,
-                      child: Image.asset('images/pizza.png'),
+                    Column(
+                      children: [
+                        Material(
+                          color: Colors.transparent,
+                          shape: CircleBorder(
+                              side: BorderSide(color: Color(0xFF815FD5))
+                          ),
+                          child: Icon(Icons.person, size: 50, color: Colors.white38),
+                        ),
+                        SizedBox(width: 15),
+                        Text("25 | Level 3", style: TextStyle(color: Colors.white38),),
+                      ],
                     ),
+
                   ],
                 ),
                 const SizedBox(height: 20),
@@ -238,7 +247,7 @@ class cryptactoeState extends State<cryptactoe> {
                           children:const [
                             Icon(Icons.gamepad_outlined, color : Colors.white),
                             SizedBox(width:15),
-                            Text('NEW GAME', style: TextStyle(color: Colors.white, fontSize: 20.0),),
+                            Text('PLAY', style: TextStyle(color: Colors.white, fontSize: 20.0),),
                           ],
                         ),
                         onPressed: () async {

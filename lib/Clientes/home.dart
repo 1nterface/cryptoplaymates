@@ -344,8 +344,8 @@ class homeState extends State<home> {
                                 image: DecorationImage(
                                   image: AssetImage("images/ancestral.jpg"),
                                   fit: BoxFit.cover, //contain en todas ya que tenga los SS de los juegos
-                                )
-                            )
+                                ),
+                            ),
                         ),
                       ),
                       Container(
